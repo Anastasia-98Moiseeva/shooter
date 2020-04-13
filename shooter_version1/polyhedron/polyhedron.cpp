@@ -1,3 +1,6 @@
+
+#include <GL/glew.h>
+
 class Polyhedron {
 public:
     Polyhedron(GLuint cubeVertex, GLuint cubeColor, float* center) {
