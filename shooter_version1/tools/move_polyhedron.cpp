@@ -14,8 +14,9 @@ using namespace glm;
 
 #include <common/shader.hpp>
 
-void move(GLfloat array[], float x, float y, float z){
-    for (int i = 0; i < sizeof(array)/sizeof(array[0]); i++) {
+void move(GLfloat& array1, int size, float x, float y, float z){
+    GLfloat* array = &array1;
+    for (int i = 0; i < size; i++) {
         switch (i % 3) {
             case 0:
                 array[i] += x;

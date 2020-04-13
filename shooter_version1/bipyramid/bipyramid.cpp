@@ -15,6 +15,7 @@
 using namespace glm;
 
 #include <common/shader.hpp>
+#include <vector>
 
 GLuint getBipyramidVertex(float x, float y, float z) {
     GLfloat g_vertex_buffer_data[] = {
@@ -51,8 +52,8 @@ GLuint getBipyramidVertex(float x, float y, float z) {
             -1, 0, 0,
     };
 
-    move(g_vertex_buffer_data, x, y, z);
 
+    move(*g_vertex_buffer_data, sizeof(g_vertex_buffer_data)/sizeof(g_vertex_buffer_data[0]), x, y, z);
 
     GLuint vertexbuffer;
     glGenBuffers(1, &vertexbuffer);
