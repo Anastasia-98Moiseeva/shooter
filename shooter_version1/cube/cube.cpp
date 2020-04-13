@@ -1,7 +1,9 @@
-#include <GL/glew.h>
-
-#include "../tools/move_polyhedron.cpp"
+#pragma once
+#include "cube.h"
 #include <iterator>
+#include <GL/glew.h>
+#include "../tools/move_polyhedron.cpp"
+
 
 using namespace glm;
 
@@ -49,7 +51,7 @@ GLuint getCubeVertex(float x, float y, float z) {
 
 
 
-    move(g_vertex_buffer_data, sizeof(g_vertex_buffer_data)/sizeof(g_vertex_buffer_data[0]), x, y, z);
+    move(*g_vertex_buffer_data, sizeof(g_vertex_buffer_data)/sizeof(g_vertex_buffer_data[0]), x, y, z);
 
     GLuint vertexbuffer;
     glGenBuffers(1, &vertexbuffer);
