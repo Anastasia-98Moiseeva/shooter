@@ -1,6 +1,6 @@
 // Include standard headers
-#include <stdio.h>
-#include <stdlib.h>
+#include <cstdio>
+#include <cstdlib>
 
 // Include GLEW
 #include <GL/glew.h>
@@ -12,17 +12,15 @@ GLFWwindow* window;
 // Include GLM
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
-
-#include "cube/cube.cpp"
-#include "bipyramid/bipyramid.cpp"
 #include "polyhedron/polyhedron.cpp"
-#include "pyramid/pyramid.cpp"
+
 
 using namespace glm;
 
 #include <common/shader.hpp>
+#include <vector>
 
-void drawFigure(GLuint cubeVertex, GLuint cubeColor, GLuint MatrixID, GLuint programID, glm::mat4 MVP) {
+void drawFigure(float num_points, GLuint cubeVertex, GLuint cubeColor, GLuint MatrixID, GLuint programID, glm::mat4 MVP) {
 // Use our shader
     glUseProgram(programID);
 
@@ -53,6 +51,8 @@ void drawFigure(GLuint cubeVertex, GLuint cubeColor, GLuint MatrixID, GLuint pro
             0,                                // stride
             (void*)0                          // array buffer offset
     );
+    glDrawArrays(GL_TRIANGLES, 0, num_points); // 12*3 indices starting at 0 -> 12 triangles
+
 }
 
 int main( void )
@@ -127,30 +127,35 @@ int main( void )
 	// Our vertices. Tree consecutive floats give a 3D vertex; Three consecutive vertices give a triangle.
 	// A cube has 6 faces with 2 triangles each, so this makes 6*2=12 triangles, and 12*3 vertices
 
-
-	//GLuint cubeVertex = getCubeVertex(0 , 0 , 0);
+    //GLuint cubeVertex = getCubeVertex(0 , 0 , 0);
     //GLuint cubeColor = getCubeColor();
     //GLuint cubeVertex = getBipyramidVertex(0, 1 ,0);
     //GLuint cubeColor = getBipyramidColor();
-    GLuint cubeVertex = getPyramidVertex(0, 0, 0);
-    GLuint cubeColor = getPyramidColor();
+    //GLuint cubeVertex = getPyramidVertex(params[0], params[1], params[2], params[3]);
+    //GLuint cubeColor = getPyramidColor();
 
+    float params1[] = {0.3, 2.0, 0.0, 0.0};
+    float params2[] = {0.3, -5.0, 0.0, 0.0};
+    float params3[] = {0.3, 0.0, 0.0, 0.0};
 
-    auto* center = new float[3];
-    center[0] = 0.0;
-    center[0] = 0.0;
-    center[0] = 0.0;
-    Polyhedron polyhedron = Polyhedron(cubeVertex, cubeColor, center, 6 * 4 * 16);
+    std::vector<Polyhedron> polyhedrons;
+    polyhedrons.push_back(Polyhedron(0, params1));
+    polyhedrons.push_back(Polyhedron(1, params2));
+    polyhedrons.push_back(Polyhedron(2, params3));
 
-	do{
+   do{
+       if (polyhedrons.size() == 0) {
+           break;
+       }
         // Clear the screen
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        //drawFigure(polyhedron.getCubeVertex(), polyhedron.getCubeColor(), MatrixID, programID, MVP);
-        drawFigure(cubeVertex, cubeColor, MatrixID, programID, MVP);
+		for (int i = 0; i < polyhedrons.size(); i++) {
+            drawFigure(polyhedrons[i].getNumPoints(), polyhedrons[i].getFigureVertex(), polyhedrons[i].getFigureColor(), MatrixID, programID, MVP);
+		}
+
 
         // Draw the points !
-        glDrawArrays(GL_TRIANGLES, 0, 6 * 4 * 16); // 12*3 indices starting at 0 -> 12 triangles
 
         glDisableVertexAttribArray(0);
         glDisableVertexAttribArray(1);
@@ -165,8 +170,8 @@ int main( void )
 
 
 	// Cleanup VBO and shader
-	glDeleteBuffers(1, &cubeVertex);
-	glDeleteBuffers(1, &cubeColor);
+	//glDeleteBuffers(1, &cubeVertex);
+	//glDeleteBuffers(1, &cubeColor);
 	glDeleteProgram(programID);
 	glDeleteVertexArrays(1, &VertexArrayID);
 

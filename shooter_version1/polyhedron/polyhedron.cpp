@@ -1,35 +1,65 @@
 #include <GL/glew.h>
+#include "../pyramid/pyramid.cpp"
+#include "../cube/cube.cpp"
+#include "../bipyramid/bipyramid.cpp"
+// 0 - size
+// 1,2,3 - koor
+// 4 - num_points
 
 class Polyhedron {
 public:
-    Polyhedron(GLuint cubeVertex, GLuint cubeColor, float* center, int num_points) {
-        this->center = center;
-        this->cubeVertex = cubeVertex;
-        this->cubeColor = cubeColor;
-        this->num_points = num_points;
+    Polyhedron(int num_figure, float* param_figure) {
+        size = param_figure[0];
+        center = new float[3];
+        for (int i = 0; i < 3; i++) {
+            center[i] = param_figure[i + 1];
+        }
+
+        switch (num_figure) {
+            case 0:
+                vertex = getPyramidVertex(size, center[0], center[1], center[2]);
+                color = getPyramidColor();
+                num_points =  6 * 4 * 16;
+                break;
+            case 1:
+                vertex = getCubeVertex(size, center[0], center[1], center[2]);
+                color = getCubeColor();
+                num_points = 12 * 3;
+                break;
+            case 2:
+                vertex = getBipyramidVertex(size, center[0], center[1], center[2]);
+                color = getBipyramidColor();
+                num_points = 12 * 3;
+                break;
+            default:
+                vertex = 0;
+                color = 0;
+        }
+
     }
 
     float* getCenter() {
         return center;
     }
 
-    GLuint getCubeVertex() {
-        return cubeVertex;
+    GLuint getFigureVertex() {
+        return vertex;
     }
 
-    GLuint getCubeColor() {
-        return cubeColor;
+    GLuint getFigureColor() {
+        return color;
     }
 
-    int getNumPoints() {
+    float getNumPoints() {
         return num_points;
     }
 
 //    GLuint get
 
 private:
-    GLuint cubeVertex;
-    GLuint cubeColor;
+    GLuint vertex;
+    GLuint color;
+    float size;
     float* center;
-    int num_points;
+    float num_points;
 };

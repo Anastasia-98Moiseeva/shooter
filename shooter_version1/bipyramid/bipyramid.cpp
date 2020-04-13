@@ -1,6 +1,6 @@
 #include "shooter_version1/tools/tools.cpp"
 
-GLuint getBipyramidVertex(float x, float y, float z) {
+GLuint getBipyramidVertex(float k, float x, float y, float z) {
     GLfloat g_vertex_buffer_data[] = {
             0, 2, 0,
             0, 0, -1,
@@ -34,6 +34,9 @@ GLuint getBipyramidVertex(float x, float y, float z) {
             0, 0, -1,
             -1, 0, 0,
     };
+
+    Tools tools = Tools();
+    tools.changeConfiguration(*g_vertex_buffer_data, (sizeof(g_vertex_buffer_data)) / (sizeof(g_vertex_buffer_data[0])), k, x, y, z);
 
     GLuint vertexbuffer;
     glGenBuffers(1, &vertexbuffer);
