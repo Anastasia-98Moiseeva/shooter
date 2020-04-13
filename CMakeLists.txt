@@ -62,8 +62,8 @@ add_executable(shooter_version1
 		common/shader.cpp
 		common/shader.hpp
 
-		shooter_version1/cube/TransformVertexShader.vertexshader
-		shooter_version1/cube/ColorFragmentShader.fragmentshader
+		shooter_version1/TransformVertexShader.vertexshader
+		shooter_version1/ColorFragmentShader.fragmentshader
 		)
 target_link_libraries(shooter_version1
 		${ALL_LIBS}
