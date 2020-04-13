@@ -10,6 +10,8 @@ public:
         return center;
     }
 
+//    GLuint get
+
 private:
     GLuint cubeVertex;
     GLuint cubeColor;
