@@ -316,7 +316,7 @@ GLfloat getPyramidVertex(float x, float y, float z) {
     return vertexbuffer;
 }
 
-GLfloat getPyramidVertex() {
+GLfloat getPyramidColor() {
     // One color for each vertex.
     const int num_points = 6 * 4 * 16;
     static GLfloat g_color_buffer_data[num_points * 3] = { 0.0f };

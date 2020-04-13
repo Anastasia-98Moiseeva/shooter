@@ -130,23 +130,27 @@ int main( void )
 
 	//GLuint cubeVertex = getCubeVertex(0 , 0 , 0);
     //GLuint cubeColor = getCubeColor();
-    GLuint cubeVertex = getBipyramidVertex(0, 1 ,0);
-    GLuint cubeColor = getBipyramidColor();
+    //GLuint cubeVertex = getBipyramidVertex(0, 1 ,0);
+    //GLuint cubeColor = getBipyramidColor();
+    GLuint cubeVertex = getPyramidVertex(0, 0, 0);
+    GLuint cubeColor = getPyramidColor();
 
-//    auto* center = new float[3];
-//    center[0] = 1.0;
-//    center[0] = 3.0;
-//    center[0] = 2.0;
-//    Polyhedron polyhedron = Polyhedron(cubeVertex, cubeColor, center);
+
+    auto* center = new float[3];
+    center[0] = 0.0;
+    center[0] = 0.0;
+    center[0] = 0.0;
+    Polyhedron polyhedron = Polyhedron(cubeVertex, cubeColor, center, 6 * 4 * 16);
 
 	do{
         // Clear the screen
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
+        //drawFigure(polyhedron.getCubeVertex(), polyhedron.getCubeColor(), MatrixID, programID, MVP);
         drawFigure(cubeVertex, cubeColor, MatrixID, programID, MVP);
 
         // Draw the points !
-        glDrawArrays(GL_TRIANGLES, 0, 12*3); // 12*3 indices starting at 0 -> 12 triangles
+        glDrawArrays(GL_TRIANGLES, 0, 6 * 4 * 16); // 12*3 indices starting at 0 -> 12 triangles
 
         glDisableVertexAttribArray(0);
         glDisableVertexAttribArray(1);
