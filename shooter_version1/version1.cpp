@@ -14,7 +14,7 @@ GLFWwindow* window;
 #include <glm/gtc/matrix_transform.hpp>
 
 //#include "cube/cube.cpp"
-#include "bipyramid/bipyramid.h"
+#include "bipyramid/bipyramid.cpp"
 //#include "polyhedron/polyhedron.cpp"
 
 using namespace glm;
