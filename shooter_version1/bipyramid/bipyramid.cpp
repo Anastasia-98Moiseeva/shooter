@@ -1,10 +1,5 @@
-//
-// Created by Никита on 13.04.2020.
-//
-
 #include "bipyramid.h"
 #pragma once
-using namespace glm;
 
 GLuint Bipyramid::getBipyramidVertex(float x, float y, float z) {
     GLfloat g_vertex_buffer_data[] = {
