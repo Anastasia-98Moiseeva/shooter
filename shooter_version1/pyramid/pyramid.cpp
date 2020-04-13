@@ -5,15 +5,18 @@
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
+
+#include "../tools/move_polyhedron.cpp"
+
 using namespace glm;
 
 
-GLfloat getPyramidVertex(double x, double y, double z) {
+GLfloat getPyramidVertex(float x, float y, float z) {
 
     size = 0.25
     const int num_points = 6 * 4 * 16;
 
-    static GLfloat g_vertex_buffer_data[num_points * 3] = {
+    GLfloat g_vertex_buffer_data[num_points * 3] = {
             3 * size, -size, -3 * size,
             5 * size, -size,  5 * size,
             3 * size, -size, 3 * size,
@@ -305,6 +308,8 @@ GLfloat getPyramidVertex(double x, double y, double z) {
             -size, 3 * size, size,
             size, 5 * size, size,
     };
+
+    move(g_vertex_buffer_data, x, y, z);
 
     return g_vertex_buffer_data;
 }
