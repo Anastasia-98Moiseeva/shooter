@@ -1,7 +1,7 @@
 #include "bipyramid.h"
 #pragma once
 
-GLuint Bipyramid::getBipyramidVertex(float x, float y, float z) {
+GLuint getBipyramidVertex(float x, float y, float z) {
     GLfloat g_vertex_buffer_data[] = {
             0, 2, 0,
             0, 0, -1,
@@ -47,7 +47,7 @@ GLuint Bipyramid::getBipyramidVertex(float x, float y, float z) {
     return vertexbuffer;
 }
 
-GLuint Bipyramid::getBipyramidColor() {
+GLuint getBipyramidColor() {
     // One color for each vertex.
     static const GLfloat g_color_buffer_data[] = {
             0.822f,  0.569f,  0.201f,

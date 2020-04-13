@@ -129,9 +129,8 @@ int main( void )
 
 	//GLuint cubeVertex = getCubeVertex(0 , 0 , 0);
     //GLuint cubeColor = getCubeColor();
-    Bipyramid bipyramid1 = Bipyramid();
-    GLuint cubeVertex = bipyramid1.getBipyramidVertex(0, 1 ,0);
-    GLuint cubeColor = bipyramid1.getBipyramidColor();
+    GLuint cubeVertex = getBipyramidVertex(0, 1 ,0);
+    GLuint cubeColor = getBipyramidColor();
 
 //    auto* center = new float[3];
 //    center[0] = 1.0;
