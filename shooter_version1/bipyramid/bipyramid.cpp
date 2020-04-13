@@ -1,8 +1,12 @@
+//
+// Created by Никита on 13.04.2020.
+//
+
 #include "bipyramid.h"
 #pragma once
 using namespace glm;
 
-GLuint getBipyramidVertex(float x, float y, float z) {
+GLuint Bipyramid::getBipyramidVertex(float x, float y, float z) {
     GLfloat g_vertex_buffer_data[] = {
             0, 2, 0,
             0, 0, -1,
@@ -48,7 +52,7 @@ GLuint getBipyramidVertex(float x, float y, float z) {
     return vertexbuffer;
 }
 
-GLuint getBipyramidColor() {
+GLuint Bipyramid::getBipyramidColor() {
     // One color for each vertex.
     static const GLfloat g_color_buffer_data[] = {
             0.822f,  0.569f,  0.201f,
@@ -92,3 +96,5 @@ GLuint getBipyramidColor() {
 
     return colorbuffer;
 }
+
+

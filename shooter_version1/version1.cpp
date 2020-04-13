@@ -13,8 +13,8 @@ GLFWwindow* window;
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 
-#include "cube/cube.cpp"
-//#include "bipyramid/bipyramid.cpp"
+//#include "cube/cube.cpp"
+#include "bipyramid/bipyramid.h"
 //#include "polyhedron/polyhedron.cpp"
 
 using namespace glm;
@@ -127,11 +127,11 @@ int main( void )
 	// A cube has 6 faces with 2 triangles each, so this makes 6*2=12 triangles, and 12*3 vertices
 
 
-	GLuint cubeVertex = getCubeVertex(0 , 0 , 0);
-    GLuint cubeColor = getCubeColor();
-
-    //GLuint cubeVertex = getBipyramidVertex(0, 1 ,0);
-    //GLuint cubeColor = getBipyramidColor();
+	//GLuint cubeVertex = getCubeVertex(0 , 0 , 0);
+    //GLuint cubeColor = getCubeColor();
+    Bipyramid bipyramid1 = Bipyramid();
+    GLuint cubeVertex = bipyramid1.getBipyramidVertex(0, 1 ,0);
+    GLuint cubeColor = bipyramid1.getBipyramidColor();
 
 //    auto* center = new float[3];
 //    center[0] = 1.0;
