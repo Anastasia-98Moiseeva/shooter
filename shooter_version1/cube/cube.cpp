@@ -47,11 +47,7 @@ GLuint getCubeVertex(float x, float y, float z) {
             1.0f,-1.0f, 1.0f
     };
 
-
-
-
-
-    move(*g_vertex_buffer_data, sizeof(g_vertex_buffer_data)/sizeof(g_vertex_buffer_data[0]), x, y, z);
+    changeConfiguration(*g_vertex_buffer_data, sizeof(g_vertex_buffer_data)/sizeof(g_vertex_buffer_data[0]), 0.5, 0, 1, 0);
 
     GLuint vertexbuffer;
     glGenBuffers(1, &vertexbuffer);

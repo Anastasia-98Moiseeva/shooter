@@ -37,3 +37,8 @@ void resize(GLfloat& array1, int size, float k){
         array[i] *= k;
     }
 }
+
+void changeConfiguration(GLfloat& array1, int size, float k, float x, float y, float z ){
+    resize(array1, size, k);
+    move(array1, size, x, y, z);
+}
