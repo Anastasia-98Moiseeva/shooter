@@ -43,10 +43,10 @@ RM = /snap/clion/107/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/shooter
+CMAKE_SOURCE_DIR = /home/anastasia/Documents/mipt/3d-graph/shooter
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug
+CMAKE_BINARY_DIR = /home/anastasia/Documents/mipt/3d-graph/shooter/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/misc05_picking_slow_easy.dir/depend.make
@@ -59,81 +59,81 @@ include CMakeFiles/misc05_picking_slow_easy.dir/flags.make
 
 CMakeFiles/misc05_picking_slow_easy.dir/misc05_picking/misc05_picking_slow_easy.cpp.o: CMakeFiles/misc05_picking_slow_easy.dir/flags.make
 CMakeFiles/misc05_picking_slow_easy.dir/misc05_picking/misc05_picking_slow_easy.cpp.o: ../misc05_picking/misc05_picking_slow_easy.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/misc05_picking_slow_easy.dir/misc05_picking/misc05_picking_slow_easy.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/misc05_picking_slow_easy.dir/misc05_picking/misc05_picking_slow_easy.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/misc05_picking/misc05_picking_slow_easy.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/misc05_picking_slow_easy.dir/misc05_picking/misc05_picking_slow_easy.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/misc05_picking_slow_easy.dir/misc05_picking/misc05_picking_slow_easy.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/shooter/misc05_picking/misc05_picking_slow_easy.cpp
 
 CMakeFiles/misc05_picking_slow_easy.dir/misc05_picking/misc05_picking_slow_easy.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/misc05_picking_slow_easy.dir/misc05_picking/misc05_picking_slow_easy.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/misc05_picking/misc05_picking_slow_easy.cpp > CMakeFiles/misc05_picking_slow_easy.dir/misc05_picking/misc05_picking_slow_easy.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/shooter/misc05_picking/misc05_picking_slow_easy.cpp > CMakeFiles/misc05_picking_slow_easy.dir/misc05_picking/misc05_picking_slow_easy.cpp.i
 
 CMakeFiles/misc05_picking_slow_easy.dir/misc05_picking/misc05_picking_slow_easy.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/misc05_picking_slow_easy.dir/misc05_picking/misc05_picking_slow_easy.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/misc05_picking/misc05_picking_slow_easy.cpp -o CMakeFiles/misc05_picking_slow_easy.dir/misc05_picking/misc05_picking_slow_easy.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/shooter/misc05_picking/misc05_picking_slow_easy.cpp -o CMakeFiles/misc05_picking_slow_easy.dir/misc05_picking/misc05_picking_slow_easy.cpp.s
 
 CMakeFiles/misc05_picking_slow_easy.dir/common/shader.cpp.o: CMakeFiles/misc05_picking_slow_easy.dir/flags.make
 CMakeFiles/misc05_picking_slow_easy.dir/common/shader.cpp.o: ../common/shader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/misc05_picking_slow_easy.dir/common/shader.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/misc05_picking_slow_easy.dir/common/shader.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/shader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/misc05_picking_slow_easy.dir/common/shader.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/misc05_picking_slow_easy.dir/common/shader.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/shooter/common/shader.cpp
 
 CMakeFiles/misc05_picking_slow_easy.dir/common/shader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/misc05_picking_slow_easy.dir/common/shader.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/shader.cpp > CMakeFiles/misc05_picking_slow_easy.dir/common/shader.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/shooter/common/shader.cpp > CMakeFiles/misc05_picking_slow_easy.dir/common/shader.cpp.i
 
 CMakeFiles/misc05_picking_slow_easy.dir/common/shader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/misc05_picking_slow_easy.dir/common/shader.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/shader.cpp -o CMakeFiles/misc05_picking_slow_easy.dir/common/shader.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/shooter/common/shader.cpp -o CMakeFiles/misc05_picking_slow_easy.dir/common/shader.cpp.s
 
 CMakeFiles/misc05_picking_slow_easy.dir/common/controls.cpp.o: CMakeFiles/misc05_picking_slow_easy.dir/flags.make
 CMakeFiles/misc05_picking_slow_easy.dir/common/controls.cpp.o: ../common/controls.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/misc05_picking_slow_easy.dir/common/controls.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/misc05_picking_slow_easy.dir/common/controls.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/controls.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/misc05_picking_slow_easy.dir/common/controls.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/misc05_picking_slow_easy.dir/common/controls.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/shooter/common/controls.cpp
 
 CMakeFiles/misc05_picking_slow_easy.dir/common/controls.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/misc05_picking_slow_easy.dir/common/controls.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/controls.cpp > CMakeFiles/misc05_picking_slow_easy.dir/common/controls.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/shooter/common/controls.cpp > CMakeFiles/misc05_picking_slow_easy.dir/common/controls.cpp.i
 
 CMakeFiles/misc05_picking_slow_easy.dir/common/controls.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/misc05_picking_slow_easy.dir/common/controls.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/controls.cpp -o CMakeFiles/misc05_picking_slow_easy.dir/common/controls.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/shooter/common/controls.cpp -o CMakeFiles/misc05_picking_slow_easy.dir/common/controls.cpp.s
 
 CMakeFiles/misc05_picking_slow_easy.dir/common/texture.cpp.o: CMakeFiles/misc05_picking_slow_easy.dir/flags.make
 CMakeFiles/misc05_picking_slow_easy.dir/common/texture.cpp.o: ../common/texture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/misc05_picking_slow_easy.dir/common/texture.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/misc05_picking_slow_easy.dir/common/texture.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/texture.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/misc05_picking_slow_easy.dir/common/texture.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/misc05_picking_slow_easy.dir/common/texture.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/shooter/common/texture.cpp
 
 CMakeFiles/misc05_picking_slow_easy.dir/common/texture.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/misc05_picking_slow_easy.dir/common/texture.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/texture.cpp > CMakeFiles/misc05_picking_slow_easy.dir/common/texture.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/shooter/common/texture.cpp > CMakeFiles/misc05_picking_slow_easy.dir/common/texture.cpp.i
 
 CMakeFiles/misc05_picking_slow_easy.dir/common/texture.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/misc05_picking_slow_easy.dir/common/texture.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/texture.cpp -o CMakeFiles/misc05_picking_slow_easy.dir/common/texture.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/shooter/common/texture.cpp -o CMakeFiles/misc05_picking_slow_easy.dir/common/texture.cpp.s
 
 CMakeFiles/misc05_picking_slow_easy.dir/common/objloader.cpp.o: CMakeFiles/misc05_picking_slow_easy.dir/flags.make
 CMakeFiles/misc05_picking_slow_easy.dir/common/objloader.cpp.o: ../common/objloader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/misc05_picking_slow_easy.dir/common/objloader.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/misc05_picking_slow_easy.dir/common/objloader.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/objloader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/misc05_picking_slow_easy.dir/common/objloader.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/misc05_picking_slow_easy.dir/common/objloader.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/shooter/common/objloader.cpp
 
 CMakeFiles/misc05_picking_slow_easy.dir/common/objloader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/misc05_picking_slow_easy.dir/common/objloader.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/objloader.cpp > CMakeFiles/misc05_picking_slow_easy.dir/common/objloader.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/shooter/common/objloader.cpp > CMakeFiles/misc05_picking_slow_easy.dir/common/objloader.cpp.i
 
 CMakeFiles/misc05_picking_slow_easy.dir/common/objloader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/misc05_picking_slow_easy.dir/common/objloader.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/objloader.cpp -o CMakeFiles/misc05_picking_slow_easy.dir/common/objloader.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/shooter/common/objloader.cpp -o CMakeFiles/misc05_picking_slow_easy.dir/common/objloader.cpp.s
 
 CMakeFiles/misc05_picking_slow_easy.dir/common/vboindexer.cpp.o: CMakeFiles/misc05_picking_slow_easy.dir/flags.make
 CMakeFiles/misc05_picking_slow_easy.dir/common/vboindexer.cpp.o: ../common/vboindexer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/misc05_picking_slow_easy.dir/common/vboindexer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/misc05_picking_slow_easy.dir/common/vboindexer.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/vboindexer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/misc05_picking_slow_easy.dir/common/vboindexer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/misc05_picking_slow_easy.dir/common/vboindexer.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/shooter/common/vboindexer.cpp
 
 CMakeFiles/misc05_picking_slow_easy.dir/common/vboindexer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/misc05_picking_slow_easy.dir/common/vboindexer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/vboindexer.cpp > CMakeFiles/misc05_picking_slow_easy.dir/common/vboindexer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/shooter/common/vboindexer.cpp > CMakeFiles/misc05_picking_slow_easy.dir/common/vboindexer.cpp.i
 
 CMakeFiles/misc05_picking_slow_easy.dir/common/vboindexer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/misc05_picking_slow_easy.dir/common/vboindexer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/vboindexer.cpp -o CMakeFiles/misc05_picking_slow_easy.dir/common/vboindexer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/shooter/common/vboindexer.cpp -o CMakeFiles/misc05_picking_slow_easy.dir/common/vboindexer.cpp.s
 
 # Object files for target misc05_picking_slow_easy
 misc05_picking_slow_easy_OBJECTS = \
@@ -178,9 +178,9 @@ misc05_picking_slow_easy: /usr/lib/x86_64-linux-gnu/libXcursor.so
 misc05_picking_slow_easy: /usr/lib/x86_64-linux-gnu/libGL.so
 misc05_picking_slow_easy: /usr/lib/x86_64-linux-gnu/libGLU.so
 misc05_picking_slow_easy: CMakeFiles/misc05_picking_slow_easy.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable misc05_picking_slow_easy"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/anastasia/Documents/mipt/3d-graph/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable misc05_picking_slow_easy"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/misc05_picking_slow_easy.dir/link.txt --verbose=$(VERBOSE)
-	/snap/clion/107/bin/cmake/linux/bin/cmake -E copy /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/./misc05_picking_slow_easy /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/misc05_picking/
+	/snap/clion/107/bin/cmake/linux/bin/cmake -E copy /home/anastasia/Documents/mipt/3d-graph/shooter/cmake-build-debug/./misc05_picking_slow_easy /home/anastasia/Documents/mipt/3d-graph/shooter/misc05_picking/
 
 # Rule to build all files generated by this target.
 CMakeFiles/misc05_picking_slow_easy.dir/build: misc05_picking_slow_easy
@@ -192,6 +192,6 @@ CMakeFiles/misc05_picking_slow_easy.dir/clean:
 .PHONY : CMakeFiles/misc05_picking_slow_easy.dir/clean
 
 CMakeFiles/misc05_picking_slow_easy.dir/depend:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anastasia/Documents/mipt/3d-graph/repositories/shooter /home/anastasia/Documents/mipt/3d-graph/repositories/shooter /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles/misc05_picking_slow_easy.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/anastasia/Documents/mipt/3d-graph/shooter/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anastasia/Documents/mipt/3d-graph/shooter /home/anastasia/Documents/mipt/3d-graph/shooter /home/anastasia/Documents/mipt/3d-graph/shooter/cmake-build-debug /home/anastasia/Documents/mipt/3d-graph/shooter/cmake-build-debug /home/anastasia/Documents/mipt/3d-graph/shooter/cmake-build-debug/CMakeFiles/misc05_picking_slow_easy.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/misc05_picking_slow_easy.dir/depend
 

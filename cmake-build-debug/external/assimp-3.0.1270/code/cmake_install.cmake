@@ -1,4 +1,4 @@
-# Install script for directory: /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code
+# Install script for directory: /home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,7 +38,7 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xlibassimp3.0-r1270-OGLtutsx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external/assimp-3.0.1270/code/libassimp.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/anastasia/Documents/mipt/3d-graph/shooter/cmake-build-debug/external/assimp-3.0.1270/code/libassimp.a")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -51,45 +51,45 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
 file(INSTALL DESTINATION "/assimp" TYPE FILE FILES
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/../include/assimp/anim.h"
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/../include/assimp/ai_assert.h"
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/../include/assimp/camera.h"
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/../include/assimp/color4.h"
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/../include/assimp/color4.inl"
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/../include/assimp/config.h"
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/../include/assimp/defs.h"
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/../include/assimp/cfileio.h"
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/../include/assimp/light.h"
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/../include/assimp/material.h"
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/../include/assimp/material.inl"
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/../include/assimp/matrix3x3.h"
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/../include/assimp/matrix3x3.inl"
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/../include/assimp/matrix4x4.h"
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/../include/assimp/matrix4x4.inl"
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/../include/assimp/mesh.h"
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/../include/assimp/postprocess.h"
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/../include/assimp/quaternion.h"
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/../include/assimp/quaternion.inl"
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/../include/assimp/scene.h"
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/../include/assimp/texture.h"
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/../include/assimp/types.h"
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/../include/assimp/vector2.h"
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/../include/assimp/vector2.inl"
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/../include/assimp/vector3.h"
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/../include/assimp/vector3.inl"
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/../include/assimp/version.h"
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/../include/assimp/cimport.h"
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/../include/assimp/importerdesc.h"
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/../include/assimp/Importer.hpp"
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/../include/assimp/DefaultLogger.hpp"
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/../include/assimp/ProgressHandler.hpp"
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/../include/assimp/IOStream.hpp"
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/../include/assimp/IOSystem.hpp"
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/../include/assimp/Logger.hpp"
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/../include/assimp/LogStream.hpp"
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/../include/assimp/NullLogger.hpp"
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/../include/assimp/cexport.h"
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/../include/assimp/Exporter.hpp"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/../include/assimp/anim.h"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/../include/assimp/ai_assert.h"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/../include/assimp/camera.h"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/../include/assimp/color4.h"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/../include/assimp/color4.inl"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/../include/assimp/config.h"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/../include/assimp/defs.h"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/../include/assimp/cfileio.h"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/../include/assimp/light.h"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/../include/assimp/material.h"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/../include/assimp/material.inl"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/../include/assimp/matrix3x3.h"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/../include/assimp/matrix3x3.inl"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/../include/assimp/matrix4x4.h"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/../include/assimp/matrix4x4.inl"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/../include/assimp/mesh.h"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/../include/assimp/postprocess.h"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/../include/assimp/quaternion.h"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/../include/assimp/quaternion.inl"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/../include/assimp/scene.h"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/../include/assimp/texture.h"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/../include/assimp/types.h"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/../include/assimp/vector2.h"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/../include/assimp/vector2.inl"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/../include/assimp/vector3.h"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/../include/assimp/vector3.inl"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/../include/assimp/version.h"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/../include/assimp/cimport.h"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/../include/assimp/importerdesc.h"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/../include/assimp/Importer.hpp"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/../include/assimp/DefaultLogger.hpp"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/../include/assimp/ProgressHandler.hpp"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/../include/assimp/IOStream.hpp"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/../include/assimp/IOSystem.hpp"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/../include/assimp/Logger.hpp"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/../include/assimp/LogStream.hpp"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/../include/assimp/NullLogger.hpp"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/../include/assimp/cexport.h"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/../include/assimp/Exporter.hpp"
     )
 endif()
 
@@ -103,9 +103,9 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
 file(INSTALL DESTINATION "/assimp/Compiler" TYPE FILE FILES
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/../include/assimp/Compiler/pushpack1.h"
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/../include/assimp/Compiler/poppack1.h"
-    "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/pstdint.h"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/../include/assimp/Compiler/pushpack1.h"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/../include/assimp/Compiler/poppack1.h"
+    "/home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/code/pstdint.h"
     )
 endif()
 

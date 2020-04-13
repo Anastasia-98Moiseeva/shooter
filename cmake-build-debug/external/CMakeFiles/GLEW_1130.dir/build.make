@@ -43,10 +43,10 @@ RM = /snap/clion/107/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/shooter
+CMAKE_SOURCE_DIR = /home/anastasia/Documents/mipt/3d-graph/shooter
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug
+CMAKE_BINARY_DIR = /home/anastasia/Documents/mipt/3d-graph/shooter/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include external/CMakeFiles/GLEW_1130.dir/depend.make
@@ -59,16 +59,16 @@ include external/CMakeFiles/GLEW_1130.dir/flags.make
 
 external/CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.o: external/CMakeFiles/GLEW_1130.dir/flags.make
 external/CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.o: ../external/glew-1.13.0/src/glew.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object external/CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.o"
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.o   -c /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/glew-1.13.0/src/glew.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object external/CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.o"
+	cd /home/anastasia/Documents/mipt/3d-graph/shooter/cmake-build-debug/external && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.o   -c /home/anastasia/Documents/mipt/3d-graph/shooter/external/glew-1.13.0/src/glew.c
 
 external/CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.i"
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/glew-1.13.0/src/glew.c > CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.i
+	cd /home/anastasia/Documents/mipt/3d-graph/shooter/cmake-build-debug/external && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/shooter/external/glew-1.13.0/src/glew.c > CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.i
 
 external/CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.s"
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/glew-1.13.0/src/glew.c -o CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.s
+	cd /home/anastasia/Documents/mipt/3d-graph/shooter/cmake-build-debug/external && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/shooter/external/glew-1.13.0/src/glew.c -o CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.s
 
 # Object files for target GLEW_1130
 GLEW_1130_OBJECTS = \
@@ -80,9 +80,9 @@ GLEW_1130_EXTERNAL_OBJECTS =
 external/libGLEW_1130.a: external/CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.o
 external/libGLEW_1130.a: external/CMakeFiles/GLEW_1130.dir/build.make
 external/libGLEW_1130.a: external/CMakeFiles/GLEW_1130.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libGLEW_1130.a"
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external && $(CMAKE_COMMAND) -P CMakeFiles/GLEW_1130.dir/cmake_clean_target.cmake
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GLEW_1130.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/anastasia/Documents/mipt/3d-graph/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libGLEW_1130.a"
+	cd /home/anastasia/Documents/mipt/3d-graph/shooter/cmake-build-debug/external && $(CMAKE_COMMAND) -P CMakeFiles/GLEW_1130.dir/cmake_clean_target.cmake
+	cd /home/anastasia/Documents/mipt/3d-graph/shooter/cmake-build-debug/external && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GLEW_1130.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 external/CMakeFiles/GLEW_1130.dir/build: external/libGLEW_1130.a
@@ -90,10 +90,10 @@ external/CMakeFiles/GLEW_1130.dir/build: external/libGLEW_1130.a
 .PHONY : external/CMakeFiles/GLEW_1130.dir/build
 
 external/CMakeFiles/GLEW_1130.dir/clean:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external && $(CMAKE_COMMAND) -P CMakeFiles/GLEW_1130.dir/cmake_clean.cmake
+	cd /home/anastasia/Documents/mipt/3d-graph/shooter/cmake-build-debug/external && $(CMAKE_COMMAND) -P CMakeFiles/GLEW_1130.dir/cmake_clean.cmake
 .PHONY : external/CMakeFiles/GLEW_1130.dir/clean
 
 external/CMakeFiles/GLEW_1130.dir/depend:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anastasia/Documents/mipt/3d-graph/repositories/shooter /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external/CMakeFiles/GLEW_1130.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/anastasia/Documents/mipt/3d-graph/shooter/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anastasia/Documents/mipt/3d-graph/shooter /home/anastasia/Documents/mipt/3d-graph/shooter/external /home/anastasia/Documents/mipt/3d-graph/shooter/cmake-build-debug /home/anastasia/Documents/mipt/3d-graph/shooter/cmake-build-debug/external /home/anastasia/Documents/mipt/3d-graph/shooter/cmake-build-debug/external/CMakeFiles/GLEW_1130.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : external/CMakeFiles/GLEW_1130.dir/depend
 

@@ -6,5 +6,5 @@ C_FLAGS = -g   -Wall
 
 C_DEFINES = -DGLEW_STATIC -DTW_NO_DIRECT3D -DTW_NO_LIB_PRAGMA -DTW_STATIC -D_CRT_SECURE_NO_WARNINGS
 
-C_INCLUDES = -I/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/glfw-3.1.2/include -I/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/glfw-3.1.2/deps 
+C_INCLUDES = -I/home/anastasia/Documents/mipt/3d-graph/shooter/external/glfw-3.1.2/include -I/home/anastasia/Documents/mipt/3d-graph/shooter/external/glfw-3.1.2/deps 
 

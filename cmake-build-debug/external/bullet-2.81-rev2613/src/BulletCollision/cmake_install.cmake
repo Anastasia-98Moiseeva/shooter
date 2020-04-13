@@ -1,4 +1,4 @@
-# Install script for directory: /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/bullet-2.81-rev2613/src/BulletCollision
+# Install script for directory: /home/anastasia/Documents/mipt/3d-graph/shooter/external/bullet-2.81-rev2613/src/BulletCollision
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

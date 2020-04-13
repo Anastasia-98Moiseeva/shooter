@@ -1,4 +1,4 @@
-# Install script for directory: /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/contrib/zlib
+# Install script for directory: /home/anastasia/Documents/mipt/3d-graph/shooter/external/assimp-3.0.1270/contrib/zlib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
