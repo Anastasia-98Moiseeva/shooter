@@ -30,3 +30,10 @@ void move(GLfloat& array1, int size, float x, float y, float z){
         }
     }
 }
+
+void resize(GLfloat& array1, int size, float k){
+    GLfloat* array = &array1;
+    for (int i = 0; i < size; i++) {
+        array[i] *= k;
+    }
+}
