@@ -56,6 +56,22 @@ add_definitions(
 	-D_CRT_SECURE_NO_WARNINGS
 )
 
+# shooter_version1
+add_executable(shooter_version1
+		shooter_version1/version1.cpp
+		common/shader.cpp
+		common/shader.hpp
+
+		shooter_version1/TransformVertexShader.vertexshader
+		shooter_version1/ColorFragmentShader.fragmentshader
+		)
+target_link_libraries(shooter_version1
+		${ALL_LIBS}
+		)
+# Xcode and Visual working directories
+set_target_properties(shooter_version1 PROPERTIES XCODE_ATTRIBUTE_CONFIGURATION_BUILD_DIR "${CMAKE_CURRENT_SOURCE_DIR}/shooter_version1/")
+create_target_launcher(shooter_version1 WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/shooter_version1/")
+
 # User playground
 add_executable(playground 
 	playground/playground.cpp
@@ -172,6 +188,10 @@ add_custom_command(
 add_custom_command(
    TARGET misc05_picking_BulletPhysics POST_BUILD
    COMMAND ${CMAKE_COMMAND} -E copy "${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_CFG_INTDIR}/misc05_picking_BulletPhysics${CMAKE_EXECUTABLE_SUFFIX}" "${CMAKE_CURRENT_SOURCE_DIR}/misc05_picking/"
+)
+add_custom_command(
+		TARGET shooter_version1 POST_BUILD
+		COMMAND ${CMAKE_COMMAND} -E copy "${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_CFG_INTDIR}/shooter_version1${CMAKE_EXECUTABLE_SUFFIX}" "${CMAKE_CURRENT_SOURCE_DIR}/shooter_version1/"
 )
 
 elseif (${CMAKE_GENERATOR} MATCHES "Xcode" )

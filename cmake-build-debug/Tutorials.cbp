@@ -37,18 +37,18 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="install/local">
+			<Target title="rebuild_cache">
 				<Option working_dir="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="misc05_picking_slow_easy">
-				<Option output="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/misc05_picking_slow_easy" prefix_auto="0" extension_auto="0"/>
+			<Target title="shooter_version1">
+				<Option output="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/shooter_version1" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -76,14 +76,14 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 misc05_picking_slow_easy"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 shooter_version1"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="misc05_picking_slow_easy/fast">
-				<Option output="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/misc05_picking_slow_easy" prefix_auto="0" extension_auto="0"/>
+			<Target title="shooter_version1/fast">
+				<Option output="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/shooter_version1" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -111,77 +111,7 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 misc05_picking_slow_easy/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="playground">
-				<Option output="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/playground" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DTW_STATIC"/>
-					<Add option="-DTW_NO_LIB_PRAGMA"/>
-					<Add option="-DTW_NO_DIRECT3D"/>
-					<Add option="-DGLEW_STATIC"/>
-					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
-					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/AntTweakBar-1.16/include"/>
-					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/glfw-3.1.2/include"/>
-					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/glm-0.9.7.1"/>
-					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/glew-1.13.0/include"/>
-					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/include"/>
-					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/bullet-2.81-rev2613/src"/>
-					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/."/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 playground"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="playground/fast">
-				<Option output="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/playground" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DTW_STATIC"/>
-					<Add option="-DTW_NO_LIB_PRAGMA"/>
-					<Add option="-DTW_NO_DIRECT3D"/>
-					<Add option="-DGLEW_STATIC"/>
-					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
-					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/AntTweakBar-1.16/include"/>
-					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/glfw-3.1.2/include"/>
-					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/glm-0.9.7.1"/>
-					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/glew-1.13.0/include"/>
-					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/include"/>
-					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/bullet-2.81-rev2613/src"/>
-					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/."/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 playground/fast"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 shooter_version1/fast"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -267,6 +197,156 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="install/local">
+				<Option working_dir="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="playground">
+				<Option output="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/playground" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DTW_STATIC"/>
+					<Add option="-DTW_NO_LIB_PRAGMA"/>
+					<Add option="-DTW_NO_DIRECT3D"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
+					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/AntTweakBar-1.16/include"/>
+					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/glfw-3.1.2/include"/>
+					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/glm-0.9.7.1"/>
+					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/glew-1.13.0/include"/>
+					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/include"/>
+					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/bullet-2.81-rev2613/src"/>
+					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/."/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 playground"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="playground/fast">
+				<Option output="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/playground" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DTW_STATIC"/>
+					<Add option="-DTW_NO_LIB_PRAGMA"/>
+					<Add option="-DTW_NO_DIRECT3D"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
+					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/AntTweakBar-1.16/include"/>
+					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/glfw-3.1.2/include"/>
+					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/glm-0.9.7.1"/>
+					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/glew-1.13.0/include"/>
+					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/include"/>
+					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/bullet-2.81-rev2613/src"/>
+					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/."/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 playground/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="misc05_picking_slow_easy">
+				<Option output="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/misc05_picking_slow_easy" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DTW_STATIC"/>
+					<Add option="-DTW_NO_LIB_PRAGMA"/>
+					<Add option="-DTW_NO_DIRECT3D"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
+					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/AntTweakBar-1.16/include"/>
+					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/glfw-3.1.2/include"/>
+					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/glm-0.9.7.1"/>
+					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/glew-1.13.0/include"/>
+					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/include"/>
+					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/bullet-2.81-rev2613/src"/>
+					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/."/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 misc05_picking_slow_easy"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="misc05_picking_slow_easy/fast">
+				<Option output="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/misc05_picking_slow_easy" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DTW_STATIC"/>
+					<Add option="-DTW_NO_LIB_PRAGMA"/>
+					<Add option="-DTW_NO_DIRECT3D"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
+					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/AntTweakBar-1.16/include"/>
+					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/glfw-3.1.2/include"/>
+					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/glm-0.9.7.1"/>
+					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/glew-1.13.0/include"/>
+					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/include"/>
+					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/bullet-2.81-rev2613/src"/>
+					<Add directory="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/."/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 misc05_picking_slow_easy/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="misc05_picking_custom">
 				<Option output="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/misc05_picking_custom" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug"/>
@@ -342,16 +422,6 @@
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="rebuild_cache">
-				<Option working_dir="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -2382,55 +2452,57 @@
 			<Option target="glfw"/>
 		</Unit>
 		<Unit filename="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/controls.cpp">
-			<Option target="misc05_picking_slow_easy"/>
 			<Option target="misc05_picking_BulletPhysics"/>
+			<Option target="misc05_picking_slow_easy"/>
 			<Option target="misc05_picking_custom"/>
 		</Unit>
 		<Unit filename="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/controls.hpp">
-			<Option target="misc05_picking_slow_easy"/>
 			<Option target="misc05_picking_BulletPhysics"/>
+			<Option target="misc05_picking_slow_easy"/>
 			<Option target="misc05_picking_custom"/>
 		</Unit>
 		<Unit filename="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/objloader.cpp">
-			<Option target="misc05_picking_slow_easy"/>
 			<Option target="misc05_picking_BulletPhysics"/>
+			<Option target="misc05_picking_slow_easy"/>
 			<Option target="misc05_picking_custom"/>
 		</Unit>
 		<Unit filename="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/objloader.hpp">
-			<Option target="misc05_picking_slow_easy"/>
 			<Option target="misc05_picking_BulletPhysics"/>
+			<Option target="misc05_picking_slow_easy"/>
 			<Option target="misc05_picking_custom"/>
 		</Unit>
 		<Unit filename="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/shader.cpp">
-			<Option target="misc05_picking_slow_easy"/>
-			<Option target="playground"/>
+			<Option target="shooter_version1"/>
 			<Option target="misc05_picking_BulletPhysics"/>
+			<Option target="playground"/>
+			<Option target="misc05_picking_slow_easy"/>
 			<Option target="misc05_picking_custom"/>
 		</Unit>
 		<Unit filename="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/shader.hpp">
-			<Option target="misc05_picking_slow_easy"/>
-			<Option target="playground"/>
+			<Option target="shooter_version1"/>
 			<Option target="misc05_picking_BulletPhysics"/>
+			<Option target="playground"/>
+			<Option target="misc05_picking_slow_easy"/>
 			<Option target="misc05_picking_custom"/>
 		</Unit>
 		<Unit filename="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/texture.cpp">
-			<Option target="misc05_picking_slow_easy"/>
 			<Option target="misc05_picking_BulletPhysics"/>
+			<Option target="misc05_picking_slow_easy"/>
 			<Option target="misc05_picking_custom"/>
 		</Unit>
 		<Unit filename="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/texture.hpp">
-			<Option target="misc05_picking_slow_easy"/>
 			<Option target="misc05_picking_BulletPhysics"/>
+			<Option target="misc05_picking_slow_easy"/>
 			<Option target="misc05_picking_custom"/>
 		</Unit>
 		<Unit filename="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/vboindexer.cpp">
-			<Option target="misc05_picking_slow_easy"/>
 			<Option target="misc05_picking_BulletPhysics"/>
+			<Option target="misc05_picking_slow_easy"/>
 			<Option target="misc05_picking_custom"/>
 		</Unit>
 		<Unit filename="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/vboindexer.hpp">
-			<Option target="misc05_picking_slow_easy"/>
 			<Option target="misc05_picking_BulletPhysics"/>
+			<Option target="misc05_picking_slow_easy"/>
 			<Option target="misc05_picking_custom"/>
 		</Unit>
 		<Unit filename="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/AntTweakBar-1.16/src/AntPerfTimer.h">
@@ -4738,13 +4810,13 @@
 			<Option target="misc05_picking_slow_easy"/>
 		</Unit>
 		<Unit filename="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/misc05_picking/StandardShading.fragmentshader">
-			<Option target="misc05_picking_slow_easy"/>
 			<Option target="misc05_picking_BulletPhysics"/>
+			<Option target="misc05_picking_slow_easy"/>
 			<Option target="misc05_picking_custom"/>
 		</Unit>
 		<Unit filename="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/misc05_picking/StandardShading.vertexshader">
-			<Option target="misc05_picking_slow_easy"/>
 			<Option target="misc05_picking_BulletPhysics"/>
+			<Option target="misc05_picking_slow_easy"/>
 			<Option target="misc05_picking_custom"/>
 		</Unit>
 		<Unit filename="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/misc05_picking/misc05_picking_BulletPhysics.cpp">
@@ -4758,6 +4830,15 @@
 		</Unit>
 		<Unit filename="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/playground/playground.cpp">
 			<Option target="playground"/>
+		</Unit>
+		<Unit filename="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/shooter_version1/ColorFragmentShader.fragmentshader">
+			<Option target="shooter_version1"/>
+		</Unit>
+		<Unit filename="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/shooter_version1/TransformVertexShader.vertexshader">
+			<Option target="shooter_version1"/>
+		</Unit>
+		<Unit filename="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/shooter_version1/version1.cpp">
+			<Option target="shooter_version1"/>
 		</Unit>
 		<Unit filename="/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

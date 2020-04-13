@@ -78,17 +78,16 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/snap/clion/107/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/snap/clion/107/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
 
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/snap/clion/107/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # Special rule for the target install
 install: preinstall
@@ -102,6 +101,18 @@ install/fast: preinstall/fast
 	/snap/clion/107/bin/cmake/linux/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/snap/clion/107/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/snap/clion/107/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -112,17 +123,6 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/107/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -157,17 +157,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named misc05_picking_slow_easy
+# Target rules for targets named shooter_version1
 
 # Build rule for target.
-misc05_picking_slow_easy: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 misc05_picking_slow_easy
-.PHONY : misc05_picking_slow_easy
+shooter_version1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 shooter_version1
+.PHONY : shooter_version1
 
 # fast build rule for target.
-misc05_picking_slow_easy/fast:
-	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/build
-.PHONY : misc05_picking_slow_easy/fast
+shooter_version1/fast:
+	$(MAKE) -f CMakeFiles/shooter_version1.dir/build.make CMakeFiles/shooter_version1.dir/build
+.PHONY : shooter_version1/fast
+
+#=============================================================================
+# Target rules for targets named misc05_picking_BulletPhysics
+
+# Build rule for target.
+misc05_picking_BulletPhysics: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 misc05_picking_BulletPhysics
+.PHONY : misc05_picking_BulletPhysics
+
+# fast build rule for target.
+misc05_picking_BulletPhysics/fast:
+	$(MAKE) -f CMakeFiles/misc05_picking_BulletPhysics.dir/build.make CMakeFiles/misc05_picking_BulletPhysics.dir/build
+.PHONY : misc05_picking_BulletPhysics/fast
 
 #=============================================================================
 # Target rules for targets named playground
@@ -183,17 +196,17 @@ playground/fast:
 .PHONY : playground/fast
 
 #=============================================================================
-# Target rules for targets named misc05_picking_BulletPhysics
+# Target rules for targets named misc05_picking_slow_easy
 
 # Build rule for target.
-misc05_picking_BulletPhysics: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 misc05_picking_BulletPhysics
-.PHONY : misc05_picking_BulletPhysics
+misc05_picking_slow_easy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 misc05_picking_slow_easy
+.PHONY : misc05_picking_slow_easy
 
 # fast build rule for target.
-misc05_picking_BulletPhysics/fast:
-	$(MAKE) -f CMakeFiles/misc05_picking_BulletPhysics.dir/build.make CMakeFiles/misc05_picking_BulletPhysics.dir/build
-.PHONY : misc05_picking_BulletPhysics/fast
+misc05_picking_slow_easy/fast:
+	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/build
+.PHONY : misc05_picking_slow_easy/fast
 
 #=============================================================================
 # Target rules for targets named misc05_picking_custom
@@ -643,8 +656,8 @@ common/controls.o: common/controls.cpp.o
 
 # target to build an object file
 common/controls.cpp.o:
-	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/controls.cpp.o
 	$(MAKE) -f CMakeFiles/misc05_picking_BulletPhysics.dir/build.make CMakeFiles/misc05_picking_BulletPhysics.dir/common/controls.cpp.o
+	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/controls.cpp.o
 	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/controls.cpp.o
 .PHONY : common/controls.cpp.o
 
@@ -654,8 +667,8 @@ common/controls.i: common/controls.cpp.i
 
 # target to preprocess a source file
 common/controls.cpp.i:
-	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/controls.cpp.i
 	$(MAKE) -f CMakeFiles/misc05_picking_BulletPhysics.dir/build.make CMakeFiles/misc05_picking_BulletPhysics.dir/common/controls.cpp.i
+	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/controls.cpp.i
 	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/controls.cpp.i
 .PHONY : common/controls.cpp.i
 
@@ -665,8 +678,8 @@ common/controls.s: common/controls.cpp.s
 
 # target to generate assembly for a file
 common/controls.cpp.s:
-	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/controls.cpp.s
 	$(MAKE) -f CMakeFiles/misc05_picking_BulletPhysics.dir/build.make CMakeFiles/misc05_picking_BulletPhysics.dir/common/controls.cpp.s
+	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/controls.cpp.s
 	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/controls.cpp.s
 .PHONY : common/controls.cpp.s
 
@@ -676,8 +689,8 @@ common/objloader.o: common/objloader.cpp.o
 
 # target to build an object file
 common/objloader.cpp.o:
-	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/objloader.cpp.o
 	$(MAKE) -f CMakeFiles/misc05_picking_BulletPhysics.dir/build.make CMakeFiles/misc05_picking_BulletPhysics.dir/common/objloader.cpp.o
+	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/objloader.cpp.o
 	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/objloader.cpp.o
 .PHONY : common/objloader.cpp.o
 
@@ -687,8 +700,8 @@ common/objloader.i: common/objloader.cpp.i
 
 # target to preprocess a source file
 common/objloader.cpp.i:
-	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/objloader.cpp.i
 	$(MAKE) -f CMakeFiles/misc05_picking_BulletPhysics.dir/build.make CMakeFiles/misc05_picking_BulletPhysics.dir/common/objloader.cpp.i
+	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/objloader.cpp.i
 	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/objloader.cpp.i
 .PHONY : common/objloader.cpp.i
 
@@ -698,8 +711,8 @@ common/objloader.s: common/objloader.cpp.s
 
 # target to generate assembly for a file
 common/objloader.cpp.s:
-	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/objloader.cpp.s
 	$(MAKE) -f CMakeFiles/misc05_picking_BulletPhysics.dir/build.make CMakeFiles/misc05_picking_BulletPhysics.dir/common/objloader.cpp.s
+	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/objloader.cpp.s
 	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/objloader.cpp.s
 .PHONY : common/objloader.cpp.s
 
@@ -709,9 +722,10 @@ common/shader.o: common/shader.cpp.o
 
 # target to build an object file
 common/shader.cpp.o:
-	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/shader.cpp.o
-	$(MAKE) -f CMakeFiles/playground.dir/build.make CMakeFiles/playground.dir/common/shader.cpp.o
+	$(MAKE) -f CMakeFiles/shooter_version1.dir/build.make CMakeFiles/shooter_version1.dir/common/shader.cpp.o
 	$(MAKE) -f CMakeFiles/misc05_picking_BulletPhysics.dir/build.make CMakeFiles/misc05_picking_BulletPhysics.dir/common/shader.cpp.o
+	$(MAKE) -f CMakeFiles/playground.dir/build.make CMakeFiles/playground.dir/common/shader.cpp.o
+	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/shader.cpp.o
 	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/shader.cpp.o
 .PHONY : common/shader.cpp.o
 
@@ -721,9 +735,10 @@ common/shader.i: common/shader.cpp.i
 
 # target to preprocess a source file
 common/shader.cpp.i:
-	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/shader.cpp.i
-	$(MAKE) -f CMakeFiles/playground.dir/build.make CMakeFiles/playground.dir/common/shader.cpp.i
+	$(MAKE) -f CMakeFiles/shooter_version1.dir/build.make CMakeFiles/shooter_version1.dir/common/shader.cpp.i
 	$(MAKE) -f CMakeFiles/misc05_picking_BulletPhysics.dir/build.make CMakeFiles/misc05_picking_BulletPhysics.dir/common/shader.cpp.i
+	$(MAKE) -f CMakeFiles/playground.dir/build.make CMakeFiles/playground.dir/common/shader.cpp.i
+	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/shader.cpp.i
 	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/shader.cpp.i
 .PHONY : common/shader.cpp.i
 
@@ -733,9 +748,10 @@ common/shader.s: common/shader.cpp.s
 
 # target to generate assembly for a file
 common/shader.cpp.s:
-	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/shader.cpp.s
-	$(MAKE) -f CMakeFiles/playground.dir/build.make CMakeFiles/playground.dir/common/shader.cpp.s
+	$(MAKE) -f CMakeFiles/shooter_version1.dir/build.make CMakeFiles/shooter_version1.dir/common/shader.cpp.s
 	$(MAKE) -f CMakeFiles/misc05_picking_BulletPhysics.dir/build.make CMakeFiles/misc05_picking_BulletPhysics.dir/common/shader.cpp.s
+	$(MAKE) -f CMakeFiles/playground.dir/build.make CMakeFiles/playground.dir/common/shader.cpp.s
+	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/shader.cpp.s
 	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/shader.cpp.s
 .PHONY : common/shader.cpp.s
 
@@ -745,8 +761,8 @@ common/texture.o: common/texture.cpp.o
 
 # target to build an object file
 common/texture.cpp.o:
-	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/texture.cpp.o
 	$(MAKE) -f CMakeFiles/misc05_picking_BulletPhysics.dir/build.make CMakeFiles/misc05_picking_BulletPhysics.dir/common/texture.cpp.o
+	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/texture.cpp.o
 	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/texture.cpp.o
 .PHONY : common/texture.cpp.o
 
@@ -756,8 +772,8 @@ common/texture.i: common/texture.cpp.i
 
 # target to preprocess a source file
 common/texture.cpp.i:
-	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/texture.cpp.i
 	$(MAKE) -f CMakeFiles/misc05_picking_BulletPhysics.dir/build.make CMakeFiles/misc05_picking_BulletPhysics.dir/common/texture.cpp.i
+	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/texture.cpp.i
 	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/texture.cpp.i
 .PHONY : common/texture.cpp.i
 
@@ -767,8 +783,8 @@ common/texture.s: common/texture.cpp.s
 
 # target to generate assembly for a file
 common/texture.cpp.s:
-	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/texture.cpp.s
 	$(MAKE) -f CMakeFiles/misc05_picking_BulletPhysics.dir/build.make CMakeFiles/misc05_picking_BulletPhysics.dir/common/texture.cpp.s
+	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/texture.cpp.s
 	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/texture.cpp.s
 .PHONY : common/texture.cpp.s
 
@@ -778,8 +794,8 @@ common/vboindexer.o: common/vboindexer.cpp.o
 
 # target to build an object file
 common/vboindexer.cpp.o:
-	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/vboindexer.cpp.o
 	$(MAKE) -f CMakeFiles/misc05_picking_BulletPhysics.dir/build.make CMakeFiles/misc05_picking_BulletPhysics.dir/common/vboindexer.cpp.o
+	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/vboindexer.cpp.o
 	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/vboindexer.cpp.o
 .PHONY : common/vboindexer.cpp.o
 
@@ -789,8 +805,8 @@ common/vboindexer.i: common/vboindexer.cpp.i
 
 # target to preprocess a source file
 common/vboindexer.cpp.i:
-	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/vboindexer.cpp.i
 	$(MAKE) -f CMakeFiles/misc05_picking_BulletPhysics.dir/build.make CMakeFiles/misc05_picking_BulletPhysics.dir/common/vboindexer.cpp.i
+	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/vboindexer.cpp.i
 	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/vboindexer.cpp.i
 .PHONY : common/vboindexer.cpp.i
 
@@ -800,8 +816,8 @@ common/vboindexer.s: common/vboindexer.cpp.s
 
 # target to generate assembly for a file
 common/vboindexer.cpp.s:
-	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/vboindexer.cpp.s
 	$(MAKE) -f CMakeFiles/misc05_picking_BulletPhysics.dir/build.make CMakeFiles/misc05_picking_BulletPhysics.dir/common/vboindexer.cpp.s
+	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/vboindexer.cpp.s
 	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/vboindexer.cpp.s
 .PHONY : common/vboindexer.cpp.s
 
@@ -913,6 +929,33 @@ playground/playground.cpp.s:
 	$(MAKE) -f CMakeFiles/playground.dir/build.make CMakeFiles/playground.dir/playground/playground.cpp.s
 .PHONY : playground/playground.cpp.s
 
+shooter_version1/version1.o: shooter_version1/version1.cpp.o
+
+.PHONY : shooter_version1/version1.o
+
+# target to build an object file
+shooter_version1/version1.cpp.o:
+	$(MAKE) -f CMakeFiles/shooter_version1.dir/build.make CMakeFiles/shooter_version1.dir/shooter_version1/version1.cpp.o
+.PHONY : shooter_version1/version1.cpp.o
+
+shooter_version1/version1.i: shooter_version1/version1.cpp.i
+
+.PHONY : shooter_version1/version1.i
+
+# target to preprocess a source file
+shooter_version1/version1.cpp.i:
+	$(MAKE) -f CMakeFiles/shooter_version1.dir/build.make CMakeFiles/shooter_version1.dir/shooter_version1/version1.cpp.i
+.PHONY : shooter_version1/version1.cpp.i
+
+shooter_version1/version1.s: shooter_version1/version1.cpp.s
+
+.PHONY : shooter_version1/version1.s
+
+# target to generate assembly for a file
+shooter_version1/version1.cpp.s:
+	$(MAKE) -f CMakeFiles/shooter_version1.dir/build.make CMakeFiles/shooter_version1.dir/shooter_version1/version1.cpp.s
+.PHONY : shooter_version1/version1.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -921,14 +964,15 @@ help:
 	@echo "... depend"
 	@echo "... install/strip"
 	@echo "... list_install_components"
-	@echo "... install/local"
-	@echo "... misc05_picking_slow_easy"
-	@echo "... playground"
+	@echo "... rebuild_cache"
+	@echo "... shooter_version1"
 	@echo "... install"
 	@echo "... misc05_picking_BulletPhysics"
+	@echo "... install/local"
+	@echo "... playground"
+	@echo "... misc05_picking_slow_easy"
 	@echo "... misc05_picking_custom"
 	@echo "... edit_cache"
-	@echo "... rebuild_cache"
 	@echo "... ANTTWEAKBAR_116_OGLCORE_GLFW"
 	@echo "... GLEW_1130"
 	@echo "... uninstall"
@@ -989,6 +1033,9 @@ help:
 	@echo "... playground/playground.o"
 	@echo "... playground/playground.i"
 	@echo "... playground/playground.s"
+	@echo "... shooter_version1/version1.o"
+	@echo "... shooter_version1/version1.i"
+	@echo "... shooter_version1/version1.s"
 .PHONY : help
 
 

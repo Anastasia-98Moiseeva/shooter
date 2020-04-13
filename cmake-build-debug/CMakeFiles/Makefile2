@@ -53,18 +53,20 @@ CMAKE_BINARY_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/misc05_picking_slow_easy.dir/all
-all: CMakeFiles/playground.dir/all
+all: CMakeFiles/shooter_version1.dir/all
 all: CMakeFiles/misc05_picking_BulletPhysics.dir/all
+all: CMakeFiles/playground.dir/all
+all: CMakeFiles/misc05_picking_slow_easy.dir/all
 all: CMakeFiles/misc05_picking_custom.dir/all
 all: external/all
 
 .PHONY : all
 
 # The main recursive "clean" target.
-clean: CMakeFiles/misc05_picking_slow_easy.dir/clean
-clean: CMakeFiles/playground.dir/clean
+clean: CMakeFiles/shooter_version1.dir/clean
 clean: CMakeFiles/misc05_picking_BulletPhysics.dir/clean
+clean: CMakeFiles/playground.dir/clean
+clean: CMakeFiles/misc05_picking_slow_easy.dir/clean
 clean: CMakeFiles/misc05_picking_custom.dir/clean
 clean: external/clean
 
@@ -74,6 +76,94 @@ clean: external/clean
 preinstall: external/preinstall
 
 .PHONY : preinstall
+
+#=============================================================================
+# Target rules for target CMakeFiles/shooter_version1.dir
+
+# All Build rule for target.
+CMakeFiles/shooter_version1.dir/all: external/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
+CMakeFiles/shooter_version1.dir/all: external/CMakeFiles/GLEW_1130.dir/all
+	$(MAKE) -f CMakeFiles/shooter_version1.dir/build.make CMakeFiles/shooter_version1.dir/depend
+	$(MAKE) -f CMakeFiles/shooter_version1.dir/build.make CMakeFiles/shooter_version1.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=93 "Built target shooter_version1"
+.PHONY : CMakeFiles/shooter_version1.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/shooter_version1.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 5
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/shooter_version1.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/shooter_version1.dir/rule
+
+# Convenience name for target.
+shooter_version1: CMakeFiles/shooter_version1.dir/rule
+
+.PHONY : shooter_version1
+
+# clean rule for target.
+CMakeFiles/shooter_version1.dir/clean:
+	$(MAKE) -f CMakeFiles/shooter_version1.dir/build.make CMakeFiles/shooter_version1.dir/clean
+.PHONY : CMakeFiles/shooter_version1.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/misc05_picking_BulletPhysics.dir
+
+# All Build rule for target.
+CMakeFiles/misc05_picking_BulletPhysics.dir/all: external/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
+CMakeFiles/misc05_picking_BulletPhysics.dir/all: external/CMakeFiles/GLEW_1130.dir/all
+CMakeFiles/misc05_picking_BulletPhysics.dir/all: external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/all
+CMakeFiles/misc05_picking_BulletPhysics.dir/all: external/bullet-2.81-rev2613/src/BulletCollision/CMakeFiles/BulletCollision.dir/all
+CMakeFiles/misc05_picking_BulletPhysics.dir/all: external/bullet-2.81-rev2613/src/BulletDynamics/CMakeFiles/BulletDynamics.dir/all
+CMakeFiles/misc05_picking_BulletPhysics.dir/all: external/bullet-2.81-rev2613/src/LinearMath/CMakeFiles/LinearMath.dir/all
+	$(MAKE) -f CMakeFiles/misc05_picking_BulletPhysics.dir/build.make CMakeFiles/misc05_picking_BulletPhysics.dir/depend
+	$(MAKE) -f CMakeFiles/misc05_picking_BulletPhysics.dir/build.make CMakeFiles/misc05_picking_BulletPhysics.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=83,84 "Built target misc05_picking_BulletPhysics"
+.PHONY : CMakeFiles/misc05_picking_BulletPhysics.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/misc05_picking_BulletPhysics.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 40
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/misc05_picking_BulletPhysics.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/misc05_picking_BulletPhysics.dir/rule
+
+# Convenience name for target.
+misc05_picking_BulletPhysics: CMakeFiles/misc05_picking_BulletPhysics.dir/rule
+
+.PHONY : misc05_picking_BulletPhysics
+
+# clean rule for target.
+CMakeFiles/misc05_picking_BulletPhysics.dir/clean:
+	$(MAKE) -f CMakeFiles/misc05_picking_BulletPhysics.dir/build.make CMakeFiles/misc05_picking_BulletPhysics.dir/clean
+.PHONY : CMakeFiles/misc05_picking_BulletPhysics.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/playground.dir
+
+# All Build rule for target.
+CMakeFiles/playground.dir/all: external/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
+CMakeFiles/playground.dir/all: external/CMakeFiles/GLEW_1130.dir/all
+	$(MAKE) -f CMakeFiles/playground.dir/build.make CMakeFiles/playground.dir/depend
+	$(MAKE) -f CMakeFiles/playground.dir/build.make CMakeFiles/playground.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=91 "Built target playground"
+.PHONY : CMakeFiles/playground.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/playground.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 5
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/playground.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/playground.dir/rule
+
+# Convenience name for target.
+playground: CMakeFiles/playground.dir/rule
+
+.PHONY : playground
+
+# clean rule for target.
+CMakeFiles/playground.dir/clean:
+	$(MAKE) -f CMakeFiles/playground.dir/build.make CMakeFiles/playground.dir/clean
+.PHONY : CMakeFiles/playground.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/misc05_picking_slow_easy.dir
@@ -105,66 +195,6 @@ CMakeFiles/misc05_picking_slow_easy.dir/clean:
 .PHONY : CMakeFiles/misc05_picking_slow_easy.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/playground.dir
-
-# All Build rule for target.
-CMakeFiles/playground.dir/all: external/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
-CMakeFiles/playground.dir/all: external/CMakeFiles/GLEW_1130.dir/all
-	$(MAKE) -f CMakeFiles/playground.dir/build.make CMakeFiles/playground.dir/depend
-	$(MAKE) -f CMakeFiles/playground.dir/build.make CMakeFiles/playground.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=92 "Built target playground"
-.PHONY : CMakeFiles/playground.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/playground.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 5
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/playground.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/playground.dir/rule
-
-# Convenience name for target.
-playground: CMakeFiles/playground.dir/rule
-
-.PHONY : playground
-
-# clean rule for target.
-CMakeFiles/playground.dir/clean:
-	$(MAKE) -f CMakeFiles/playground.dir/build.make CMakeFiles/playground.dir/clean
-.PHONY : CMakeFiles/playground.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/misc05_picking_BulletPhysics.dir
-
-# All Build rule for target.
-CMakeFiles/misc05_picking_BulletPhysics.dir/all: external/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
-CMakeFiles/misc05_picking_BulletPhysics.dir/all: external/CMakeFiles/GLEW_1130.dir/all
-CMakeFiles/misc05_picking_BulletPhysics.dir/all: external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/all
-CMakeFiles/misc05_picking_BulletPhysics.dir/all: external/bullet-2.81-rev2613/src/BulletCollision/CMakeFiles/BulletCollision.dir/all
-CMakeFiles/misc05_picking_BulletPhysics.dir/all: external/bullet-2.81-rev2613/src/BulletDynamics/CMakeFiles/BulletDynamics.dir/all
-CMakeFiles/misc05_picking_BulletPhysics.dir/all: external/bullet-2.81-rev2613/src/LinearMath/CMakeFiles/LinearMath.dir/all
-	$(MAKE) -f CMakeFiles/misc05_picking_BulletPhysics.dir/build.make CMakeFiles/misc05_picking_BulletPhysics.dir/depend
-	$(MAKE) -f CMakeFiles/misc05_picking_BulletPhysics.dir/build.make CMakeFiles/misc05_picking_BulletPhysics.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=84,85 "Built target misc05_picking_BulletPhysics"
-.PHONY : CMakeFiles/misc05_picking_BulletPhysics.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/misc05_picking_BulletPhysics.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 40
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/misc05_picking_BulletPhysics.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/misc05_picking_BulletPhysics.dir/rule
-
-# Convenience name for target.
-misc05_picking_BulletPhysics: CMakeFiles/misc05_picking_BulletPhysics.dir/rule
-
-.PHONY : misc05_picking_BulletPhysics
-
-# clean rule for target.
-CMakeFiles/misc05_picking_BulletPhysics.dir/clean:
-	$(MAKE) -f CMakeFiles/misc05_picking_BulletPhysics.dir/build.make CMakeFiles/misc05_picking_BulletPhysics.dir/clean
-.PHONY : CMakeFiles/misc05_picking_BulletPhysics.dir/clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/misc05_picking_custom.dir
 
 # All Build rule for target.
@@ -173,12 +203,12 @@ CMakeFiles/misc05_picking_custom.dir/all: external/CMakeFiles/GLEW_1130.dir/all
 CMakeFiles/misc05_picking_custom.dir/all: external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/all
 	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/depend
 	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=86 "Built target misc05_picking_custom"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=85,86 "Built target misc05_picking_custom"
 .PHONY : CMakeFiles/misc05_picking_custom.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/misc05_picking_custom.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/misc05_picking_custom.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/misc05_picking_custom.dir/rule
@@ -267,12 +297,12 @@ external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/clean:
 external/CMakeFiles/GLEW_1130.dir/all:
 	$(MAKE) -f external/CMakeFiles/GLEW_1130.dir/build.make external/CMakeFiles/GLEW_1130.dir/depend
 	$(MAKE) -f external/CMakeFiles/GLEW_1130.dir/build.make external/CMakeFiles/GLEW_1130.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num= "Built target GLEW_1130"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=35 "Built target GLEW_1130"
 .PHONY : external/CMakeFiles/GLEW_1130.dir/all
 
 # Build rule for subdir invocation for target.
 external/CMakeFiles/GLEW_1130.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 external/CMakeFiles/GLEW_1130.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 0
 .PHONY : external/CMakeFiles/GLEW_1130.dir/rule
@@ -364,12 +394,12 @@ external/glfw-3.1.2/src/preinstall:
 external/glfw-3.1.2/src/CMakeFiles/glfw.dir/all:
 	$(MAKE) -f external/glfw-3.1.2/src/CMakeFiles/glfw.dir/build.make external/glfw-3.1.2/src/CMakeFiles/glfw.dir/depend
 	$(MAKE) -f external/glfw-3.1.2/src/CMakeFiles/glfw.dir/build.make external/glfw-3.1.2/src/CMakeFiles/glfw.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=77,78,79,80 "Built target glfw"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=77,78,79 "Built target glfw"
 .PHONY : external/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw-3.1.2/src/CMakeFiles/glfw.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 external/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 0
 .PHONY : external/glfw-3.1.2/src/CMakeFiles/glfw.dir/rule
@@ -426,7 +456,7 @@ external/glfw-3.1.2/examples/CMakeFiles/wave.dir/all: external/glfw-3.1.2/src/CM
 
 # Build rule for subdir invocation for target.
 external/glfw-3.1.2/examples/CMakeFiles/wave.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 external/glfw-3.1.2/examples/CMakeFiles/wave.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 0
 .PHONY : external/glfw-3.1.2/examples/CMakeFiles/wave.dir/rule
@@ -448,7 +478,7 @@ external/glfw-3.1.2/examples/CMakeFiles/wave.dir/clean:
 external/glfw-3.1.2/examples/CMakeFiles/gears.dir/all: external/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f external/glfw-3.1.2/examples/CMakeFiles/gears.dir/build.make external/glfw-3.1.2/examples/CMakeFiles/gears.dir/depend
 	$(MAKE) -f external/glfw-3.1.2/examples/CMakeFiles/gears.dir/build.make external/glfw-3.1.2/examples/CMakeFiles/gears.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num= "Built target gears"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=76 "Built target gears"
 .PHONY : external/glfw-3.1.2/examples/CMakeFiles/gears.dir/all
 
 # Build rule for subdir invocation for target.
@@ -475,12 +505,12 @@ external/glfw-3.1.2/examples/CMakeFiles/gears.dir/clean:
 external/glfw-3.1.2/examples/CMakeFiles/boing.dir/all: external/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f external/glfw-3.1.2/examples/CMakeFiles/boing.dir/build.make external/glfw-3.1.2/examples/CMakeFiles/boing.dir/depend
 	$(MAKE) -f external/glfw-3.1.2/examples/CMakeFiles/boing.dir/build.make external/glfw-3.1.2/examples/CMakeFiles/boing.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=72 "Built target boing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num= "Built target boing"
 .PHONY : external/glfw-3.1.2/examples/CMakeFiles/boing.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw-3.1.2/examples/CMakeFiles/boing.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 external/glfw-3.1.2/examples/CMakeFiles/boing.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 0
 .PHONY : external/glfw-3.1.2/examples/CMakeFiles/boing.dir/rule
@@ -502,7 +532,7 @@ external/glfw-3.1.2/examples/CMakeFiles/boing.dir/clean:
 external/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/all: external/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f external/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/build.make external/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/depend
 	$(MAKE) -f external/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/build.make external/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num= "Built target heightmap"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=81 "Built target heightmap"
 .PHONY : external/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/all
 
 # Build rule for subdir invocation for target.
@@ -529,12 +559,12 @@ external/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/clean:
 external/glfw-3.1.2/examples/CMakeFiles/particles.dir/all: external/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f external/glfw-3.1.2/examples/CMakeFiles/particles.dir/build.make external/glfw-3.1.2/examples/CMakeFiles/particles.dir/depend
 	$(MAKE) -f external/glfw-3.1.2/examples/CMakeFiles/particles.dir/build.make external/glfw-3.1.2/examples/CMakeFiles/particles.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=91 "Built target particles"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=90 "Built target particles"
 .PHONY : external/glfw-3.1.2/examples/CMakeFiles/particles.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw-3.1.2/examples/CMakeFiles/particles.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 external/glfw-3.1.2/examples/CMakeFiles/particles.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 0
 .PHONY : external/glfw-3.1.2/examples/CMakeFiles/particles.dir/rule
@@ -561,7 +591,7 @@ external/glfw-3.1.2/examples/CMakeFiles/splitview.dir/all: external/glfw-3.1.2/s
 
 # Build rule for subdir invocation for target.
 external/glfw-3.1.2/examples/CMakeFiles/splitview.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 external/glfw-3.1.2/examples/CMakeFiles/splitview.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 0
 .PHONY : external/glfw-3.1.2/examples/CMakeFiles/splitview.dir/rule
@@ -588,7 +618,7 @@ external/glfw-3.1.2/examples/CMakeFiles/simple.dir/all: external/glfw-3.1.2/src/
 
 # Build rule for subdir invocation for target.
 external/glfw-3.1.2/examples/CMakeFiles/simple.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 external/glfw-3.1.2/examples/CMakeFiles/simple.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 0
 .PHONY : external/glfw-3.1.2/examples/CMakeFiles/simple.dir/rule
@@ -658,7 +688,7 @@ external/glfw-3.1.2/tests/preinstall:
 external/glfw-3.1.2/tests/CMakeFiles/cursor.dir/all: external/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f external/glfw-3.1.2/tests/CMakeFiles/cursor.dir/build.make external/glfw-3.1.2/tests/CMakeFiles/cursor.dir/depend
 	$(MAKE) -f external/glfw-3.1.2/tests/CMakeFiles/cursor.dir/build.make external/glfw-3.1.2/tests/CMakeFiles/cursor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num= "Built target cursor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=73 "Built target cursor"
 .PHONY : external/glfw-3.1.2/tests/CMakeFiles/cursor.dir/all
 
 # Build rule for subdir invocation for target.
@@ -685,12 +715,12 @@ external/glfw-3.1.2/tests/CMakeFiles/cursor.dir/clean:
 external/glfw-3.1.2/tests/CMakeFiles/msaa.dir/all: external/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f external/glfw-3.1.2/tests/CMakeFiles/msaa.dir/build.make external/glfw-3.1.2/tests/CMakeFiles/msaa.dir/depend
 	$(MAKE) -f external/glfw-3.1.2/tests/CMakeFiles/msaa.dir/build.make external/glfw-3.1.2/tests/CMakeFiles/msaa.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=90 "Built target msaa"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=89 "Built target msaa"
 .PHONY : external/glfw-3.1.2/tests/CMakeFiles/msaa.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw-3.1.2/tests/CMakeFiles/msaa.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 external/glfw-3.1.2/tests/CMakeFiles/msaa.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 0
 .PHONY : external/glfw-3.1.2/tests/CMakeFiles/msaa.dir/rule
@@ -712,12 +742,12 @@ external/glfw-3.1.2/tests/CMakeFiles/msaa.dir/clean:
 external/glfw-3.1.2/tests/CMakeFiles/events.dir/all: external/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f external/glfw-3.1.2/tests/CMakeFiles/events.dir/build.make external/glfw-3.1.2/tests/CMakeFiles/events.dir/depend
 	$(MAKE) -f external/glfw-3.1.2/tests/CMakeFiles/events.dir/build.make external/glfw-3.1.2/tests/CMakeFiles/events.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=75 "Built target events"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num= "Built target events"
 .PHONY : external/glfw-3.1.2/tests/CMakeFiles/events.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw-3.1.2/tests/CMakeFiles/events.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 external/glfw-3.1.2/tests/CMakeFiles/events.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 0
 .PHONY : external/glfw-3.1.2/tests/CMakeFiles/events.dir/rule
@@ -739,12 +769,12 @@ external/glfw-3.1.2/tests/CMakeFiles/events.dir/clean:
 external/glfw-3.1.2/tests/CMakeFiles/glfwinfo.dir/all: external/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f external/glfw-3.1.2/tests/CMakeFiles/glfwinfo.dir/build.make external/glfw-3.1.2/tests/CMakeFiles/glfwinfo.dir/depend
 	$(MAKE) -f external/glfw-3.1.2/tests/CMakeFiles/glfwinfo.dir/build.make external/glfw-3.1.2/tests/CMakeFiles/glfwinfo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=81 "Built target glfwinfo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=80 "Built target glfwinfo"
 .PHONY : external/glfw-3.1.2/tests/CMakeFiles/glfwinfo.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw-3.1.2/tests/CMakeFiles/glfwinfo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 external/glfw-3.1.2/tests/CMakeFiles/glfwinfo.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 0
 .PHONY : external/glfw-3.1.2/tests/CMakeFiles/glfwinfo.dir/rule
@@ -771,7 +801,7 @@ external/glfw-3.1.2/tests/CMakeFiles/threads.dir/all: external/glfw-3.1.2/src/CM
 
 # Build rule for subdir invocation for target.
 external/glfw-3.1.2/tests/CMakeFiles/threads.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 external/glfw-3.1.2/tests/CMakeFiles/threads.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 0
 .PHONY : external/glfw-3.1.2/tests/CMakeFiles/threads.dir/rule
@@ -793,12 +823,12 @@ external/glfw-3.1.2/tests/CMakeFiles/threads.dir/clean:
 external/glfw-3.1.2/tests/CMakeFiles/clipboard.dir/all: external/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f external/glfw-3.1.2/tests/CMakeFiles/clipboard.dir/build.make external/glfw-3.1.2/tests/CMakeFiles/clipboard.dir/depend
 	$(MAKE) -f external/glfw-3.1.2/tests/CMakeFiles/clipboard.dir/build.make external/glfw-3.1.2/tests/CMakeFiles/clipboard.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=73 "Built target clipboard"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=72 "Built target clipboard"
 .PHONY : external/glfw-3.1.2/tests/CMakeFiles/clipboard.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw-3.1.2/tests/CMakeFiles/clipboard.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 external/glfw-3.1.2/tests/CMakeFiles/clipboard.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 0
 .PHONY : external/glfw-3.1.2/tests/CMakeFiles/clipboard.dir/rule
@@ -820,12 +850,12 @@ external/glfw-3.1.2/tests/CMakeFiles/clipboard.dir/clean:
 external/glfw-3.1.2/tests/CMakeFiles/monitors.dir/all: external/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f external/glfw-3.1.2/tests/CMakeFiles/monitors.dir/build.make external/glfw-3.1.2/tests/CMakeFiles/monitors.dir/depend
 	$(MAKE) -f external/glfw-3.1.2/tests/CMakeFiles/monitors.dir/build.make external/glfw-3.1.2/tests/CMakeFiles/monitors.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=89 "Built target monitors"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num= "Built target monitors"
 .PHONY : external/glfw-3.1.2/tests/CMakeFiles/monitors.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw-3.1.2/tests/CMakeFiles/monitors.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 external/glfw-3.1.2/tests/CMakeFiles/monitors.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 0
 .PHONY : external/glfw-3.1.2/tests/CMakeFiles/monitors.dir/rule
@@ -852,7 +882,7 @@ external/glfw-3.1.2/tests/CMakeFiles/iconify.dir/all: external/glfw-3.1.2/src/CM
 
 # Build rule for subdir invocation for target.
 external/glfw-3.1.2/tests/CMakeFiles/iconify.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 external/glfw-3.1.2/tests/CMakeFiles/iconify.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 0
 .PHONY : external/glfw-3.1.2/tests/CMakeFiles/iconify.dir/rule
@@ -874,12 +904,12 @@ external/glfw-3.1.2/tests/CMakeFiles/iconify.dir/clean:
 external/glfw-3.1.2/tests/CMakeFiles/gamma.dir/all: external/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f external/glfw-3.1.2/tests/CMakeFiles/gamma.dir/build.make external/glfw-3.1.2/tests/CMakeFiles/gamma.dir/depend
 	$(MAKE) -f external/glfw-3.1.2/tests/CMakeFiles/gamma.dir/build.make external/glfw-3.1.2/tests/CMakeFiles/gamma.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=76 "Built target gamma"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=75 "Built target gamma"
 .PHONY : external/glfw-3.1.2/tests/CMakeFiles/gamma.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw-3.1.2/tests/CMakeFiles/gamma.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 external/glfw-3.1.2/tests/CMakeFiles/gamma.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 0
 .PHONY : external/glfw-3.1.2/tests/CMakeFiles/gamma.dir/rule
@@ -901,12 +931,12 @@ external/glfw-3.1.2/tests/CMakeFiles/gamma.dir/clean:
 external/glfw-3.1.2/tests/CMakeFiles/sharing.dir/all: external/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f external/glfw-3.1.2/tests/CMakeFiles/sharing.dir/build.make external/glfw-3.1.2/tests/CMakeFiles/sharing.dir/depend
 	$(MAKE) -f external/glfw-3.1.2/tests/CMakeFiles/sharing.dir/build.make external/glfw-3.1.2/tests/CMakeFiles/sharing.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=93 "Built target sharing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=92 "Built target sharing"
 .PHONY : external/glfw-3.1.2/tests/CMakeFiles/sharing.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw-3.1.2/tests/CMakeFiles/sharing.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 external/glfw-3.1.2/tests/CMakeFiles/sharing.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 0
 .PHONY : external/glfw-3.1.2/tests/CMakeFiles/sharing.dir/rule
@@ -928,12 +958,12 @@ external/glfw-3.1.2/tests/CMakeFiles/sharing.dir/clean:
 external/glfw-3.1.2/tests/CMakeFiles/joysticks.dir/all: external/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f external/glfw-3.1.2/tests/CMakeFiles/joysticks.dir/build.make external/glfw-3.1.2/tests/CMakeFiles/joysticks.dir/depend
 	$(MAKE) -f external/glfw-3.1.2/tests/CMakeFiles/joysticks.dir/build.make external/glfw-3.1.2/tests/CMakeFiles/joysticks.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=83 "Built target joysticks"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num= "Built target joysticks"
 .PHONY : external/glfw-3.1.2/tests/CMakeFiles/joysticks.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw-3.1.2/tests/CMakeFiles/joysticks.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 external/glfw-3.1.2/tests/CMakeFiles/joysticks.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 0
 .PHONY : external/glfw-3.1.2/tests/CMakeFiles/joysticks.dir/rule
@@ -960,7 +990,7 @@ external/glfw-3.1.2/tests/CMakeFiles/title.dir/all: external/glfw-3.1.2/src/CMak
 
 # Build rule for subdir invocation for target.
 external/glfw-3.1.2/tests/CMakeFiles/title.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 external/glfw-3.1.2/tests/CMakeFiles/title.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 0
 .PHONY : external/glfw-3.1.2/tests/CMakeFiles/title.dir/rule
@@ -987,7 +1017,7 @@ external/glfw-3.1.2/tests/CMakeFiles/reopen.dir/all: external/glfw-3.1.2/src/CMa
 
 # Build rule for subdir invocation for target.
 external/glfw-3.1.2/tests/CMakeFiles/reopen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 external/glfw-3.1.2/tests/CMakeFiles/reopen.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 0
 .PHONY : external/glfw-3.1.2/tests/CMakeFiles/reopen.dir/rule
@@ -1014,7 +1044,7 @@ external/glfw-3.1.2/tests/CMakeFiles/empty.dir/all: external/glfw-3.1.2/src/CMak
 
 # Build rule for subdir invocation for target.
 external/glfw-3.1.2/tests/CMakeFiles/empty.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 external/glfw-3.1.2/tests/CMakeFiles/empty.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 0
 .PHONY : external/glfw-3.1.2/tests/CMakeFiles/empty.dir/rule
@@ -1041,7 +1071,7 @@ external/glfw-3.1.2/tests/CMakeFiles/tearing.dir/all: external/glfw-3.1.2/src/CM
 
 # Build rule for subdir invocation for target.
 external/glfw-3.1.2/tests/CMakeFiles/tearing.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 external/glfw-3.1.2/tests/CMakeFiles/tearing.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 0
 .PHONY : external/glfw-3.1.2/tests/CMakeFiles/tearing.dir/rule
@@ -1068,7 +1098,7 @@ external/glfw-3.1.2/tests/CMakeFiles/windows.dir/all: external/glfw-3.1.2/src/CM
 
 # Build rule for subdir invocation for target.
 external/glfw-3.1.2/tests/CMakeFiles/windows.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 external/glfw-3.1.2/tests/CMakeFiles/windows.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 0
 .PHONY : external/glfw-3.1.2/tests/CMakeFiles/windows.dir/rule
@@ -1198,12 +1228,12 @@ external/bullet-2.81-rev2613/src/BulletSoftBody/preinstall:
 external/bullet-2.81-rev2613/src/BulletSoftBody/CMakeFiles/BulletSoftBody.dir/all:
 	$(MAKE) -f external/bullet-2.81-rev2613/src/BulletSoftBody/CMakeFiles/BulletSoftBody.dir/build.make external/bullet-2.81-rev2613/src/BulletSoftBody/CMakeFiles/BulletSoftBody.dir/depend
 	$(MAKE) -f external/bullet-2.81-rev2613/src/BulletSoftBody/CMakeFiles/BulletSoftBody.dir/build.make external/bullet-2.81-rev2613/src/BulletSoftBody/CMakeFiles/BulletSoftBody.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=33,34,35 "Built target BulletSoftBody"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=33,34 "Built target BulletSoftBody"
 .PHONY : external/bullet-2.81-rev2613/src/BulletSoftBody/CMakeFiles/BulletSoftBody.dir/all
 
 # Build rule for subdir invocation for target.
 external/bullet-2.81-rev2613/src/BulletSoftBody/CMakeFiles/BulletSoftBody.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 external/bullet-2.81-rev2613/src/BulletSoftBody/CMakeFiles/BulletSoftBody.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 0
 .PHONY : external/bullet-2.81-rev2613/src/BulletSoftBody/CMakeFiles/BulletSoftBody.dir/rule

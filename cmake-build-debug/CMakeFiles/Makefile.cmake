@@ -79,6 +79,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
+  "CMakeFiles/launch-shooter_version1.sh"
   "CMakeFiles/launch-playground.sh"
   "CMakeFiles/launch-misc05_picking_slow_easy.sh"
   "CMakeFiles/launch-misc05_picking_custom.sh"
@@ -99,9 +100,10 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/misc05_picking_slow_easy.dir/DependInfo.cmake"
-  "CMakeFiles/playground.dir/DependInfo.cmake"
+  "CMakeFiles/shooter_version1.dir/DependInfo.cmake"
   "CMakeFiles/misc05_picking_BulletPhysics.dir/DependInfo.cmake"
+  "CMakeFiles/playground.dir/DependInfo.cmake"
+  "CMakeFiles/misc05_picking_slow_easy.dir/DependInfo.cmake"
   "CMakeFiles/misc05_picking_custom.dir/DependInfo.cmake"
   "external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/DependInfo.cmake"
   "external/CMakeFiles/GLEW_1130.dir/DependInfo.cmake"
