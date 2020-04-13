@@ -155,7 +155,7 @@ add_executable(misc05_picking_BulletPhysics
 	
 	misc05_picking/StandardShading.vertexshader
 	misc05_picking/StandardShading.fragmentshader
-		shooter_version1/bipyramid/bipyramid.cpp)
+		shooter_version1/bipyramid/bipyramid.cpp shooter_version1/tools/move_polyhedron.cpp)
 target_link_libraries(misc05_picking_BulletPhysics
 	${ALL_LIBS}
 	ANTTWEAKBAR_116_OGLCORE_GLFW

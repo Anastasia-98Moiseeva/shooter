@@ -1,11 +1,15 @@
 #include <GL/glew.h>
+
+#include "../tools/move_polyhedron.cpp"
+
 using namespace glm;
 
-GLuint getCubeVertex() {
-    static const GLfloat g_vertex_buffer_data[] = {
+GLuint getCubeVertex(float x, float y, float z) {
+    GLfloat g_vertex_buffer_data[] = {
             -1.0f,-1.0f,-1.0f,
             -1.0f,-1.0f, 1.0f,
             -1.0f, 1.0f, 1.0f,
+
             1.0f, 1.0f,-1.0f,
             -1.0f,-1.0f,-1.0f,
             -1.0f, 1.0f,-1.0f,
@@ -40,6 +44,9 @@ GLuint getCubeVertex() {
             -1.0f, 1.0f, 1.0f,
             1.0f,-1.0f, 1.0f
     };
+
+    move(g_vertex_buffer_data, x, y, z);
+
     GLuint vertexbuffer;
     glGenBuffers(1, &vertexbuffer);
     glBindBuffer(GL_ARRAY_BUFFER, vertexbuffer);

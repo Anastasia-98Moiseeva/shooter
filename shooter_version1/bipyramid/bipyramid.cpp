@@ -1,7 +1,3 @@
-//
-// Created by anastasia on 13.04.2020.
-//
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -10,17 +6,18 @@
 
 // Include GLFW
 #include <GLFW/glfw3.h>
-GLFWwindow* window;
-
 // Include GLM
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
+
+#include "../tools/move_polyhedron.cpp"
+
 using namespace glm;
 
 #include <common/shader.hpp>
 
-GLuint getBipyramidVertex() {
-    static GLfloat g_vertex_buffer_data[] = {
+GLuint getBipyramidVertex(float x, float y, float z) {
+    GLfloat g_vertex_buffer_data[] = {
             0, 2, 0,
             0, 0, -1,
             1, 0, 0,
@@ -53,6 +50,9 @@ GLuint getBipyramidVertex() {
             0, 0, -1,
             -1, 0, 0,
     };
+
+    move(g_vertex_buffer_data, x, y, z);
+
 
     GLuint vertexbuffer;
     glGenBuffers(1, &vertexbuffer);
