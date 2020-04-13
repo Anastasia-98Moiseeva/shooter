@@ -1,5 +1,4 @@
 #pragma once
-#include "cube.h"
 #include <GL/glew.h>
 #include "shooter_version1/tools/tools.cpp"
 

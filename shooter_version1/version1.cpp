@@ -13,9 +13,10 @@ GLFWwindow* window;
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 
-//#include "cube/cube.cpp"
+#include "cube/cube.cpp"
 #include "bipyramid/bipyramid.cpp"
-//#include "polyhedron/polyhedron.cpp"
+#include "polyhedron/polyhedron.cpp"
+#include "pyramid/pyramid.cpp"
 
 using namespace glm;
 

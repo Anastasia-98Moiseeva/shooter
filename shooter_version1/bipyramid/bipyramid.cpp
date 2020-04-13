@@ -1,5 +1,4 @@
-#include "bipyramid.h"
-#pragma once
+#include "shooter_version1/tools/tools.cpp"
 
 GLuint getBipyramidVertex(float x, float y, float z) {
     GLfloat g_vertex_buffer_data[] = {

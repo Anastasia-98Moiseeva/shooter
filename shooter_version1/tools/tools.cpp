@@ -1,12 +1,14 @@
+
 #include <GL/glew.h>
+#pragma once
 
 class Tools {
-    private:
-        void move(GLfloat &array1, int size, float x, float y, float z);
-        void resize(GLfloat &array1, int size, float k);
+private:
+    void move(GLfloat &array1, int size, float x, float y, float z);
+    void resize(GLfloat &array1, int size, float k);
 
-    public:
-        void changeConfiguration(GLfloat &array1, int size, float k, float x, float y, float z);
+public:
+    void changeConfiguration(GLfloat &array1, int size, float k, float x, float y, float z);
 };
 
 void Tools::changeConfiguration(GLfloat &array1, int size, float k, float x, float y, float z) {

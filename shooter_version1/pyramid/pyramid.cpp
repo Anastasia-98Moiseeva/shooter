@@ -13,7 +13,7 @@ using namespace glm;
 
 GLfloat getPyramidVertex(float x, float y, float z) {
 
-    size = 0.25
+    float size = 0.25;
     const int num_points = 6 * 4 * 16;
 
     GLfloat g_vertex_buffer_data[num_points * 3] = {
@@ -309,10 +309,14 @@ GLfloat getPyramidVertex(float x, float y, float z) {
             size, 5 * size, size,
     };
 
-    return g_vertex_buffer_data;
+    GLuint vertexbuffer;
+    glGenBuffers(1, &vertexbuffer);
+    glBindBuffer(GL_ARRAY_BUFFER, vertexbuffer);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(g_vertex_buffer_data), g_vertex_buffer_data, GL_STATIC_DRAW);
+    return vertexbuffer;
 }
 
-void getPyramidVertex() {
+GLfloat getPyramidVertex() {
     // One color for each vertex.
     const int num_points = 6 * 4 * 16;
     static GLfloat g_color_buffer_data[num_points * 3] = { 0.0f };
@@ -323,10 +327,16 @@ void getPyramidVertex() {
     for (int i = 0; i < n_points; i++) {
         for (int k = 0; k < 3; k++) {
             float angle = 14.0f * (i * step - k / 3.0f);
-            float color = (1.0f + cos(angle)) * 2 * sizef;
+            float color = (1.0f + cos(angle)) * 2 * 0.5f;
             g_color_buffer_data[3 * i + k] = color;
         }
     }
-    return g_color_buffer_data;
+
+    GLuint colorbuffer;
+    glGenBuffers(1, &colorbuffer);
+    glBindBuffer(GL_ARRAY_BUFFER, colorbuffer);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(g_color_buffer_data), g_color_buffer_data, GL_STATIC_DRAW);
+
+    return colorbuffer;
 }
 
