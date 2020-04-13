@@ -19,7 +19,7 @@ using namespace glm;
 
 #include <common/shader.hpp>
 
-void drawFigure(GLuint cubeVertex, GLuint MatrixID, GLuint programID, glm::mat4 MVP) {
+void drawFigure(GLuint cubeVertex, GLuint cubeColor, GLuint MatrixID, GLuint programID, glm::mat4 MVP) {
 // Use our shader
     glUseProgram(programID);
 
@@ -38,11 +38,18 @@ void drawFigure(GLuint cubeVertex, GLuint MatrixID, GLuint programID, glm::mat4 
             0,                  // stride
             (void*)0            // array buffer offset
     );
-}
 
-void paintFigure(GLuint cubeColor) {
+    // 2nd attribute buffer : colors
     glEnableVertexAttribArray(1);
     glBindBuffer(GL_ARRAY_BUFFER, cubeColor);
+    glVertexAttribPointer(
+            1,                                // attribute. No particular reason for 1, but must match the layout in the shader.
+            3,                                // size
+            GL_FLOAT,                         // type
+            GL_FALSE,                         // normalized?
+            0,                                // stride
+            (void*)0                          // array buffer offset
+    );
 }
 
 int main( void )
@@ -126,25 +133,13 @@ int main( void )
         // Clear the screen
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        drawFigure(cubeVertex, MatrixID, programID, MVP);
+        drawFigure(cubeVertex, cubeColor, MatrixID, programID, MVP);
 
-        // 2nd attribute buffer : colors
-        paintFigure(cubeColor);
-        glVertexAttribPointer(
-                1,                                // attribute. No particular reason for 1, but must match the layout in the shader.
-                3,                                // size
-                GL_FLOAT,                         // type
-                GL_FALSE,                         // normalized?
-                0,                                // stride
-                (void*)0                          // array buffer offset
-        );
-
-        // Draw the triangle !
+        // Draw the points !
         glDrawArrays(GL_TRIANGLES, 0, 12*3); // 12*3 indices starting at 0 -> 12 triangles
 
         glDisableVertexAttribArray(0);
         glDisableVertexAttribArray(1);
-
 
 		// Swap buffers
 		glfwSwapBuffers(window);
