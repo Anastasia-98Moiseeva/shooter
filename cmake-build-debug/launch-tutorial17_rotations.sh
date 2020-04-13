@@ -1,6 +1,6 @@
 #!/bin/sh
 bindir=$(pwd)
-cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/tutorial17_rotations/
+cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/tutorial17_rotations/
 export 
 
 if test "x$1" = "x--debugger"; then
@@ -8,10 +8,10 @@ if test "x$1" = "x--debugger"; then
 	if test "xYES" = "xYES"; then
 		echo "r  " > $bindir/gdbscript
 		echo "bt" >> $bindir/gdbscript
-		/usr/bin/gdb -batch -command=$bindir/gdbscript --return-child-result /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/tutorial17_rotations 
+		/usr/bin/gdb -batch -command=$bindir/gdbscript --return-child-result /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/tutorial17_rotations 
 	else
-		"/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/tutorial17_rotations"  
+		"/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/tutorial17_rotations"  
 	fi
 else
-	"/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/tutorial17_rotations"  
+	"/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/tutorial17_rotations"  
 fi

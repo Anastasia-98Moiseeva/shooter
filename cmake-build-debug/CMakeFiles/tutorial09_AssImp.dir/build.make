@@ -43,10 +43,10 @@ RM = /snap/clion/107/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/ogl
+CMAKE_SOURCE_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/shooter
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug
+CMAKE_BINARY_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/tutorial09_AssImp.dir/depend.make
@@ -59,68 +59,68 @@ include CMakeFiles/tutorial09_AssImp.dir/flags.make
 
 CMakeFiles/tutorial09_AssImp.dir/tutorial09_vbo_indexing/tutorial09_AssImp.cpp.o: CMakeFiles/tutorial09_AssImp.dir/flags.make
 CMakeFiles/tutorial09_AssImp.dir/tutorial09_vbo_indexing/tutorial09_AssImp.cpp.o: ../tutorial09_vbo_indexing/tutorial09_AssImp.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/tutorial09_AssImp.dir/tutorial09_vbo_indexing/tutorial09_AssImp.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial09_AssImp.dir/tutorial09_vbo_indexing/tutorial09_AssImp.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/tutorial09_vbo_indexing/tutorial09_AssImp.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/tutorial09_AssImp.dir/tutorial09_vbo_indexing/tutorial09_AssImp.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial09_AssImp.dir/tutorial09_vbo_indexing/tutorial09_AssImp.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/tutorial09_vbo_indexing/tutorial09_AssImp.cpp
 
 CMakeFiles/tutorial09_AssImp.dir/tutorial09_vbo_indexing/tutorial09_AssImp.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tutorial09_AssImp.dir/tutorial09_vbo_indexing/tutorial09_AssImp.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/tutorial09_vbo_indexing/tutorial09_AssImp.cpp > CMakeFiles/tutorial09_AssImp.dir/tutorial09_vbo_indexing/tutorial09_AssImp.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/tutorial09_vbo_indexing/tutorial09_AssImp.cpp > CMakeFiles/tutorial09_AssImp.dir/tutorial09_vbo_indexing/tutorial09_AssImp.cpp.i
 
 CMakeFiles/tutorial09_AssImp.dir/tutorial09_vbo_indexing/tutorial09_AssImp.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tutorial09_AssImp.dir/tutorial09_vbo_indexing/tutorial09_AssImp.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/tutorial09_vbo_indexing/tutorial09_AssImp.cpp -o CMakeFiles/tutorial09_AssImp.dir/tutorial09_vbo_indexing/tutorial09_AssImp.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/tutorial09_vbo_indexing/tutorial09_AssImp.cpp -o CMakeFiles/tutorial09_AssImp.dir/tutorial09_vbo_indexing/tutorial09_AssImp.cpp.s
 
 CMakeFiles/tutorial09_AssImp.dir/common/shader.cpp.o: CMakeFiles/tutorial09_AssImp.dir/flags.make
 CMakeFiles/tutorial09_AssImp.dir/common/shader.cpp.o: ../common/shader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/tutorial09_AssImp.dir/common/shader.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial09_AssImp.dir/common/shader.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/shader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/tutorial09_AssImp.dir/common/shader.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial09_AssImp.dir/common/shader.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/shader.cpp
 
 CMakeFiles/tutorial09_AssImp.dir/common/shader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tutorial09_AssImp.dir/common/shader.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/shader.cpp > CMakeFiles/tutorial09_AssImp.dir/common/shader.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/shader.cpp > CMakeFiles/tutorial09_AssImp.dir/common/shader.cpp.i
 
 CMakeFiles/tutorial09_AssImp.dir/common/shader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tutorial09_AssImp.dir/common/shader.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/shader.cpp -o CMakeFiles/tutorial09_AssImp.dir/common/shader.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/shader.cpp -o CMakeFiles/tutorial09_AssImp.dir/common/shader.cpp.s
 
 CMakeFiles/tutorial09_AssImp.dir/common/controls.cpp.o: CMakeFiles/tutorial09_AssImp.dir/flags.make
 CMakeFiles/tutorial09_AssImp.dir/common/controls.cpp.o: ../common/controls.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/tutorial09_AssImp.dir/common/controls.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial09_AssImp.dir/common/controls.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/controls.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/tutorial09_AssImp.dir/common/controls.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial09_AssImp.dir/common/controls.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/controls.cpp
 
 CMakeFiles/tutorial09_AssImp.dir/common/controls.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tutorial09_AssImp.dir/common/controls.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/controls.cpp > CMakeFiles/tutorial09_AssImp.dir/common/controls.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/controls.cpp > CMakeFiles/tutorial09_AssImp.dir/common/controls.cpp.i
 
 CMakeFiles/tutorial09_AssImp.dir/common/controls.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tutorial09_AssImp.dir/common/controls.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/controls.cpp -o CMakeFiles/tutorial09_AssImp.dir/common/controls.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/controls.cpp -o CMakeFiles/tutorial09_AssImp.dir/common/controls.cpp.s
 
 CMakeFiles/tutorial09_AssImp.dir/common/texture.cpp.o: CMakeFiles/tutorial09_AssImp.dir/flags.make
 CMakeFiles/tutorial09_AssImp.dir/common/texture.cpp.o: ../common/texture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/tutorial09_AssImp.dir/common/texture.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial09_AssImp.dir/common/texture.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/texture.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/tutorial09_AssImp.dir/common/texture.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial09_AssImp.dir/common/texture.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/texture.cpp
 
 CMakeFiles/tutorial09_AssImp.dir/common/texture.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tutorial09_AssImp.dir/common/texture.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/texture.cpp > CMakeFiles/tutorial09_AssImp.dir/common/texture.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/texture.cpp > CMakeFiles/tutorial09_AssImp.dir/common/texture.cpp.i
 
 CMakeFiles/tutorial09_AssImp.dir/common/texture.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tutorial09_AssImp.dir/common/texture.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/texture.cpp -o CMakeFiles/tutorial09_AssImp.dir/common/texture.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/texture.cpp -o CMakeFiles/tutorial09_AssImp.dir/common/texture.cpp.s
 
 CMakeFiles/tutorial09_AssImp.dir/common/objloader.cpp.o: CMakeFiles/tutorial09_AssImp.dir/flags.make
 CMakeFiles/tutorial09_AssImp.dir/common/objloader.cpp.o: ../common/objloader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/tutorial09_AssImp.dir/common/objloader.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial09_AssImp.dir/common/objloader.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/objloader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/tutorial09_AssImp.dir/common/objloader.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial09_AssImp.dir/common/objloader.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/objloader.cpp
 
 CMakeFiles/tutorial09_AssImp.dir/common/objloader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tutorial09_AssImp.dir/common/objloader.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/objloader.cpp > CMakeFiles/tutorial09_AssImp.dir/common/objloader.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/objloader.cpp > CMakeFiles/tutorial09_AssImp.dir/common/objloader.cpp.i
 
 CMakeFiles/tutorial09_AssImp.dir/common/objloader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tutorial09_AssImp.dir/common/objloader.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/objloader.cpp -o CMakeFiles/tutorial09_AssImp.dir/common/objloader.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/objloader.cpp -o CMakeFiles/tutorial09_AssImp.dir/common/objloader.cpp.s
 
 # Object files for target tutorial09_AssImp
 tutorial09_AssImp_OBJECTS = \
@@ -164,9 +164,9 @@ tutorial09_AssImp: /usr/lib/x86_64-linux-gnu/libGL.so
 tutorial09_AssImp: /usr/lib/x86_64-linux-gnu/libGLU.so
 tutorial09_AssImp: external/assimp-3.0.1270/contrib/zlib/libz.a
 tutorial09_AssImp: CMakeFiles/tutorial09_AssImp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable tutorial09_AssImp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable tutorial09_AssImp"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tutorial09_AssImp.dir/link.txt --verbose=$(VERBOSE)
-	/snap/clion/107/bin/cmake/linux/bin/cmake -E copy /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/./tutorial09_AssImp /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/tutorial09_vbo_indexing/
+	/snap/clion/107/bin/cmake/linux/bin/cmake -E copy /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/./tutorial09_AssImp /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/tutorial09_vbo_indexing/
 
 # Rule to build all files generated by this target.
 CMakeFiles/tutorial09_AssImp.dir/build: tutorial09_AssImp
@@ -178,6 +178,6 @@ CMakeFiles/tutorial09_AssImp.dir/clean:
 .PHONY : CMakeFiles/tutorial09_AssImp.dir/clean
 
 CMakeFiles/tutorial09_AssImp.dir/depend:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anastasia/Documents/mipt/3d-graph/repositories/ogl /home/anastasia/Documents/mipt/3d-graph/repositories/ogl /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles/tutorial09_AssImp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anastasia/Documents/mipt/3d-graph/repositories/shooter /home/anastasia/Documents/mipt/3d-graph/repositories/shooter /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles/tutorial09_AssImp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/tutorial09_AssImp.dir/depend
 

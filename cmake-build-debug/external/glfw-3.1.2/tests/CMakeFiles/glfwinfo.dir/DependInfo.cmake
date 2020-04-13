@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/external/glfw-3.1.2/deps/getopt.c" "/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/external/glfw-3.1.2/tests/CMakeFiles/glfwinfo.dir/__/deps/getopt.c.o"
-  "/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/external/glfw-3.1.2/tests/glfwinfo.c" "/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/external/glfw-3.1.2/tests/CMakeFiles/glfwinfo.dir/glfwinfo.c.o"
+  "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/glfw-3.1.2/deps/getopt.c" "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external/glfw-3.1.2/tests/CMakeFiles/glfwinfo.dir/__/deps/getopt.c.o"
+  "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/glfw-3.1.2/tests/glfwinfo.c" "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external/glfw-3.1.2/tests/CMakeFiles/glfwinfo.dir/glfwinfo.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -26,7 +26,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/external/glfw-3.1.2/src/CMakeFiles/glfw.dir/DependInfo.cmake"
+  "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external/glfw-3.1.2/src/CMakeFiles/glfw.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

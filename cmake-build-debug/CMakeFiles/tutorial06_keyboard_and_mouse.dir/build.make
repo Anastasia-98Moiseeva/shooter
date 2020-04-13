@@ -43,10 +43,10 @@ RM = /snap/clion/107/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/ogl
+CMAKE_SOURCE_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/shooter
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug
+CMAKE_BINARY_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/tutorial06_keyboard_and_mouse.dir/depend.make
@@ -59,55 +59,55 @@ include CMakeFiles/tutorial06_keyboard_and_mouse.dir/flags.make
 
 CMakeFiles/tutorial06_keyboard_and_mouse.dir/tutorial06_keyboard_and_mouse/tutorial06.cpp.o: CMakeFiles/tutorial06_keyboard_and_mouse.dir/flags.make
 CMakeFiles/tutorial06_keyboard_and_mouse.dir/tutorial06_keyboard_and_mouse/tutorial06.cpp.o: ../tutorial06_keyboard_and_mouse/tutorial06.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/tutorial06_keyboard_and_mouse.dir/tutorial06_keyboard_and_mouse/tutorial06.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial06_keyboard_and_mouse.dir/tutorial06_keyboard_and_mouse/tutorial06.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/tutorial06_keyboard_and_mouse/tutorial06.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/tutorial06_keyboard_and_mouse.dir/tutorial06_keyboard_and_mouse/tutorial06.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial06_keyboard_and_mouse.dir/tutorial06_keyboard_and_mouse/tutorial06.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/tutorial06_keyboard_and_mouse/tutorial06.cpp
 
 CMakeFiles/tutorial06_keyboard_and_mouse.dir/tutorial06_keyboard_and_mouse/tutorial06.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tutorial06_keyboard_and_mouse.dir/tutorial06_keyboard_and_mouse/tutorial06.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/tutorial06_keyboard_and_mouse/tutorial06.cpp > CMakeFiles/tutorial06_keyboard_and_mouse.dir/tutorial06_keyboard_and_mouse/tutorial06.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/tutorial06_keyboard_and_mouse/tutorial06.cpp > CMakeFiles/tutorial06_keyboard_and_mouse.dir/tutorial06_keyboard_and_mouse/tutorial06.cpp.i
 
 CMakeFiles/tutorial06_keyboard_and_mouse.dir/tutorial06_keyboard_and_mouse/tutorial06.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tutorial06_keyboard_and_mouse.dir/tutorial06_keyboard_and_mouse/tutorial06.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/tutorial06_keyboard_and_mouse/tutorial06.cpp -o CMakeFiles/tutorial06_keyboard_and_mouse.dir/tutorial06_keyboard_and_mouse/tutorial06.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/tutorial06_keyboard_and_mouse/tutorial06.cpp -o CMakeFiles/tutorial06_keyboard_and_mouse.dir/tutorial06_keyboard_and_mouse/tutorial06.cpp.s
 
 CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/shader.cpp.o: CMakeFiles/tutorial06_keyboard_and_mouse.dir/flags.make
 CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/shader.cpp.o: ../common/shader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/shader.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/shader.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/shader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/shader.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/shader.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/shader.cpp
 
 CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/shader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/shader.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/shader.cpp > CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/shader.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/shader.cpp > CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/shader.cpp.i
 
 CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/shader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/shader.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/shader.cpp -o CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/shader.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/shader.cpp -o CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/shader.cpp.s
 
 CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/controls.cpp.o: CMakeFiles/tutorial06_keyboard_and_mouse.dir/flags.make
 CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/controls.cpp.o: ../common/controls.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/controls.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/controls.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/controls.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/controls.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/controls.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/controls.cpp
 
 CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/controls.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/controls.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/controls.cpp > CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/controls.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/controls.cpp > CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/controls.cpp.i
 
 CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/controls.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/controls.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/controls.cpp -o CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/controls.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/controls.cpp -o CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/controls.cpp.s
 
 CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/texture.cpp.o: CMakeFiles/tutorial06_keyboard_and_mouse.dir/flags.make
 CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/texture.cpp.o: ../common/texture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/texture.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/texture.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/texture.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/texture.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/texture.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/texture.cpp
 
 CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/texture.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/texture.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/texture.cpp > CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/texture.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/texture.cpp > CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/texture.cpp.i
 
 CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/texture.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/texture.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/texture.cpp -o CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/texture.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/texture.cpp -o CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/texture.cpp.s
 
 # Object files for target tutorial06_keyboard_and_mouse
 tutorial06_keyboard_and_mouse_OBJECTS = \
@@ -147,9 +147,9 @@ tutorial06_keyboard_and_mouse: /usr/lib/x86_64-linux-gnu/libXcursor.so
 tutorial06_keyboard_and_mouse: /usr/lib/x86_64-linux-gnu/libGL.so
 tutorial06_keyboard_and_mouse: /usr/lib/x86_64-linux-gnu/libGLU.so
 tutorial06_keyboard_and_mouse: CMakeFiles/tutorial06_keyboard_and_mouse.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable tutorial06_keyboard_and_mouse"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable tutorial06_keyboard_and_mouse"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tutorial06_keyboard_and_mouse.dir/link.txt --verbose=$(VERBOSE)
-	/snap/clion/107/bin/cmake/linux/bin/cmake -E copy /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/./tutorial06_keyboard_and_mouse /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/tutorial06_keyboard_and_mouse/
+	/snap/clion/107/bin/cmake/linux/bin/cmake -E copy /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/./tutorial06_keyboard_and_mouse /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/tutorial06_keyboard_and_mouse/
 
 # Rule to build all files generated by this target.
 CMakeFiles/tutorial06_keyboard_and_mouse.dir/build: tutorial06_keyboard_and_mouse
@@ -161,6 +161,6 @@ CMakeFiles/tutorial06_keyboard_and_mouse.dir/clean:
 .PHONY : CMakeFiles/tutorial06_keyboard_and_mouse.dir/clean
 
 CMakeFiles/tutorial06_keyboard_and_mouse.dir/depend:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anastasia/Documents/mipt/3d-graph/repositories/ogl /home/anastasia/Documents/mipt/3d-graph/repositories/ogl /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles/tutorial06_keyboard_and_mouse.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anastasia/Documents/mipt/3d-graph/repositories/shooter /home/anastasia/Documents/mipt/3d-graph/repositories/shooter /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles/tutorial06_keyboard_and_mouse.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/tutorial06_keyboard_and_mouse.dir/depend
 

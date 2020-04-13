@@ -43,10 +43,10 @@ RM = /snap/clion/107/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/ogl
+CMAKE_SOURCE_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/shooter
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug
+CMAKE_BINARY_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/tutorial10_transparency.dir/depend.make
@@ -59,81 +59,81 @@ include CMakeFiles/tutorial10_transparency.dir/flags.make
 
 CMakeFiles/tutorial10_transparency.dir/tutorial10_transparency/tutorial10.cpp.o: CMakeFiles/tutorial10_transparency.dir/flags.make
 CMakeFiles/tutorial10_transparency.dir/tutorial10_transparency/tutorial10.cpp.o: ../tutorial10_transparency/tutorial10.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/tutorial10_transparency.dir/tutorial10_transparency/tutorial10.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial10_transparency.dir/tutorial10_transparency/tutorial10.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/tutorial10_transparency/tutorial10.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/tutorial10_transparency.dir/tutorial10_transparency/tutorial10.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial10_transparency.dir/tutorial10_transparency/tutorial10.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/tutorial10_transparency/tutorial10.cpp
 
 CMakeFiles/tutorial10_transparency.dir/tutorial10_transparency/tutorial10.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tutorial10_transparency.dir/tutorial10_transparency/tutorial10.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/tutorial10_transparency/tutorial10.cpp > CMakeFiles/tutorial10_transparency.dir/tutorial10_transparency/tutorial10.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/tutorial10_transparency/tutorial10.cpp > CMakeFiles/tutorial10_transparency.dir/tutorial10_transparency/tutorial10.cpp.i
 
 CMakeFiles/tutorial10_transparency.dir/tutorial10_transparency/tutorial10.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tutorial10_transparency.dir/tutorial10_transparency/tutorial10.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/tutorial10_transparency/tutorial10.cpp -o CMakeFiles/tutorial10_transparency.dir/tutorial10_transparency/tutorial10.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/tutorial10_transparency/tutorial10.cpp -o CMakeFiles/tutorial10_transparency.dir/tutorial10_transparency/tutorial10.cpp.s
 
 CMakeFiles/tutorial10_transparency.dir/common/shader.cpp.o: CMakeFiles/tutorial10_transparency.dir/flags.make
 CMakeFiles/tutorial10_transparency.dir/common/shader.cpp.o: ../common/shader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/tutorial10_transparency.dir/common/shader.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial10_transparency.dir/common/shader.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/shader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/tutorial10_transparency.dir/common/shader.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial10_transparency.dir/common/shader.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/shader.cpp
 
 CMakeFiles/tutorial10_transparency.dir/common/shader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tutorial10_transparency.dir/common/shader.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/shader.cpp > CMakeFiles/tutorial10_transparency.dir/common/shader.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/shader.cpp > CMakeFiles/tutorial10_transparency.dir/common/shader.cpp.i
 
 CMakeFiles/tutorial10_transparency.dir/common/shader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tutorial10_transparency.dir/common/shader.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/shader.cpp -o CMakeFiles/tutorial10_transparency.dir/common/shader.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/shader.cpp -o CMakeFiles/tutorial10_transparency.dir/common/shader.cpp.s
 
 CMakeFiles/tutorial10_transparency.dir/common/controls.cpp.o: CMakeFiles/tutorial10_transparency.dir/flags.make
 CMakeFiles/tutorial10_transparency.dir/common/controls.cpp.o: ../common/controls.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/tutorial10_transparency.dir/common/controls.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial10_transparency.dir/common/controls.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/controls.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/tutorial10_transparency.dir/common/controls.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial10_transparency.dir/common/controls.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/controls.cpp
 
 CMakeFiles/tutorial10_transparency.dir/common/controls.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tutorial10_transparency.dir/common/controls.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/controls.cpp > CMakeFiles/tutorial10_transparency.dir/common/controls.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/controls.cpp > CMakeFiles/tutorial10_transparency.dir/common/controls.cpp.i
 
 CMakeFiles/tutorial10_transparency.dir/common/controls.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tutorial10_transparency.dir/common/controls.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/controls.cpp -o CMakeFiles/tutorial10_transparency.dir/common/controls.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/controls.cpp -o CMakeFiles/tutorial10_transparency.dir/common/controls.cpp.s
 
 CMakeFiles/tutorial10_transparency.dir/common/texture.cpp.o: CMakeFiles/tutorial10_transparency.dir/flags.make
 CMakeFiles/tutorial10_transparency.dir/common/texture.cpp.o: ../common/texture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/tutorial10_transparency.dir/common/texture.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial10_transparency.dir/common/texture.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/texture.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/tutorial10_transparency.dir/common/texture.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial10_transparency.dir/common/texture.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/texture.cpp
 
 CMakeFiles/tutorial10_transparency.dir/common/texture.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tutorial10_transparency.dir/common/texture.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/texture.cpp > CMakeFiles/tutorial10_transparency.dir/common/texture.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/texture.cpp > CMakeFiles/tutorial10_transparency.dir/common/texture.cpp.i
 
 CMakeFiles/tutorial10_transparency.dir/common/texture.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tutorial10_transparency.dir/common/texture.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/texture.cpp -o CMakeFiles/tutorial10_transparency.dir/common/texture.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/texture.cpp -o CMakeFiles/tutorial10_transparency.dir/common/texture.cpp.s
 
 CMakeFiles/tutorial10_transparency.dir/common/objloader.cpp.o: CMakeFiles/tutorial10_transparency.dir/flags.make
 CMakeFiles/tutorial10_transparency.dir/common/objloader.cpp.o: ../common/objloader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/tutorial10_transparency.dir/common/objloader.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial10_transparency.dir/common/objloader.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/objloader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/tutorial10_transparency.dir/common/objloader.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial10_transparency.dir/common/objloader.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/objloader.cpp
 
 CMakeFiles/tutorial10_transparency.dir/common/objloader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tutorial10_transparency.dir/common/objloader.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/objloader.cpp > CMakeFiles/tutorial10_transparency.dir/common/objloader.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/objloader.cpp > CMakeFiles/tutorial10_transparency.dir/common/objloader.cpp.i
 
 CMakeFiles/tutorial10_transparency.dir/common/objloader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tutorial10_transparency.dir/common/objloader.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/objloader.cpp -o CMakeFiles/tutorial10_transparency.dir/common/objloader.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/objloader.cpp -o CMakeFiles/tutorial10_transparency.dir/common/objloader.cpp.s
 
 CMakeFiles/tutorial10_transparency.dir/common/vboindexer.cpp.o: CMakeFiles/tutorial10_transparency.dir/flags.make
 CMakeFiles/tutorial10_transparency.dir/common/vboindexer.cpp.o: ../common/vboindexer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/tutorial10_transparency.dir/common/vboindexer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial10_transparency.dir/common/vboindexer.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/vboindexer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/tutorial10_transparency.dir/common/vboindexer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial10_transparency.dir/common/vboindexer.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/vboindexer.cpp
 
 CMakeFiles/tutorial10_transparency.dir/common/vboindexer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tutorial10_transparency.dir/common/vboindexer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/vboindexer.cpp > CMakeFiles/tutorial10_transparency.dir/common/vboindexer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/vboindexer.cpp > CMakeFiles/tutorial10_transparency.dir/common/vboindexer.cpp.i
 
 CMakeFiles/tutorial10_transparency.dir/common/vboindexer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tutorial10_transparency.dir/common/vboindexer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/vboindexer.cpp -o CMakeFiles/tutorial10_transparency.dir/common/vboindexer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/vboindexer.cpp -o CMakeFiles/tutorial10_transparency.dir/common/vboindexer.cpp.s
 
 # Object files for target tutorial10_transparency
 tutorial10_transparency_OBJECTS = \
@@ -177,9 +177,9 @@ tutorial10_transparency: /usr/lib/x86_64-linux-gnu/libXcursor.so
 tutorial10_transparency: /usr/lib/x86_64-linux-gnu/libGL.so
 tutorial10_transparency: /usr/lib/x86_64-linux-gnu/libGLU.so
 tutorial10_transparency: CMakeFiles/tutorial10_transparency.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable tutorial10_transparency"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable tutorial10_transparency"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tutorial10_transparency.dir/link.txt --verbose=$(VERBOSE)
-	/snap/clion/107/bin/cmake/linux/bin/cmake -E copy /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/./tutorial10_transparency /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/tutorial10_transparency/
+	/snap/clion/107/bin/cmake/linux/bin/cmake -E copy /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/./tutorial10_transparency /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/tutorial10_transparency/
 
 # Rule to build all files generated by this target.
 CMakeFiles/tutorial10_transparency.dir/build: tutorial10_transparency
@@ -191,6 +191,6 @@ CMakeFiles/tutorial10_transparency.dir/clean:
 .PHONY : CMakeFiles/tutorial10_transparency.dir/clean
 
 CMakeFiles/tutorial10_transparency.dir/depend:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anastasia/Documents/mipt/3d-graph/repositories/ogl /home/anastasia/Documents/mipt/3d-graph/repositories/ogl /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles/tutorial10_transparency.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anastasia/Documents/mipt/3d-graph/repositories/shooter /home/anastasia/Documents/mipt/3d-graph/repositories/shooter /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles/tutorial10_transparency.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/tutorial10_transparency.dir/depend
 

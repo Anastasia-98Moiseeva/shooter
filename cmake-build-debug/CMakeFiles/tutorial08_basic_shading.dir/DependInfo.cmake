@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/controls.cpp" "/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles/tutorial08_basic_shading.dir/common/controls.cpp.o"
-  "/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/objloader.cpp" "/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles/tutorial08_basic_shading.dir/common/objloader.cpp.o"
-  "/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/shader.cpp" "/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles/tutorial08_basic_shading.dir/common/shader.cpp.o"
-  "/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/texture.cpp" "/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles/tutorial08_basic_shading.dir/common/texture.cpp.o"
-  "/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/tutorial08_basic_shading/tutorial08.cpp" "/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles/tutorial08_basic_shading.dir/tutorial08_basic_shading/tutorial08.cpp.o"
+  "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/controls.cpp" "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles/tutorial08_basic_shading.dir/common/controls.cpp.o"
+  "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/objloader.cpp" "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles/tutorial08_basic_shading.dir/common/objloader.cpp.o"
+  "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/shader.cpp" "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles/tutorial08_basic_shading.dir/common/shader.cpp.o"
+  "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/texture.cpp" "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles/tutorial08_basic_shading.dir/common/texture.cpp.o"
+  "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/tutorial08_basic_shading/tutorial08.cpp" "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles/tutorial08_basic_shading.dir/tutorial08_basic_shading/tutorial08.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -34,8 +34,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/external/glfw-3.1.2/src/CMakeFiles/glfw.dir/DependInfo.cmake"
-  "/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/external/CMakeFiles/GLEW_1130.dir/DependInfo.cmake"
+  "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external/glfw-3.1.2/src/CMakeFiles/glfw.dir/DependInfo.cmake"
+  "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external/CMakeFiles/GLEW_1130.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

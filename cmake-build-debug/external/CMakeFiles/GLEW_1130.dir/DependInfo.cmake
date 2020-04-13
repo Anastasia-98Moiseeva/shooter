@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/external/glew-1.13.0/src/glew.c" "/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/external/CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.o"
+  "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/glew-1.13.0/src/glew.c" "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external/CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

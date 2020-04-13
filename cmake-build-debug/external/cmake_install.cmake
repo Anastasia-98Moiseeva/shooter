@@ -1,4 +1,4 @@
-# Install script for directory: /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/external
+# Install script for directory: /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,13 +39,13 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/external/glfw-3.1.2/cmake_install.cmake")
-  include("/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/external/assimp-3.0.1270/contrib/zlib/cmake_install.cmake")
-  include("/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/external/assimp-3.0.1270/code/cmake_install.cmake")
-  include("/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/external/bullet-2.81-rev2613/src/BulletSoftBody/cmake_install.cmake")
-  include("/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/external/bullet-2.81-rev2613/src/BulletCollision/cmake_install.cmake")
-  include("/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/external/bullet-2.81-rev2613/src/BulletDynamics/cmake_install.cmake")
-  include("/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/external/bullet-2.81-rev2613/src/LinearMath/cmake_install.cmake")
+  include("/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external/glfw-3.1.2/cmake_install.cmake")
+  include("/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external/assimp-3.0.1270/contrib/zlib/cmake_install.cmake")
+  include("/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external/assimp-3.0.1270/code/cmake_install.cmake")
+  include("/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external/bullet-2.81-rev2613/src/BulletSoftBody/cmake_install.cmake")
+  include("/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external/bullet-2.81-rev2613/src/BulletCollision/cmake_install.cmake")
+  include("/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external/bullet-2.81-rev2613/src/BulletDynamics/cmake_install.cmake")
+  include("/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external/bullet-2.81-rev2613/src/LinearMath/cmake_install.cmake")
 
 endif()
 

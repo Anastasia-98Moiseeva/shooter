@@ -43,10 +43,10 @@ RM = /snap/clion/107/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/ogl
+CMAKE_SOURCE_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/shooter
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug
+CMAKE_BINARY_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/tutorial13_normal_mapping.dir/depend.make
@@ -59,107 +59,107 @@ include CMakeFiles/tutorial13_normal_mapping.dir/flags.make
 
 CMakeFiles/tutorial13_normal_mapping.dir/tutorial13_normal_mapping/tutorial13.cpp.o: CMakeFiles/tutorial13_normal_mapping.dir/flags.make
 CMakeFiles/tutorial13_normal_mapping.dir/tutorial13_normal_mapping/tutorial13.cpp.o: ../tutorial13_normal_mapping/tutorial13.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/tutorial13_normal_mapping.dir/tutorial13_normal_mapping/tutorial13.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial13_normal_mapping.dir/tutorial13_normal_mapping/tutorial13.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/tutorial13_normal_mapping/tutorial13.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/tutorial13_normal_mapping.dir/tutorial13_normal_mapping/tutorial13.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial13_normal_mapping.dir/tutorial13_normal_mapping/tutorial13.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/tutorial13_normal_mapping/tutorial13.cpp
 
 CMakeFiles/tutorial13_normal_mapping.dir/tutorial13_normal_mapping/tutorial13.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tutorial13_normal_mapping.dir/tutorial13_normal_mapping/tutorial13.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/tutorial13_normal_mapping/tutorial13.cpp > CMakeFiles/tutorial13_normal_mapping.dir/tutorial13_normal_mapping/tutorial13.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/tutorial13_normal_mapping/tutorial13.cpp > CMakeFiles/tutorial13_normal_mapping.dir/tutorial13_normal_mapping/tutorial13.cpp.i
 
 CMakeFiles/tutorial13_normal_mapping.dir/tutorial13_normal_mapping/tutorial13.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tutorial13_normal_mapping.dir/tutorial13_normal_mapping/tutorial13.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/tutorial13_normal_mapping/tutorial13.cpp -o CMakeFiles/tutorial13_normal_mapping.dir/tutorial13_normal_mapping/tutorial13.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/tutorial13_normal_mapping/tutorial13.cpp -o CMakeFiles/tutorial13_normal_mapping.dir/tutorial13_normal_mapping/tutorial13.cpp.s
 
 CMakeFiles/tutorial13_normal_mapping.dir/common/shader.cpp.o: CMakeFiles/tutorial13_normal_mapping.dir/flags.make
 CMakeFiles/tutorial13_normal_mapping.dir/common/shader.cpp.o: ../common/shader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/tutorial13_normal_mapping.dir/common/shader.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial13_normal_mapping.dir/common/shader.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/shader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/tutorial13_normal_mapping.dir/common/shader.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial13_normal_mapping.dir/common/shader.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/shader.cpp
 
 CMakeFiles/tutorial13_normal_mapping.dir/common/shader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tutorial13_normal_mapping.dir/common/shader.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/shader.cpp > CMakeFiles/tutorial13_normal_mapping.dir/common/shader.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/shader.cpp > CMakeFiles/tutorial13_normal_mapping.dir/common/shader.cpp.i
 
 CMakeFiles/tutorial13_normal_mapping.dir/common/shader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tutorial13_normal_mapping.dir/common/shader.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/shader.cpp -o CMakeFiles/tutorial13_normal_mapping.dir/common/shader.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/shader.cpp -o CMakeFiles/tutorial13_normal_mapping.dir/common/shader.cpp.s
 
 CMakeFiles/tutorial13_normal_mapping.dir/common/controls.cpp.o: CMakeFiles/tutorial13_normal_mapping.dir/flags.make
 CMakeFiles/tutorial13_normal_mapping.dir/common/controls.cpp.o: ../common/controls.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/tutorial13_normal_mapping.dir/common/controls.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial13_normal_mapping.dir/common/controls.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/controls.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/tutorial13_normal_mapping.dir/common/controls.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial13_normal_mapping.dir/common/controls.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/controls.cpp
 
 CMakeFiles/tutorial13_normal_mapping.dir/common/controls.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tutorial13_normal_mapping.dir/common/controls.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/controls.cpp > CMakeFiles/tutorial13_normal_mapping.dir/common/controls.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/controls.cpp > CMakeFiles/tutorial13_normal_mapping.dir/common/controls.cpp.i
 
 CMakeFiles/tutorial13_normal_mapping.dir/common/controls.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tutorial13_normal_mapping.dir/common/controls.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/controls.cpp -o CMakeFiles/tutorial13_normal_mapping.dir/common/controls.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/controls.cpp -o CMakeFiles/tutorial13_normal_mapping.dir/common/controls.cpp.s
 
 CMakeFiles/tutorial13_normal_mapping.dir/common/texture.cpp.o: CMakeFiles/tutorial13_normal_mapping.dir/flags.make
 CMakeFiles/tutorial13_normal_mapping.dir/common/texture.cpp.o: ../common/texture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/tutorial13_normal_mapping.dir/common/texture.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial13_normal_mapping.dir/common/texture.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/texture.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/tutorial13_normal_mapping.dir/common/texture.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial13_normal_mapping.dir/common/texture.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/texture.cpp
 
 CMakeFiles/tutorial13_normal_mapping.dir/common/texture.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tutorial13_normal_mapping.dir/common/texture.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/texture.cpp > CMakeFiles/tutorial13_normal_mapping.dir/common/texture.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/texture.cpp > CMakeFiles/tutorial13_normal_mapping.dir/common/texture.cpp.i
 
 CMakeFiles/tutorial13_normal_mapping.dir/common/texture.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tutorial13_normal_mapping.dir/common/texture.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/texture.cpp -o CMakeFiles/tutorial13_normal_mapping.dir/common/texture.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/texture.cpp -o CMakeFiles/tutorial13_normal_mapping.dir/common/texture.cpp.s
 
 CMakeFiles/tutorial13_normal_mapping.dir/common/objloader.cpp.o: CMakeFiles/tutorial13_normal_mapping.dir/flags.make
 CMakeFiles/tutorial13_normal_mapping.dir/common/objloader.cpp.o: ../common/objloader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/tutorial13_normal_mapping.dir/common/objloader.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial13_normal_mapping.dir/common/objloader.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/objloader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/tutorial13_normal_mapping.dir/common/objloader.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial13_normal_mapping.dir/common/objloader.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/objloader.cpp
 
 CMakeFiles/tutorial13_normal_mapping.dir/common/objloader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tutorial13_normal_mapping.dir/common/objloader.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/objloader.cpp > CMakeFiles/tutorial13_normal_mapping.dir/common/objloader.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/objloader.cpp > CMakeFiles/tutorial13_normal_mapping.dir/common/objloader.cpp.i
 
 CMakeFiles/tutorial13_normal_mapping.dir/common/objloader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tutorial13_normal_mapping.dir/common/objloader.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/objloader.cpp -o CMakeFiles/tutorial13_normal_mapping.dir/common/objloader.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/objloader.cpp -o CMakeFiles/tutorial13_normal_mapping.dir/common/objloader.cpp.s
 
 CMakeFiles/tutorial13_normal_mapping.dir/common/vboindexer.cpp.o: CMakeFiles/tutorial13_normal_mapping.dir/flags.make
 CMakeFiles/tutorial13_normal_mapping.dir/common/vboindexer.cpp.o: ../common/vboindexer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/tutorial13_normal_mapping.dir/common/vboindexer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial13_normal_mapping.dir/common/vboindexer.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/vboindexer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/tutorial13_normal_mapping.dir/common/vboindexer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial13_normal_mapping.dir/common/vboindexer.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/vboindexer.cpp
 
 CMakeFiles/tutorial13_normal_mapping.dir/common/vboindexer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tutorial13_normal_mapping.dir/common/vboindexer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/vboindexer.cpp > CMakeFiles/tutorial13_normal_mapping.dir/common/vboindexer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/vboindexer.cpp > CMakeFiles/tutorial13_normal_mapping.dir/common/vboindexer.cpp.i
 
 CMakeFiles/tutorial13_normal_mapping.dir/common/vboindexer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tutorial13_normal_mapping.dir/common/vboindexer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/vboindexer.cpp -o CMakeFiles/tutorial13_normal_mapping.dir/common/vboindexer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/vboindexer.cpp -o CMakeFiles/tutorial13_normal_mapping.dir/common/vboindexer.cpp.s
 
 CMakeFiles/tutorial13_normal_mapping.dir/common/text2D.cpp.o: CMakeFiles/tutorial13_normal_mapping.dir/flags.make
 CMakeFiles/tutorial13_normal_mapping.dir/common/text2D.cpp.o: ../common/text2D.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/tutorial13_normal_mapping.dir/common/text2D.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial13_normal_mapping.dir/common/text2D.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/text2D.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/tutorial13_normal_mapping.dir/common/text2D.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial13_normal_mapping.dir/common/text2D.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/text2D.cpp
 
 CMakeFiles/tutorial13_normal_mapping.dir/common/text2D.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tutorial13_normal_mapping.dir/common/text2D.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/text2D.cpp > CMakeFiles/tutorial13_normal_mapping.dir/common/text2D.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/text2D.cpp > CMakeFiles/tutorial13_normal_mapping.dir/common/text2D.cpp.i
 
 CMakeFiles/tutorial13_normal_mapping.dir/common/text2D.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tutorial13_normal_mapping.dir/common/text2D.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/text2D.cpp -o CMakeFiles/tutorial13_normal_mapping.dir/common/text2D.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/text2D.cpp -o CMakeFiles/tutorial13_normal_mapping.dir/common/text2D.cpp.s
 
 CMakeFiles/tutorial13_normal_mapping.dir/common/tangentspace.cpp.o: CMakeFiles/tutorial13_normal_mapping.dir/flags.make
 CMakeFiles/tutorial13_normal_mapping.dir/common/tangentspace.cpp.o: ../common/tangentspace.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/tutorial13_normal_mapping.dir/common/tangentspace.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial13_normal_mapping.dir/common/tangentspace.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/tangentspace.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/tutorial13_normal_mapping.dir/common/tangentspace.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial13_normal_mapping.dir/common/tangentspace.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/tangentspace.cpp
 
 CMakeFiles/tutorial13_normal_mapping.dir/common/tangentspace.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tutorial13_normal_mapping.dir/common/tangentspace.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/tangentspace.cpp > CMakeFiles/tutorial13_normal_mapping.dir/common/tangentspace.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/tangentspace.cpp > CMakeFiles/tutorial13_normal_mapping.dir/common/tangentspace.cpp.i
 
 CMakeFiles/tutorial13_normal_mapping.dir/common/tangentspace.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tutorial13_normal_mapping.dir/common/tangentspace.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/tangentspace.cpp -o CMakeFiles/tutorial13_normal_mapping.dir/common/tangentspace.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/tangentspace.cpp -o CMakeFiles/tutorial13_normal_mapping.dir/common/tangentspace.cpp.s
 
 # Object files for target tutorial13_normal_mapping
 tutorial13_normal_mapping_OBJECTS = \
@@ -207,9 +207,9 @@ tutorial13_normal_mapping: /usr/lib/x86_64-linux-gnu/libXcursor.so
 tutorial13_normal_mapping: /usr/lib/x86_64-linux-gnu/libGL.so
 tutorial13_normal_mapping: /usr/lib/x86_64-linux-gnu/libGLU.so
 tutorial13_normal_mapping: CMakeFiles/tutorial13_normal_mapping.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable tutorial13_normal_mapping"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable tutorial13_normal_mapping"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tutorial13_normal_mapping.dir/link.txt --verbose=$(VERBOSE)
-	/snap/clion/107/bin/cmake/linux/bin/cmake -E copy /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/./tutorial13_normal_mapping /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/tutorial13_normal_mapping/
+	/snap/clion/107/bin/cmake/linux/bin/cmake -E copy /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/./tutorial13_normal_mapping /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/tutorial13_normal_mapping/
 
 # Rule to build all files generated by this target.
 CMakeFiles/tutorial13_normal_mapping.dir/build: tutorial13_normal_mapping
@@ -221,6 +221,6 @@ CMakeFiles/tutorial13_normal_mapping.dir/clean:
 .PHONY : CMakeFiles/tutorial13_normal_mapping.dir/clean
 
 CMakeFiles/tutorial13_normal_mapping.dir/depend:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anastasia/Documents/mipt/3d-graph/repositories/ogl /home/anastasia/Documents/mipt/3d-graph/repositories/ogl /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles/tutorial13_normal_mapping.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anastasia/Documents/mipt/3d-graph/repositories/shooter /home/anastasia/Documents/mipt/3d-graph/repositories/shooter /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles/tutorial13_normal_mapping.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/tutorial13_normal_mapping.dir/depend
 

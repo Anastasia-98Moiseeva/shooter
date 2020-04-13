@@ -43,10 +43,10 @@ RM = /snap/clion/107/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/ogl
+CMAKE_SOURCE_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/shooter
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug
+CMAKE_BINARY_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include external/glfw-3.1.2/tests/CMakeFiles/reopen.dir/depend.make
@@ -59,16 +59,16 @@ include external/glfw-3.1.2/tests/CMakeFiles/reopen.dir/flags.make
 
 external/glfw-3.1.2/tests/CMakeFiles/reopen.dir/reopen.c.o: external/glfw-3.1.2/tests/CMakeFiles/reopen.dir/flags.make
 external/glfw-3.1.2/tests/CMakeFiles/reopen.dir/reopen.c.o: ../external/glfw-3.1.2/tests/reopen.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object external/glfw-3.1.2/tests/CMakeFiles/reopen.dir/reopen.c.o"
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/external/glfw-3.1.2/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/reopen.dir/reopen.c.o   -c /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/external/glfw-3.1.2/tests/reopen.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object external/glfw-3.1.2/tests/CMakeFiles/reopen.dir/reopen.c.o"
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external/glfw-3.1.2/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/reopen.dir/reopen.c.o   -c /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/glfw-3.1.2/tests/reopen.c
 
 external/glfw-3.1.2/tests/CMakeFiles/reopen.dir/reopen.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/reopen.dir/reopen.c.i"
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/external/glfw-3.1.2/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/external/glfw-3.1.2/tests/reopen.c > CMakeFiles/reopen.dir/reopen.c.i
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external/glfw-3.1.2/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/glfw-3.1.2/tests/reopen.c > CMakeFiles/reopen.dir/reopen.c.i
 
 external/glfw-3.1.2/tests/CMakeFiles/reopen.dir/reopen.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/reopen.dir/reopen.c.s"
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/external/glfw-3.1.2/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/external/glfw-3.1.2/tests/reopen.c -o CMakeFiles/reopen.dir/reopen.c.s
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external/glfw-3.1.2/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/glfw-3.1.2/tests/reopen.c -o CMakeFiles/reopen.dir/reopen.c.s
 
 # Object files for target reopen
 reopen_OBJECTS = \
@@ -90,8 +90,8 @@ external/glfw-3.1.2/tests/reopen: /usr/lib/x86_64-linux-gnu/libXxf86vm.so
 external/glfw-3.1.2/tests/reopen: /usr/lib/x86_64-linux-gnu/libXcursor.so
 external/glfw-3.1.2/tests/reopen: /usr/lib/x86_64-linux-gnu/libGL.so
 external/glfw-3.1.2/tests/reopen: external/glfw-3.1.2/tests/CMakeFiles/reopen.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable reopen"
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/external/glfw-3.1.2/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/reopen.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable reopen"
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external/glfw-3.1.2/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/reopen.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 external/glfw-3.1.2/tests/CMakeFiles/reopen.dir/build: external/glfw-3.1.2/tests/reopen
@@ -99,10 +99,10 @@ external/glfw-3.1.2/tests/CMakeFiles/reopen.dir/build: external/glfw-3.1.2/tests
 .PHONY : external/glfw-3.1.2/tests/CMakeFiles/reopen.dir/build
 
 external/glfw-3.1.2/tests/CMakeFiles/reopen.dir/clean:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/external/glfw-3.1.2/tests && $(CMAKE_COMMAND) -P CMakeFiles/reopen.dir/cmake_clean.cmake
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external/glfw-3.1.2/tests && $(CMAKE_COMMAND) -P CMakeFiles/reopen.dir/cmake_clean.cmake
 .PHONY : external/glfw-3.1.2/tests/CMakeFiles/reopen.dir/clean
 
 external/glfw-3.1.2/tests/CMakeFiles/reopen.dir/depend:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anastasia/Documents/mipt/3d-graph/repositories/ogl /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/external/glfw-3.1.2/tests /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/external/glfw-3.1.2/tests /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/external/glfw-3.1.2/tests/CMakeFiles/reopen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anastasia/Documents/mipt/3d-graph/repositories/shooter /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/glfw-3.1.2/tests /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external/glfw-3.1.2/tests /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external/glfw-3.1.2/tests/CMakeFiles/reopen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : external/glfw-3.1.2/tests/CMakeFiles/reopen.dir/depend
 

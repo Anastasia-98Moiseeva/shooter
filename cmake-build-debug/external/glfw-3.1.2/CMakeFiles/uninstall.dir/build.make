@@ -43,10 +43,10 @@ RM = /snap/clion/107/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/ogl
+CMAKE_SOURCE_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/shooter
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug
+CMAKE_BINARY_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug
 
 # Utility rule file for uninstall.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmak
 include external/glfw-3.1.2/CMakeFiles/uninstall.dir/progress.make
 
 external/glfw-3.1.2/CMakeFiles/uninstall:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/external/glfw-3.1.2 && /snap/clion/107/bin/cmake/linux/bin/cmake -P /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/external/glfw-3.1.2/cmake_uninstall.cmake
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external/glfw-3.1.2 && /snap/clion/107/bin/cmake/linux/bin/cmake -P /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external/glfw-3.1.2/cmake_uninstall.cmake
 
 uninstall: external/glfw-3.1.2/CMakeFiles/uninstall
 uninstall: external/glfw-3.1.2/CMakeFiles/uninstall.dir/build.make
@@ -67,10 +67,10 @@ external/glfw-3.1.2/CMakeFiles/uninstall.dir/build: uninstall
 .PHONY : external/glfw-3.1.2/CMakeFiles/uninstall.dir/build
 
 external/glfw-3.1.2/CMakeFiles/uninstall.dir/clean:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/external/glfw-3.1.2 && $(CMAKE_COMMAND) -P CMakeFiles/uninstall.dir/cmake_clean.cmake
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external/glfw-3.1.2 && $(CMAKE_COMMAND) -P CMakeFiles/uninstall.dir/cmake_clean.cmake
 .PHONY : external/glfw-3.1.2/CMakeFiles/uninstall.dir/clean
 
 external/glfw-3.1.2/CMakeFiles/uninstall.dir/depend:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anastasia/Documents/mipt/3d-graph/repositories/ogl /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/external/glfw-3.1.2 /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/external/glfw-3.1.2 /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/external/glfw-3.1.2/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anastasia/Documents/mipt/3d-graph/repositories/shooter /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/glfw-3.1.2 /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external/glfw-3.1.2 /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external/glfw-3.1.2/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : external/glfw-3.1.2/CMakeFiles/uninstall.dir/depend
 

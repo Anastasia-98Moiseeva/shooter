@@ -1,6 +1,6 @@
 #!/bin/sh
 bindir=$(pwd)
-cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/tutorial08_basic_shading/
+cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/tutorial08_basic_shading/
 export 
 
 if test "x$1" = "x--debugger"; then
@@ -8,10 +8,10 @@ if test "x$1" = "x--debugger"; then
 	if test "xYES" = "xYES"; then
 		echo "r  " > $bindir/gdbscript
 		echo "bt" >> $bindir/gdbscript
-		/usr/bin/gdb -batch -command=$bindir/gdbscript --return-child-result /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/tutorial08_basic_shading 
+		/usr/bin/gdb -batch -command=$bindir/gdbscript --return-child-result /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/tutorial08_basic_shading 
 	else
-		"/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/tutorial08_basic_shading"  
+		"/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/tutorial08_basic_shading"  
 	fi
 else
-	"/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/tutorial08_basic_shading"  
+	"/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/tutorial08_basic_shading"  
 fi

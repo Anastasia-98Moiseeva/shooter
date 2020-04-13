@@ -43,10 +43,10 @@ RM = /snap/clion/107/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/ogl
+CMAKE_SOURCE_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/shooter
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug
+CMAKE_BINARY_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/tutorial03_matrices.dir/depend.make
@@ -59,29 +59,29 @@ include CMakeFiles/tutorial03_matrices.dir/flags.make
 
 CMakeFiles/tutorial03_matrices.dir/tutorial03_matrices/tutorial03.cpp.o: CMakeFiles/tutorial03_matrices.dir/flags.make
 CMakeFiles/tutorial03_matrices.dir/tutorial03_matrices/tutorial03.cpp.o: ../tutorial03_matrices/tutorial03.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/tutorial03_matrices.dir/tutorial03_matrices/tutorial03.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial03_matrices.dir/tutorial03_matrices/tutorial03.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/tutorial03_matrices/tutorial03.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/tutorial03_matrices.dir/tutorial03_matrices/tutorial03.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial03_matrices.dir/tutorial03_matrices/tutorial03.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/tutorial03_matrices/tutorial03.cpp
 
 CMakeFiles/tutorial03_matrices.dir/tutorial03_matrices/tutorial03.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tutorial03_matrices.dir/tutorial03_matrices/tutorial03.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/tutorial03_matrices/tutorial03.cpp > CMakeFiles/tutorial03_matrices.dir/tutorial03_matrices/tutorial03.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/tutorial03_matrices/tutorial03.cpp > CMakeFiles/tutorial03_matrices.dir/tutorial03_matrices/tutorial03.cpp.i
 
 CMakeFiles/tutorial03_matrices.dir/tutorial03_matrices/tutorial03.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tutorial03_matrices.dir/tutorial03_matrices/tutorial03.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/tutorial03_matrices/tutorial03.cpp -o CMakeFiles/tutorial03_matrices.dir/tutorial03_matrices/tutorial03.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/tutorial03_matrices/tutorial03.cpp -o CMakeFiles/tutorial03_matrices.dir/tutorial03_matrices/tutorial03.cpp.s
 
 CMakeFiles/tutorial03_matrices.dir/common/shader.cpp.o: CMakeFiles/tutorial03_matrices.dir/flags.make
 CMakeFiles/tutorial03_matrices.dir/common/shader.cpp.o: ../common/shader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/tutorial03_matrices.dir/common/shader.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial03_matrices.dir/common/shader.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/shader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/tutorial03_matrices.dir/common/shader.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial03_matrices.dir/common/shader.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/shader.cpp
 
 CMakeFiles/tutorial03_matrices.dir/common/shader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tutorial03_matrices.dir/common/shader.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/shader.cpp > CMakeFiles/tutorial03_matrices.dir/common/shader.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/shader.cpp > CMakeFiles/tutorial03_matrices.dir/common/shader.cpp.i
 
 CMakeFiles/tutorial03_matrices.dir/common/shader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tutorial03_matrices.dir/common/shader.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/shader.cpp -o CMakeFiles/tutorial03_matrices.dir/common/shader.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/shader.cpp -o CMakeFiles/tutorial03_matrices.dir/common/shader.cpp.s
 
 # Object files for target tutorial03_matrices
 tutorial03_matrices_OBJECTS = \
@@ -117,9 +117,9 @@ tutorial03_matrices: /usr/lib/x86_64-linux-gnu/libXcursor.so
 tutorial03_matrices: /usr/lib/x86_64-linux-gnu/libGL.so
 tutorial03_matrices: /usr/lib/x86_64-linux-gnu/libGLU.so
 tutorial03_matrices: CMakeFiles/tutorial03_matrices.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable tutorial03_matrices"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable tutorial03_matrices"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tutorial03_matrices.dir/link.txt --verbose=$(VERBOSE)
-	/snap/clion/107/bin/cmake/linux/bin/cmake -E copy /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/./tutorial03_matrices /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/tutorial03_matrices/
+	/snap/clion/107/bin/cmake/linux/bin/cmake -E copy /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/./tutorial03_matrices /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/tutorial03_matrices/
 
 # Rule to build all files generated by this target.
 CMakeFiles/tutorial03_matrices.dir/build: tutorial03_matrices
@@ -131,6 +131,6 @@ CMakeFiles/tutorial03_matrices.dir/clean:
 .PHONY : CMakeFiles/tutorial03_matrices.dir/clean
 
 CMakeFiles/tutorial03_matrices.dir/depend:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anastasia/Documents/mipt/3d-graph/repositories/ogl /home/anastasia/Documents/mipt/3d-graph/repositories/ogl /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles/tutorial03_matrices.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anastasia/Documents/mipt/3d-graph/repositories/shooter /home/anastasia/Documents/mipt/3d-graph/repositories/shooter /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles/tutorial03_matrices.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/tutorial03_matrices.dir/depend
 

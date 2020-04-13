@@ -43,10 +43,10 @@ RM = /snap/clion/107/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/ogl
+CMAKE_SOURCE_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/shooter
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug
+CMAKE_BINARY_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/tutorial04_colored_cube.dir/depend.make
@@ -59,29 +59,29 @@ include CMakeFiles/tutorial04_colored_cube.dir/flags.make
 
 CMakeFiles/tutorial04_colored_cube.dir/tutorial04_colored_cube/tutorial04.cpp.o: CMakeFiles/tutorial04_colored_cube.dir/flags.make
 CMakeFiles/tutorial04_colored_cube.dir/tutorial04_colored_cube/tutorial04.cpp.o: ../tutorial04_colored_cube/tutorial04.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/tutorial04_colored_cube.dir/tutorial04_colored_cube/tutorial04.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial04_colored_cube.dir/tutorial04_colored_cube/tutorial04.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/tutorial04_colored_cube/tutorial04.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/tutorial04_colored_cube.dir/tutorial04_colored_cube/tutorial04.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial04_colored_cube.dir/tutorial04_colored_cube/tutorial04.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/tutorial04_colored_cube/tutorial04.cpp
 
 CMakeFiles/tutorial04_colored_cube.dir/tutorial04_colored_cube/tutorial04.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tutorial04_colored_cube.dir/tutorial04_colored_cube/tutorial04.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/tutorial04_colored_cube/tutorial04.cpp > CMakeFiles/tutorial04_colored_cube.dir/tutorial04_colored_cube/tutorial04.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/tutorial04_colored_cube/tutorial04.cpp > CMakeFiles/tutorial04_colored_cube.dir/tutorial04_colored_cube/tutorial04.cpp.i
 
 CMakeFiles/tutorial04_colored_cube.dir/tutorial04_colored_cube/tutorial04.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tutorial04_colored_cube.dir/tutorial04_colored_cube/tutorial04.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/tutorial04_colored_cube/tutorial04.cpp -o CMakeFiles/tutorial04_colored_cube.dir/tutorial04_colored_cube/tutorial04.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/tutorial04_colored_cube/tutorial04.cpp -o CMakeFiles/tutorial04_colored_cube.dir/tutorial04_colored_cube/tutorial04.cpp.s
 
 CMakeFiles/tutorial04_colored_cube.dir/common/shader.cpp.o: CMakeFiles/tutorial04_colored_cube.dir/flags.make
 CMakeFiles/tutorial04_colored_cube.dir/common/shader.cpp.o: ../common/shader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/tutorial04_colored_cube.dir/common/shader.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial04_colored_cube.dir/common/shader.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/shader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/tutorial04_colored_cube.dir/common/shader.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tutorial04_colored_cube.dir/common/shader.cpp.o -c /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/shader.cpp
 
 CMakeFiles/tutorial04_colored_cube.dir/common/shader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tutorial04_colored_cube.dir/common/shader.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/shader.cpp > CMakeFiles/tutorial04_colored_cube.dir/common/shader.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/shader.cpp > CMakeFiles/tutorial04_colored_cube.dir/common/shader.cpp.i
 
 CMakeFiles/tutorial04_colored_cube.dir/common/shader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tutorial04_colored_cube.dir/common/shader.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/common/shader.cpp -o CMakeFiles/tutorial04_colored_cube.dir/common/shader.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/common/shader.cpp -o CMakeFiles/tutorial04_colored_cube.dir/common/shader.cpp.s
 
 # Object files for target tutorial04_colored_cube
 tutorial04_colored_cube_OBJECTS = \
@@ -117,9 +117,9 @@ tutorial04_colored_cube: /usr/lib/x86_64-linux-gnu/libXcursor.so
 tutorial04_colored_cube: /usr/lib/x86_64-linux-gnu/libGL.so
 tutorial04_colored_cube: /usr/lib/x86_64-linux-gnu/libGLU.so
 tutorial04_colored_cube: CMakeFiles/tutorial04_colored_cube.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable tutorial04_colored_cube"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable tutorial04_colored_cube"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tutorial04_colored_cube.dir/link.txt --verbose=$(VERBOSE)
-	/snap/clion/107/bin/cmake/linux/bin/cmake -E copy /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/./tutorial04_colored_cube /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/tutorial04_colored_cube/
+	/snap/clion/107/bin/cmake/linux/bin/cmake -E copy /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/./tutorial04_colored_cube /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/tutorial04_colored_cube/
 
 # Rule to build all files generated by this target.
 CMakeFiles/tutorial04_colored_cube.dir/build: tutorial04_colored_cube
@@ -131,6 +131,6 @@ CMakeFiles/tutorial04_colored_cube.dir/clean:
 .PHONY : CMakeFiles/tutorial04_colored_cube.dir/clean
 
 CMakeFiles/tutorial04_colored_cube.dir/depend:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anastasia/Documents/mipt/3d-graph/repositories/ogl /home/anastasia/Documents/mipt/3d-graph/repositories/ogl /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles/tutorial04_colored_cube.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anastasia/Documents/mipt/3d-graph/repositories/shooter /home/anastasia/Documents/mipt/3d-graph/repositories/shooter /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles/tutorial04_colored_cube.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/tutorial04_colored_cube.dir/depend
 

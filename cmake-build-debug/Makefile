@@ -48,10 +48,10 @@ RM = /snap/clion/107/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/ogl
+CMAKE_SOURCE_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/shooter
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug
+CMAKE_BINARY_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -78,27 +78,17 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/107/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/snap/clion/107/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
 
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/107/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/snap/clion/107/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
 
 # Special rule for the target install
 install: preinstall
@@ -112,23 +102,33 @@ install/fast: preinstall/fast
 	/snap/clion/107/bin/cmake/linux/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/snap/clion/107/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/snap/clion/107/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
 
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/snap/clion/107/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/snap/clion/107/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -157,32 +157,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named tutorial18_particles
-
-# Build rule for target.
-tutorial18_particles: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tutorial18_particles
-.PHONY : tutorial18_particles
-
-# fast build rule for target.
-tutorial18_particles/fast:
-	$(MAKE) -f CMakeFiles/tutorial18_particles.dir/build.make CMakeFiles/tutorial18_particles.dir/build
-.PHONY : tutorial18_particles/fast
-
-#=============================================================================
-# Target rules for targets named misc05_picking_custom
-
-# Build rule for target.
-misc05_picking_custom: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 misc05_picking_custom
-.PHONY : misc05_picking_custom
-
-# fast build rule for target.
-misc05_picking_custom/fast:
-	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/build
-.PHONY : misc05_picking_custom/fast
-
-#=============================================================================
 # Target rules for targets named misc05_picking_slow_easy
 
 # Build rule for target.
@@ -209,240 +183,6 @@ playground/fast:
 .PHONY : playground/fast
 
 #=============================================================================
-# Target rules for targets named tutorial16_shadowmaps
-
-# Build rule for target.
-tutorial16_shadowmaps: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tutorial16_shadowmaps
-.PHONY : tutorial16_shadowmaps
-
-# fast build rule for target.
-tutorial16_shadowmaps/fast:
-	$(MAKE) -f CMakeFiles/tutorial16_shadowmaps.dir/build.make CMakeFiles/tutorial16_shadowmaps.dir/build
-.PHONY : tutorial16_shadowmaps/fast
-
-#=============================================================================
-# Target rules for targets named tutorial16_shadowmaps_simple
-
-# Build rule for target.
-tutorial16_shadowmaps_simple: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tutorial16_shadowmaps_simple
-.PHONY : tutorial16_shadowmaps_simple
-
-# fast build rule for target.
-tutorial16_shadowmaps_simple/fast:
-	$(MAKE) -f CMakeFiles/tutorial16_shadowmaps_simple.dir/build.make CMakeFiles/tutorial16_shadowmaps_simple.dir/build
-.PHONY : tutorial16_shadowmaps_simple/fast
-
-#=============================================================================
-# Target rules for targets named tutorial06_keyboard_and_mouse
-
-# Build rule for target.
-tutorial06_keyboard_and_mouse: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tutorial06_keyboard_and_mouse
-.PHONY : tutorial06_keyboard_and_mouse
-
-# fast build rule for target.
-tutorial06_keyboard_and_mouse/fast:
-	$(MAKE) -f CMakeFiles/tutorial06_keyboard_and_mouse.dir/build.make CMakeFiles/tutorial06_keyboard_and_mouse.dir/build
-.PHONY : tutorial06_keyboard_and_mouse/fast
-
-#=============================================================================
-# Target rules for targets named tutorial05_textured_cube
-
-# Build rule for target.
-tutorial05_textured_cube: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tutorial05_textured_cube
-.PHONY : tutorial05_textured_cube
-
-# fast build rule for target.
-tutorial05_textured_cube/fast:
-	$(MAKE) -f CMakeFiles/tutorial05_textured_cube.dir/build.make CMakeFiles/tutorial05_textured_cube.dir/build
-.PHONY : tutorial05_textured_cube/fast
-
-#=============================================================================
-# Target rules for targets named tutorial10_transparency
-
-# Build rule for target.
-tutorial10_transparency: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tutorial10_transparency
-.PHONY : tutorial10_transparency
-
-# fast build rule for target.
-tutorial10_transparency/fast:
-	$(MAKE) -f CMakeFiles/tutorial10_transparency.dir/build.make CMakeFiles/tutorial10_transparency.dir/build
-.PHONY : tutorial10_transparency/fast
-
-#=============================================================================
-# Target rules for targets named tutorial04_colored_cube
-
-# Build rule for target.
-tutorial04_colored_cube: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tutorial04_colored_cube
-.PHONY : tutorial04_colored_cube
-
-# fast build rule for target.
-tutorial04_colored_cube/fast:
-	$(MAKE) -f CMakeFiles/tutorial04_colored_cube.dir/build.make CMakeFiles/tutorial04_colored_cube.dir/build
-.PHONY : tutorial04_colored_cube/fast
-
-#=============================================================================
-# Target rules for targets named tutorial17_rotations
-
-# Build rule for target.
-tutorial17_rotations: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tutorial17_rotations
-.PHONY : tutorial17_rotations
-
-# fast build rule for target.
-tutorial17_rotations/fast:
-	$(MAKE) -f CMakeFiles/tutorial17_rotations.dir/build.make CMakeFiles/tutorial17_rotations.dir/build
-.PHONY : tutorial17_rotations/fast
-
-#=============================================================================
-# Target rules for targets named tutorial13_normal_mapping
-
-# Build rule for target.
-tutorial13_normal_mapping: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tutorial13_normal_mapping
-.PHONY : tutorial13_normal_mapping
-
-# fast build rule for target.
-tutorial13_normal_mapping/fast:
-	$(MAKE) -f CMakeFiles/tutorial13_normal_mapping.dir/build.make CMakeFiles/tutorial13_normal_mapping.dir/build
-.PHONY : tutorial13_normal_mapping/fast
-
-#=============================================================================
-# Target rules for targets named tutorial15_lightmaps
-
-# Build rule for target.
-tutorial15_lightmaps: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tutorial15_lightmaps
-.PHONY : tutorial15_lightmaps
-
-# fast build rule for target.
-tutorial15_lightmaps/fast:
-	$(MAKE) -f CMakeFiles/tutorial15_lightmaps.dir/build.make CMakeFiles/tutorial15_lightmaps.dir/build
-.PHONY : tutorial15_lightmaps/fast
-
-#=============================================================================
-# Target rules for targets named tutorial03_matrices
-
-# Build rule for target.
-tutorial03_matrices: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tutorial03_matrices
-.PHONY : tutorial03_matrices
-
-# fast build rule for target.
-tutorial03_matrices/fast:
-	$(MAKE) -f CMakeFiles/tutorial03_matrices.dir/build.make CMakeFiles/tutorial03_matrices.dir/build
-.PHONY : tutorial03_matrices/fast
-
-#=============================================================================
-# Target rules for targets named tutorial01_first_window
-
-# Build rule for target.
-tutorial01_first_window: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tutorial01_first_window
-.PHONY : tutorial01_first_window
-
-# fast build rule for target.
-tutorial01_first_window/fast:
-	$(MAKE) -f CMakeFiles/tutorial01_first_window.dir/build.make CMakeFiles/tutorial01_first_window.dir/build
-.PHONY : tutorial01_first_window/fast
-
-#=============================================================================
-# Target rules for targets named tutorial02_red_triangle
-
-# Build rule for target.
-tutorial02_red_triangle: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tutorial02_red_triangle
-.PHONY : tutorial02_red_triangle
-
-# fast build rule for target.
-tutorial02_red_triangle/fast:
-	$(MAKE) -f CMakeFiles/tutorial02_red_triangle.dir/build.make CMakeFiles/tutorial02_red_triangle.dir/build
-.PHONY : tutorial02_red_triangle/fast
-
-#=============================================================================
-# Target rules for targets named tutorial18_billboards
-
-# Build rule for target.
-tutorial18_billboards: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tutorial18_billboards
-.PHONY : tutorial18_billboards
-
-# fast build rule for target.
-tutorial18_billboards/fast:
-	$(MAKE) -f CMakeFiles/tutorial18_billboards.dir/build.make CMakeFiles/tutorial18_billboards.dir/build
-.PHONY : tutorial18_billboards/fast
-
-#=============================================================================
-# Target rules for targets named tutorial08_basic_shading
-
-# Build rule for target.
-tutorial08_basic_shading: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tutorial08_basic_shading
-.PHONY : tutorial08_basic_shading
-
-# fast build rule for target.
-tutorial08_basic_shading/fast:
-	$(MAKE) -f CMakeFiles/tutorial08_basic_shading.dir/build.make CMakeFiles/tutorial08_basic_shading.dir/build
-.PHONY : tutorial08_basic_shading/fast
-
-#=============================================================================
-# Target rules for targets named tutorial07_model_loading
-
-# Build rule for target.
-tutorial07_model_loading: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tutorial07_model_loading
-.PHONY : tutorial07_model_loading
-
-# fast build rule for target.
-tutorial07_model_loading/fast:
-	$(MAKE) -f CMakeFiles/tutorial07_model_loading.dir/build.make CMakeFiles/tutorial07_model_loading.dir/build
-.PHONY : tutorial07_model_loading/fast
-
-#=============================================================================
-# Target rules for targets named tutorial09_vbo_indexing
-
-# Build rule for target.
-tutorial09_vbo_indexing: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tutorial09_vbo_indexing
-.PHONY : tutorial09_vbo_indexing
-
-# fast build rule for target.
-tutorial09_vbo_indexing/fast:
-	$(MAKE) -f CMakeFiles/tutorial09_vbo_indexing.dir/build.make CMakeFiles/tutorial09_vbo_indexing.dir/build
-.PHONY : tutorial09_vbo_indexing/fast
-
-#=============================================================================
-# Target rules for targets named tutorial09_AssImp
-
-# Build rule for target.
-tutorial09_AssImp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tutorial09_AssImp
-.PHONY : tutorial09_AssImp
-
-# fast build rule for target.
-tutorial09_AssImp/fast:
-	$(MAKE) -f CMakeFiles/tutorial09_AssImp.dir/build.make CMakeFiles/tutorial09_AssImp.dir/build
-.PHONY : tutorial09_AssImp/fast
-
-#=============================================================================
-# Target rules for targets named tutorial09_several_objects
-
-# Build rule for target.
-tutorial09_several_objects: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tutorial09_several_objects
-.PHONY : tutorial09_several_objects
-
-# fast build rule for target.
-tutorial09_several_objects/fast:
-	$(MAKE) -f CMakeFiles/tutorial09_several_objects.dir/build.make CMakeFiles/tutorial09_several_objects.dir/build
-.PHONY : tutorial09_several_objects/fast
-
-#=============================================================================
 # Target rules for targets named misc05_picking_BulletPhysics
 
 # Build rule for target.
@@ -456,43 +196,17 @@ misc05_picking_BulletPhysics/fast:
 .PHONY : misc05_picking_BulletPhysics/fast
 
 #=============================================================================
-# Target rules for targets named tutorial11_2d_fonts
+# Target rules for targets named misc05_picking_custom
 
 # Build rule for target.
-tutorial11_2d_fonts: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tutorial11_2d_fonts
-.PHONY : tutorial11_2d_fonts
+misc05_picking_custom: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 misc05_picking_custom
+.PHONY : misc05_picking_custom
 
 # fast build rule for target.
-tutorial11_2d_fonts/fast:
-	$(MAKE) -f CMakeFiles/tutorial11_2d_fonts.dir/build.make CMakeFiles/tutorial11_2d_fonts.dir/build
-.PHONY : tutorial11_2d_fonts/fast
-
-#=============================================================================
-# Target rules for targets named tutorial12_extensions
-
-# Build rule for target.
-tutorial12_extensions: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tutorial12_extensions
-.PHONY : tutorial12_extensions
-
-# fast build rule for target.
-tutorial12_extensions/fast:
-	$(MAKE) -f CMakeFiles/tutorial12_extensions.dir/build.make CMakeFiles/tutorial12_extensions.dir/build
-.PHONY : tutorial12_extensions/fast
-
-#=============================================================================
-# Target rules for targets named tutorial14_render_to_texture
-
-# Build rule for target.
-tutorial14_render_to_texture: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tutorial14_render_to_texture
-.PHONY : tutorial14_render_to_texture
-
-# fast build rule for target.
-tutorial14_render_to_texture/fast:
-	$(MAKE) -f CMakeFiles/tutorial14_render_to_texture.dir/build.make CMakeFiles/tutorial14_render_to_texture.dir/build
-.PHONY : tutorial14_render_to_texture/fast
+misc05_picking_custom/fast:
+	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/build
+.PHONY : misc05_picking_custom/fast
 
 #=============================================================================
 # Target rules for targets named ANTTWEAKBAR_116_OGLCORE_GLFW
@@ -929,26 +643,9 @@ common/controls.o: common/controls.cpp.o
 
 # target to build an object file
 common/controls.cpp.o:
-	$(MAKE) -f CMakeFiles/tutorial18_particles.dir/build.make CMakeFiles/tutorial18_particles.dir/common/controls.cpp.o
-	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/controls.cpp.o
 	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/controls.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial16_shadowmaps.dir/build.make CMakeFiles/tutorial16_shadowmaps.dir/common/controls.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial16_shadowmaps_simple.dir/build.make CMakeFiles/tutorial16_shadowmaps_simple.dir/common/controls.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial06_keyboard_and_mouse.dir/build.make CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/controls.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial10_transparency.dir/build.make CMakeFiles/tutorial10_transparency.dir/common/controls.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial17_rotations.dir/build.make CMakeFiles/tutorial17_rotations.dir/common/controls.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial13_normal_mapping.dir/build.make CMakeFiles/tutorial13_normal_mapping.dir/common/controls.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial15_lightmaps.dir/build.make CMakeFiles/tutorial15_lightmaps.dir/common/controls.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial18_billboards.dir/build.make CMakeFiles/tutorial18_billboards.dir/common/controls.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial08_basic_shading.dir/build.make CMakeFiles/tutorial08_basic_shading.dir/common/controls.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial07_model_loading.dir/build.make CMakeFiles/tutorial07_model_loading.dir/common/controls.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial09_vbo_indexing.dir/build.make CMakeFiles/tutorial09_vbo_indexing.dir/common/controls.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial09_AssImp.dir/build.make CMakeFiles/tutorial09_AssImp.dir/common/controls.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial09_several_objects.dir/build.make CMakeFiles/tutorial09_several_objects.dir/common/controls.cpp.o
 	$(MAKE) -f CMakeFiles/misc05_picking_BulletPhysics.dir/build.make CMakeFiles/misc05_picking_BulletPhysics.dir/common/controls.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial11_2d_fonts.dir/build.make CMakeFiles/tutorial11_2d_fonts.dir/common/controls.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial12_extensions.dir/build.make CMakeFiles/tutorial12_extensions.dir/common/controls.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial14_render_to_texture.dir/build.make CMakeFiles/tutorial14_render_to_texture.dir/common/controls.cpp.o
+	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/controls.cpp.o
 .PHONY : common/controls.cpp.o
 
 common/controls.i: common/controls.cpp.i
@@ -957,26 +654,9 @@ common/controls.i: common/controls.cpp.i
 
 # target to preprocess a source file
 common/controls.cpp.i:
-	$(MAKE) -f CMakeFiles/tutorial18_particles.dir/build.make CMakeFiles/tutorial18_particles.dir/common/controls.cpp.i
-	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/controls.cpp.i
 	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/controls.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial16_shadowmaps.dir/build.make CMakeFiles/tutorial16_shadowmaps.dir/common/controls.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial16_shadowmaps_simple.dir/build.make CMakeFiles/tutorial16_shadowmaps_simple.dir/common/controls.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial06_keyboard_and_mouse.dir/build.make CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/controls.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial10_transparency.dir/build.make CMakeFiles/tutorial10_transparency.dir/common/controls.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial17_rotations.dir/build.make CMakeFiles/tutorial17_rotations.dir/common/controls.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial13_normal_mapping.dir/build.make CMakeFiles/tutorial13_normal_mapping.dir/common/controls.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial15_lightmaps.dir/build.make CMakeFiles/tutorial15_lightmaps.dir/common/controls.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial18_billboards.dir/build.make CMakeFiles/tutorial18_billboards.dir/common/controls.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial08_basic_shading.dir/build.make CMakeFiles/tutorial08_basic_shading.dir/common/controls.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial07_model_loading.dir/build.make CMakeFiles/tutorial07_model_loading.dir/common/controls.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial09_vbo_indexing.dir/build.make CMakeFiles/tutorial09_vbo_indexing.dir/common/controls.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial09_AssImp.dir/build.make CMakeFiles/tutorial09_AssImp.dir/common/controls.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial09_several_objects.dir/build.make CMakeFiles/tutorial09_several_objects.dir/common/controls.cpp.i
 	$(MAKE) -f CMakeFiles/misc05_picking_BulletPhysics.dir/build.make CMakeFiles/misc05_picking_BulletPhysics.dir/common/controls.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial11_2d_fonts.dir/build.make CMakeFiles/tutorial11_2d_fonts.dir/common/controls.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial12_extensions.dir/build.make CMakeFiles/tutorial12_extensions.dir/common/controls.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial14_render_to_texture.dir/build.make CMakeFiles/tutorial14_render_to_texture.dir/common/controls.cpp.i
+	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/controls.cpp.i
 .PHONY : common/controls.cpp.i
 
 common/controls.s: common/controls.cpp.s
@@ -985,26 +665,9 @@ common/controls.s: common/controls.cpp.s
 
 # target to generate assembly for a file
 common/controls.cpp.s:
-	$(MAKE) -f CMakeFiles/tutorial18_particles.dir/build.make CMakeFiles/tutorial18_particles.dir/common/controls.cpp.s
-	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/controls.cpp.s
 	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/controls.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial16_shadowmaps.dir/build.make CMakeFiles/tutorial16_shadowmaps.dir/common/controls.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial16_shadowmaps_simple.dir/build.make CMakeFiles/tutorial16_shadowmaps_simple.dir/common/controls.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial06_keyboard_and_mouse.dir/build.make CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/controls.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial10_transparency.dir/build.make CMakeFiles/tutorial10_transparency.dir/common/controls.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial17_rotations.dir/build.make CMakeFiles/tutorial17_rotations.dir/common/controls.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial13_normal_mapping.dir/build.make CMakeFiles/tutorial13_normal_mapping.dir/common/controls.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial15_lightmaps.dir/build.make CMakeFiles/tutorial15_lightmaps.dir/common/controls.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial18_billboards.dir/build.make CMakeFiles/tutorial18_billboards.dir/common/controls.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial08_basic_shading.dir/build.make CMakeFiles/tutorial08_basic_shading.dir/common/controls.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial07_model_loading.dir/build.make CMakeFiles/tutorial07_model_loading.dir/common/controls.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial09_vbo_indexing.dir/build.make CMakeFiles/tutorial09_vbo_indexing.dir/common/controls.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial09_AssImp.dir/build.make CMakeFiles/tutorial09_AssImp.dir/common/controls.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial09_several_objects.dir/build.make CMakeFiles/tutorial09_several_objects.dir/common/controls.cpp.s
 	$(MAKE) -f CMakeFiles/misc05_picking_BulletPhysics.dir/build.make CMakeFiles/misc05_picking_BulletPhysics.dir/common/controls.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial11_2d_fonts.dir/build.make CMakeFiles/tutorial11_2d_fonts.dir/common/controls.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial12_extensions.dir/build.make CMakeFiles/tutorial12_extensions.dir/common/controls.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial14_render_to_texture.dir/build.make CMakeFiles/tutorial14_render_to_texture.dir/common/controls.cpp.s
+	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/controls.cpp.s
 .PHONY : common/controls.cpp.s
 
 common/objloader.o: common/objloader.cpp.o
@@ -1013,23 +676,9 @@ common/objloader.o: common/objloader.cpp.o
 
 # target to build an object file
 common/objloader.cpp.o:
-	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/objloader.cpp.o
 	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/objloader.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial16_shadowmaps.dir/build.make CMakeFiles/tutorial16_shadowmaps.dir/common/objloader.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial16_shadowmaps_simple.dir/build.make CMakeFiles/tutorial16_shadowmaps_simple.dir/common/objloader.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial10_transparency.dir/build.make CMakeFiles/tutorial10_transparency.dir/common/objloader.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial17_rotations.dir/build.make CMakeFiles/tutorial17_rotations.dir/common/objloader.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial13_normal_mapping.dir/build.make CMakeFiles/tutorial13_normal_mapping.dir/common/objloader.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial15_lightmaps.dir/build.make CMakeFiles/tutorial15_lightmaps.dir/common/objloader.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial08_basic_shading.dir/build.make CMakeFiles/tutorial08_basic_shading.dir/common/objloader.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial07_model_loading.dir/build.make CMakeFiles/tutorial07_model_loading.dir/common/objloader.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial09_vbo_indexing.dir/build.make CMakeFiles/tutorial09_vbo_indexing.dir/common/objloader.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial09_AssImp.dir/build.make CMakeFiles/tutorial09_AssImp.dir/common/objloader.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial09_several_objects.dir/build.make CMakeFiles/tutorial09_several_objects.dir/common/objloader.cpp.o
 	$(MAKE) -f CMakeFiles/misc05_picking_BulletPhysics.dir/build.make CMakeFiles/misc05_picking_BulletPhysics.dir/common/objloader.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial11_2d_fonts.dir/build.make CMakeFiles/tutorial11_2d_fonts.dir/common/objloader.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial12_extensions.dir/build.make CMakeFiles/tutorial12_extensions.dir/common/objloader.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial14_render_to_texture.dir/build.make CMakeFiles/tutorial14_render_to_texture.dir/common/objloader.cpp.o
+	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/objloader.cpp.o
 .PHONY : common/objloader.cpp.o
 
 common/objloader.i: common/objloader.cpp.i
@@ -1038,23 +687,9 @@ common/objloader.i: common/objloader.cpp.i
 
 # target to preprocess a source file
 common/objloader.cpp.i:
-	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/objloader.cpp.i
 	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/objloader.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial16_shadowmaps.dir/build.make CMakeFiles/tutorial16_shadowmaps.dir/common/objloader.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial16_shadowmaps_simple.dir/build.make CMakeFiles/tutorial16_shadowmaps_simple.dir/common/objloader.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial10_transparency.dir/build.make CMakeFiles/tutorial10_transparency.dir/common/objloader.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial17_rotations.dir/build.make CMakeFiles/tutorial17_rotations.dir/common/objloader.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial13_normal_mapping.dir/build.make CMakeFiles/tutorial13_normal_mapping.dir/common/objloader.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial15_lightmaps.dir/build.make CMakeFiles/tutorial15_lightmaps.dir/common/objloader.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial08_basic_shading.dir/build.make CMakeFiles/tutorial08_basic_shading.dir/common/objloader.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial07_model_loading.dir/build.make CMakeFiles/tutorial07_model_loading.dir/common/objloader.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial09_vbo_indexing.dir/build.make CMakeFiles/tutorial09_vbo_indexing.dir/common/objloader.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial09_AssImp.dir/build.make CMakeFiles/tutorial09_AssImp.dir/common/objloader.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial09_several_objects.dir/build.make CMakeFiles/tutorial09_several_objects.dir/common/objloader.cpp.i
 	$(MAKE) -f CMakeFiles/misc05_picking_BulletPhysics.dir/build.make CMakeFiles/misc05_picking_BulletPhysics.dir/common/objloader.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial11_2d_fonts.dir/build.make CMakeFiles/tutorial11_2d_fonts.dir/common/objloader.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial12_extensions.dir/build.make CMakeFiles/tutorial12_extensions.dir/common/objloader.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial14_render_to_texture.dir/build.make CMakeFiles/tutorial14_render_to_texture.dir/common/objloader.cpp.i
+	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/objloader.cpp.i
 .PHONY : common/objloader.cpp.i
 
 common/objloader.s: common/objloader.cpp.s
@@ -1063,51 +698,10 @@ common/objloader.s: common/objloader.cpp.s
 
 # target to generate assembly for a file
 common/objloader.cpp.s:
-	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/objloader.cpp.s
 	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/objloader.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial16_shadowmaps.dir/build.make CMakeFiles/tutorial16_shadowmaps.dir/common/objloader.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial16_shadowmaps_simple.dir/build.make CMakeFiles/tutorial16_shadowmaps_simple.dir/common/objloader.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial10_transparency.dir/build.make CMakeFiles/tutorial10_transparency.dir/common/objloader.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial17_rotations.dir/build.make CMakeFiles/tutorial17_rotations.dir/common/objloader.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial13_normal_mapping.dir/build.make CMakeFiles/tutorial13_normal_mapping.dir/common/objloader.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial15_lightmaps.dir/build.make CMakeFiles/tutorial15_lightmaps.dir/common/objloader.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial08_basic_shading.dir/build.make CMakeFiles/tutorial08_basic_shading.dir/common/objloader.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial07_model_loading.dir/build.make CMakeFiles/tutorial07_model_loading.dir/common/objloader.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial09_vbo_indexing.dir/build.make CMakeFiles/tutorial09_vbo_indexing.dir/common/objloader.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial09_AssImp.dir/build.make CMakeFiles/tutorial09_AssImp.dir/common/objloader.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial09_several_objects.dir/build.make CMakeFiles/tutorial09_several_objects.dir/common/objloader.cpp.s
 	$(MAKE) -f CMakeFiles/misc05_picking_BulletPhysics.dir/build.make CMakeFiles/misc05_picking_BulletPhysics.dir/common/objloader.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial11_2d_fonts.dir/build.make CMakeFiles/tutorial11_2d_fonts.dir/common/objloader.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial12_extensions.dir/build.make CMakeFiles/tutorial12_extensions.dir/common/objloader.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial14_render_to_texture.dir/build.make CMakeFiles/tutorial14_render_to_texture.dir/common/objloader.cpp.s
+	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/objloader.cpp.s
 .PHONY : common/objloader.cpp.s
-
-common/quaternion_utils.o: common/quaternion_utils.cpp.o
-
-.PHONY : common/quaternion_utils.o
-
-# target to build an object file
-common/quaternion_utils.cpp.o:
-	$(MAKE) -f CMakeFiles/tutorial17_rotations.dir/build.make CMakeFiles/tutorial17_rotations.dir/common/quaternion_utils.cpp.o
-.PHONY : common/quaternion_utils.cpp.o
-
-common/quaternion_utils.i: common/quaternion_utils.cpp.i
-
-.PHONY : common/quaternion_utils.i
-
-# target to preprocess a source file
-common/quaternion_utils.cpp.i:
-	$(MAKE) -f CMakeFiles/tutorial17_rotations.dir/build.make CMakeFiles/tutorial17_rotations.dir/common/quaternion_utils.cpp.i
-.PHONY : common/quaternion_utils.cpp.i
-
-common/quaternion_utils.s: common/quaternion_utils.cpp.s
-
-.PHONY : common/quaternion_utils.s
-
-# target to generate assembly for a file
-common/quaternion_utils.cpp.s:
-	$(MAKE) -f CMakeFiles/tutorial17_rotations.dir/build.make CMakeFiles/tutorial17_rotations.dir/common/quaternion_utils.cpp.s
-.PHONY : common/quaternion_utils.cpp.s
 
 common/shader.o: common/shader.cpp.o
 
@@ -1115,31 +709,10 @@ common/shader.o: common/shader.cpp.o
 
 # target to build an object file
 common/shader.cpp.o:
-	$(MAKE) -f CMakeFiles/tutorial18_particles.dir/build.make CMakeFiles/tutorial18_particles.dir/common/shader.cpp.o
-	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/shader.cpp.o
 	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/shader.cpp.o
 	$(MAKE) -f CMakeFiles/playground.dir/build.make CMakeFiles/playground.dir/common/shader.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial16_shadowmaps.dir/build.make CMakeFiles/tutorial16_shadowmaps.dir/common/shader.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial16_shadowmaps_simple.dir/build.make CMakeFiles/tutorial16_shadowmaps_simple.dir/common/shader.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial06_keyboard_and_mouse.dir/build.make CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/shader.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial05_textured_cube.dir/build.make CMakeFiles/tutorial05_textured_cube.dir/common/shader.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial10_transparency.dir/build.make CMakeFiles/tutorial10_transparency.dir/common/shader.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial04_colored_cube.dir/build.make CMakeFiles/tutorial04_colored_cube.dir/common/shader.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial17_rotations.dir/build.make CMakeFiles/tutorial17_rotations.dir/common/shader.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial13_normal_mapping.dir/build.make CMakeFiles/tutorial13_normal_mapping.dir/common/shader.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial15_lightmaps.dir/build.make CMakeFiles/tutorial15_lightmaps.dir/common/shader.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial03_matrices.dir/build.make CMakeFiles/tutorial03_matrices.dir/common/shader.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial02_red_triangle.dir/build.make CMakeFiles/tutorial02_red_triangle.dir/common/shader.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial18_billboards.dir/build.make CMakeFiles/tutorial18_billboards.dir/common/shader.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial08_basic_shading.dir/build.make CMakeFiles/tutorial08_basic_shading.dir/common/shader.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial07_model_loading.dir/build.make CMakeFiles/tutorial07_model_loading.dir/common/shader.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial09_vbo_indexing.dir/build.make CMakeFiles/tutorial09_vbo_indexing.dir/common/shader.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial09_AssImp.dir/build.make CMakeFiles/tutorial09_AssImp.dir/common/shader.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial09_several_objects.dir/build.make CMakeFiles/tutorial09_several_objects.dir/common/shader.cpp.o
 	$(MAKE) -f CMakeFiles/misc05_picking_BulletPhysics.dir/build.make CMakeFiles/misc05_picking_BulletPhysics.dir/common/shader.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial11_2d_fonts.dir/build.make CMakeFiles/tutorial11_2d_fonts.dir/common/shader.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial12_extensions.dir/build.make CMakeFiles/tutorial12_extensions.dir/common/shader.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial14_render_to_texture.dir/build.make CMakeFiles/tutorial14_render_to_texture.dir/common/shader.cpp.o
+	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/shader.cpp.o
 .PHONY : common/shader.cpp.o
 
 common/shader.i: common/shader.cpp.i
@@ -1148,31 +721,10 @@ common/shader.i: common/shader.cpp.i
 
 # target to preprocess a source file
 common/shader.cpp.i:
-	$(MAKE) -f CMakeFiles/tutorial18_particles.dir/build.make CMakeFiles/tutorial18_particles.dir/common/shader.cpp.i
-	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/shader.cpp.i
 	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/shader.cpp.i
 	$(MAKE) -f CMakeFiles/playground.dir/build.make CMakeFiles/playground.dir/common/shader.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial16_shadowmaps.dir/build.make CMakeFiles/tutorial16_shadowmaps.dir/common/shader.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial16_shadowmaps_simple.dir/build.make CMakeFiles/tutorial16_shadowmaps_simple.dir/common/shader.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial06_keyboard_and_mouse.dir/build.make CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/shader.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial05_textured_cube.dir/build.make CMakeFiles/tutorial05_textured_cube.dir/common/shader.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial10_transparency.dir/build.make CMakeFiles/tutorial10_transparency.dir/common/shader.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial04_colored_cube.dir/build.make CMakeFiles/tutorial04_colored_cube.dir/common/shader.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial17_rotations.dir/build.make CMakeFiles/tutorial17_rotations.dir/common/shader.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial13_normal_mapping.dir/build.make CMakeFiles/tutorial13_normal_mapping.dir/common/shader.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial15_lightmaps.dir/build.make CMakeFiles/tutorial15_lightmaps.dir/common/shader.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial03_matrices.dir/build.make CMakeFiles/tutorial03_matrices.dir/common/shader.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial02_red_triangle.dir/build.make CMakeFiles/tutorial02_red_triangle.dir/common/shader.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial18_billboards.dir/build.make CMakeFiles/tutorial18_billboards.dir/common/shader.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial08_basic_shading.dir/build.make CMakeFiles/tutorial08_basic_shading.dir/common/shader.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial07_model_loading.dir/build.make CMakeFiles/tutorial07_model_loading.dir/common/shader.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial09_vbo_indexing.dir/build.make CMakeFiles/tutorial09_vbo_indexing.dir/common/shader.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial09_AssImp.dir/build.make CMakeFiles/tutorial09_AssImp.dir/common/shader.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial09_several_objects.dir/build.make CMakeFiles/tutorial09_several_objects.dir/common/shader.cpp.i
 	$(MAKE) -f CMakeFiles/misc05_picking_BulletPhysics.dir/build.make CMakeFiles/misc05_picking_BulletPhysics.dir/common/shader.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial11_2d_fonts.dir/build.make CMakeFiles/tutorial11_2d_fonts.dir/common/shader.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial12_extensions.dir/build.make CMakeFiles/tutorial12_extensions.dir/common/shader.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial14_render_to_texture.dir/build.make CMakeFiles/tutorial14_render_to_texture.dir/common/shader.cpp.i
+	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/shader.cpp.i
 .PHONY : common/shader.cpp.i
 
 common/shader.s: common/shader.cpp.s
@@ -1181,92 +733,11 @@ common/shader.s: common/shader.cpp.s
 
 # target to generate assembly for a file
 common/shader.cpp.s:
-	$(MAKE) -f CMakeFiles/tutorial18_particles.dir/build.make CMakeFiles/tutorial18_particles.dir/common/shader.cpp.s
-	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/shader.cpp.s
 	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/shader.cpp.s
 	$(MAKE) -f CMakeFiles/playground.dir/build.make CMakeFiles/playground.dir/common/shader.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial16_shadowmaps.dir/build.make CMakeFiles/tutorial16_shadowmaps.dir/common/shader.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial16_shadowmaps_simple.dir/build.make CMakeFiles/tutorial16_shadowmaps_simple.dir/common/shader.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial06_keyboard_and_mouse.dir/build.make CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/shader.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial05_textured_cube.dir/build.make CMakeFiles/tutorial05_textured_cube.dir/common/shader.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial10_transparency.dir/build.make CMakeFiles/tutorial10_transparency.dir/common/shader.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial04_colored_cube.dir/build.make CMakeFiles/tutorial04_colored_cube.dir/common/shader.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial17_rotations.dir/build.make CMakeFiles/tutorial17_rotations.dir/common/shader.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial13_normal_mapping.dir/build.make CMakeFiles/tutorial13_normal_mapping.dir/common/shader.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial15_lightmaps.dir/build.make CMakeFiles/tutorial15_lightmaps.dir/common/shader.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial03_matrices.dir/build.make CMakeFiles/tutorial03_matrices.dir/common/shader.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial02_red_triangle.dir/build.make CMakeFiles/tutorial02_red_triangle.dir/common/shader.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial18_billboards.dir/build.make CMakeFiles/tutorial18_billboards.dir/common/shader.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial08_basic_shading.dir/build.make CMakeFiles/tutorial08_basic_shading.dir/common/shader.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial07_model_loading.dir/build.make CMakeFiles/tutorial07_model_loading.dir/common/shader.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial09_vbo_indexing.dir/build.make CMakeFiles/tutorial09_vbo_indexing.dir/common/shader.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial09_AssImp.dir/build.make CMakeFiles/tutorial09_AssImp.dir/common/shader.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial09_several_objects.dir/build.make CMakeFiles/tutorial09_several_objects.dir/common/shader.cpp.s
 	$(MAKE) -f CMakeFiles/misc05_picking_BulletPhysics.dir/build.make CMakeFiles/misc05_picking_BulletPhysics.dir/common/shader.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial11_2d_fonts.dir/build.make CMakeFiles/tutorial11_2d_fonts.dir/common/shader.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial12_extensions.dir/build.make CMakeFiles/tutorial12_extensions.dir/common/shader.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial14_render_to_texture.dir/build.make CMakeFiles/tutorial14_render_to_texture.dir/common/shader.cpp.s
+	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/shader.cpp.s
 .PHONY : common/shader.cpp.s
-
-common/tangentspace.o: common/tangentspace.cpp.o
-
-.PHONY : common/tangentspace.o
-
-# target to build an object file
-common/tangentspace.cpp.o:
-	$(MAKE) -f CMakeFiles/tutorial13_normal_mapping.dir/build.make CMakeFiles/tutorial13_normal_mapping.dir/common/tangentspace.cpp.o
-.PHONY : common/tangentspace.cpp.o
-
-common/tangentspace.i: common/tangentspace.cpp.i
-
-.PHONY : common/tangentspace.i
-
-# target to preprocess a source file
-common/tangentspace.cpp.i:
-	$(MAKE) -f CMakeFiles/tutorial13_normal_mapping.dir/build.make CMakeFiles/tutorial13_normal_mapping.dir/common/tangentspace.cpp.i
-.PHONY : common/tangentspace.cpp.i
-
-common/tangentspace.s: common/tangentspace.cpp.s
-
-.PHONY : common/tangentspace.s
-
-# target to generate assembly for a file
-common/tangentspace.cpp.s:
-	$(MAKE) -f CMakeFiles/tutorial13_normal_mapping.dir/build.make CMakeFiles/tutorial13_normal_mapping.dir/common/tangentspace.cpp.s
-.PHONY : common/tangentspace.cpp.s
-
-common/text2D.o: common/text2D.cpp.o
-
-.PHONY : common/text2D.o
-
-# target to build an object file
-common/text2D.cpp.o:
-	$(MAKE) -f CMakeFiles/tutorial13_normal_mapping.dir/build.make CMakeFiles/tutorial13_normal_mapping.dir/common/text2D.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial11_2d_fonts.dir/build.make CMakeFiles/tutorial11_2d_fonts.dir/common/text2D.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial14_render_to_texture.dir/build.make CMakeFiles/tutorial14_render_to_texture.dir/common/text2D.cpp.o
-.PHONY : common/text2D.cpp.o
-
-common/text2D.i: common/text2D.cpp.i
-
-.PHONY : common/text2D.i
-
-# target to preprocess a source file
-common/text2D.cpp.i:
-	$(MAKE) -f CMakeFiles/tutorial13_normal_mapping.dir/build.make CMakeFiles/tutorial13_normal_mapping.dir/common/text2D.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial11_2d_fonts.dir/build.make CMakeFiles/tutorial11_2d_fonts.dir/common/text2D.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial14_render_to_texture.dir/build.make CMakeFiles/tutorial14_render_to_texture.dir/common/text2D.cpp.i
-.PHONY : common/text2D.cpp.i
-
-common/text2D.s: common/text2D.cpp.s
-
-.PHONY : common/text2D.s
-
-# target to generate assembly for a file
-common/text2D.cpp.s:
-	$(MAKE) -f CMakeFiles/tutorial13_normal_mapping.dir/build.make CMakeFiles/tutorial13_normal_mapping.dir/common/text2D.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial11_2d_fonts.dir/build.make CMakeFiles/tutorial11_2d_fonts.dir/common/text2D.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial14_render_to_texture.dir/build.make CMakeFiles/tutorial14_render_to_texture.dir/common/text2D.cpp.s
-.PHONY : common/text2D.cpp.s
 
 common/texture.o: common/texture.cpp.o
 
@@ -1274,27 +745,9 @@ common/texture.o: common/texture.cpp.o
 
 # target to build an object file
 common/texture.cpp.o:
-	$(MAKE) -f CMakeFiles/tutorial18_particles.dir/build.make CMakeFiles/tutorial18_particles.dir/common/texture.cpp.o
-	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/texture.cpp.o
 	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/texture.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial16_shadowmaps.dir/build.make CMakeFiles/tutorial16_shadowmaps.dir/common/texture.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial16_shadowmaps_simple.dir/build.make CMakeFiles/tutorial16_shadowmaps_simple.dir/common/texture.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial06_keyboard_and_mouse.dir/build.make CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/texture.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial05_textured_cube.dir/build.make CMakeFiles/tutorial05_textured_cube.dir/common/texture.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial10_transparency.dir/build.make CMakeFiles/tutorial10_transparency.dir/common/texture.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial17_rotations.dir/build.make CMakeFiles/tutorial17_rotations.dir/common/texture.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial13_normal_mapping.dir/build.make CMakeFiles/tutorial13_normal_mapping.dir/common/texture.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial15_lightmaps.dir/build.make CMakeFiles/tutorial15_lightmaps.dir/common/texture.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial18_billboards.dir/build.make CMakeFiles/tutorial18_billboards.dir/common/texture.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial08_basic_shading.dir/build.make CMakeFiles/tutorial08_basic_shading.dir/common/texture.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial07_model_loading.dir/build.make CMakeFiles/tutorial07_model_loading.dir/common/texture.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial09_vbo_indexing.dir/build.make CMakeFiles/tutorial09_vbo_indexing.dir/common/texture.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial09_AssImp.dir/build.make CMakeFiles/tutorial09_AssImp.dir/common/texture.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial09_several_objects.dir/build.make CMakeFiles/tutorial09_several_objects.dir/common/texture.cpp.o
 	$(MAKE) -f CMakeFiles/misc05_picking_BulletPhysics.dir/build.make CMakeFiles/misc05_picking_BulletPhysics.dir/common/texture.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial11_2d_fonts.dir/build.make CMakeFiles/tutorial11_2d_fonts.dir/common/texture.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial12_extensions.dir/build.make CMakeFiles/tutorial12_extensions.dir/common/texture.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial14_render_to_texture.dir/build.make CMakeFiles/tutorial14_render_to_texture.dir/common/texture.cpp.o
+	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/texture.cpp.o
 .PHONY : common/texture.cpp.o
 
 common/texture.i: common/texture.cpp.i
@@ -1303,27 +756,9 @@ common/texture.i: common/texture.cpp.i
 
 # target to preprocess a source file
 common/texture.cpp.i:
-	$(MAKE) -f CMakeFiles/tutorial18_particles.dir/build.make CMakeFiles/tutorial18_particles.dir/common/texture.cpp.i
-	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/texture.cpp.i
 	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/texture.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial16_shadowmaps.dir/build.make CMakeFiles/tutorial16_shadowmaps.dir/common/texture.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial16_shadowmaps_simple.dir/build.make CMakeFiles/tutorial16_shadowmaps_simple.dir/common/texture.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial06_keyboard_and_mouse.dir/build.make CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/texture.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial05_textured_cube.dir/build.make CMakeFiles/tutorial05_textured_cube.dir/common/texture.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial10_transparency.dir/build.make CMakeFiles/tutorial10_transparency.dir/common/texture.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial17_rotations.dir/build.make CMakeFiles/tutorial17_rotations.dir/common/texture.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial13_normal_mapping.dir/build.make CMakeFiles/tutorial13_normal_mapping.dir/common/texture.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial15_lightmaps.dir/build.make CMakeFiles/tutorial15_lightmaps.dir/common/texture.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial18_billboards.dir/build.make CMakeFiles/tutorial18_billboards.dir/common/texture.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial08_basic_shading.dir/build.make CMakeFiles/tutorial08_basic_shading.dir/common/texture.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial07_model_loading.dir/build.make CMakeFiles/tutorial07_model_loading.dir/common/texture.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial09_vbo_indexing.dir/build.make CMakeFiles/tutorial09_vbo_indexing.dir/common/texture.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial09_AssImp.dir/build.make CMakeFiles/tutorial09_AssImp.dir/common/texture.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial09_several_objects.dir/build.make CMakeFiles/tutorial09_several_objects.dir/common/texture.cpp.i
 	$(MAKE) -f CMakeFiles/misc05_picking_BulletPhysics.dir/build.make CMakeFiles/misc05_picking_BulletPhysics.dir/common/texture.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial11_2d_fonts.dir/build.make CMakeFiles/tutorial11_2d_fonts.dir/common/texture.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial12_extensions.dir/build.make CMakeFiles/tutorial12_extensions.dir/common/texture.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial14_render_to_texture.dir/build.make CMakeFiles/tutorial14_render_to_texture.dir/common/texture.cpp.i
+	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/texture.cpp.i
 .PHONY : common/texture.cpp.i
 
 common/texture.s: common/texture.cpp.s
@@ -1332,27 +767,9 @@ common/texture.s: common/texture.cpp.s
 
 # target to generate assembly for a file
 common/texture.cpp.s:
-	$(MAKE) -f CMakeFiles/tutorial18_particles.dir/build.make CMakeFiles/tutorial18_particles.dir/common/texture.cpp.s
-	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/texture.cpp.s
 	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/texture.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial16_shadowmaps.dir/build.make CMakeFiles/tutorial16_shadowmaps.dir/common/texture.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial16_shadowmaps_simple.dir/build.make CMakeFiles/tutorial16_shadowmaps_simple.dir/common/texture.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial06_keyboard_and_mouse.dir/build.make CMakeFiles/tutorial06_keyboard_and_mouse.dir/common/texture.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial05_textured_cube.dir/build.make CMakeFiles/tutorial05_textured_cube.dir/common/texture.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial10_transparency.dir/build.make CMakeFiles/tutorial10_transparency.dir/common/texture.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial17_rotations.dir/build.make CMakeFiles/tutorial17_rotations.dir/common/texture.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial13_normal_mapping.dir/build.make CMakeFiles/tutorial13_normal_mapping.dir/common/texture.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial15_lightmaps.dir/build.make CMakeFiles/tutorial15_lightmaps.dir/common/texture.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial18_billboards.dir/build.make CMakeFiles/tutorial18_billboards.dir/common/texture.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial08_basic_shading.dir/build.make CMakeFiles/tutorial08_basic_shading.dir/common/texture.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial07_model_loading.dir/build.make CMakeFiles/tutorial07_model_loading.dir/common/texture.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial09_vbo_indexing.dir/build.make CMakeFiles/tutorial09_vbo_indexing.dir/common/texture.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial09_AssImp.dir/build.make CMakeFiles/tutorial09_AssImp.dir/common/texture.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial09_several_objects.dir/build.make CMakeFiles/tutorial09_several_objects.dir/common/texture.cpp.s
 	$(MAKE) -f CMakeFiles/misc05_picking_BulletPhysics.dir/build.make CMakeFiles/misc05_picking_BulletPhysics.dir/common/texture.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial11_2d_fonts.dir/build.make CMakeFiles/tutorial11_2d_fonts.dir/common/texture.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial12_extensions.dir/build.make CMakeFiles/tutorial12_extensions.dir/common/texture.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial14_render_to_texture.dir/build.make CMakeFiles/tutorial14_render_to_texture.dir/common/texture.cpp.s
+	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/texture.cpp.s
 .PHONY : common/texture.cpp.s
 
 common/vboindexer.o: common/vboindexer.cpp.o
@@ -1361,20 +778,9 @@ common/vboindexer.o: common/vboindexer.cpp.o
 
 # target to build an object file
 common/vboindexer.cpp.o:
-	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/vboindexer.cpp.o
 	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/vboindexer.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial16_shadowmaps.dir/build.make CMakeFiles/tutorial16_shadowmaps.dir/common/vboindexer.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial16_shadowmaps_simple.dir/build.make CMakeFiles/tutorial16_shadowmaps_simple.dir/common/vboindexer.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial10_transparency.dir/build.make CMakeFiles/tutorial10_transparency.dir/common/vboindexer.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial17_rotations.dir/build.make CMakeFiles/tutorial17_rotations.dir/common/vboindexer.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial13_normal_mapping.dir/build.make CMakeFiles/tutorial13_normal_mapping.dir/common/vboindexer.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial15_lightmaps.dir/build.make CMakeFiles/tutorial15_lightmaps.dir/common/vboindexer.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial09_vbo_indexing.dir/build.make CMakeFiles/tutorial09_vbo_indexing.dir/common/vboindexer.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial09_several_objects.dir/build.make CMakeFiles/tutorial09_several_objects.dir/common/vboindexer.cpp.o
 	$(MAKE) -f CMakeFiles/misc05_picking_BulletPhysics.dir/build.make CMakeFiles/misc05_picking_BulletPhysics.dir/common/vboindexer.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial11_2d_fonts.dir/build.make CMakeFiles/tutorial11_2d_fonts.dir/common/vboindexer.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial12_extensions.dir/build.make CMakeFiles/tutorial12_extensions.dir/common/vboindexer.cpp.o
-	$(MAKE) -f CMakeFiles/tutorial14_render_to_texture.dir/build.make CMakeFiles/tutorial14_render_to_texture.dir/common/vboindexer.cpp.o
+	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/vboindexer.cpp.o
 .PHONY : common/vboindexer.cpp.o
 
 common/vboindexer.i: common/vboindexer.cpp.i
@@ -1383,20 +789,9 @@ common/vboindexer.i: common/vboindexer.cpp.i
 
 # target to preprocess a source file
 common/vboindexer.cpp.i:
-	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/vboindexer.cpp.i
 	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/vboindexer.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial16_shadowmaps.dir/build.make CMakeFiles/tutorial16_shadowmaps.dir/common/vboindexer.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial16_shadowmaps_simple.dir/build.make CMakeFiles/tutorial16_shadowmaps_simple.dir/common/vboindexer.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial10_transparency.dir/build.make CMakeFiles/tutorial10_transparency.dir/common/vboindexer.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial17_rotations.dir/build.make CMakeFiles/tutorial17_rotations.dir/common/vboindexer.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial13_normal_mapping.dir/build.make CMakeFiles/tutorial13_normal_mapping.dir/common/vboindexer.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial15_lightmaps.dir/build.make CMakeFiles/tutorial15_lightmaps.dir/common/vboindexer.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial09_vbo_indexing.dir/build.make CMakeFiles/tutorial09_vbo_indexing.dir/common/vboindexer.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial09_several_objects.dir/build.make CMakeFiles/tutorial09_several_objects.dir/common/vboindexer.cpp.i
 	$(MAKE) -f CMakeFiles/misc05_picking_BulletPhysics.dir/build.make CMakeFiles/misc05_picking_BulletPhysics.dir/common/vboindexer.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial11_2d_fonts.dir/build.make CMakeFiles/tutorial11_2d_fonts.dir/common/vboindexer.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial12_extensions.dir/build.make CMakeFiles/tutorial12_extensions.dir/common/vboindexer.cpp.i
-	$(MAKE) -f CMakeFiles/tutorial14_render_to_texture.dir/build.make CMakeFiles/tutorial14_render_to_texture.dir/common/vboindexer.cpp.i
+	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/vboindexer.cpp.i
 .PHONY : common/vboindexer.cpp.i
 
 common/vboindexer.s: common/vboindexer.cpp.s
@@ -1405,20 +800,9 @@ common/vboindexer.s: common/vboindexer.cpp.s
 
 # target to generate assembly for a file
 common/vboindexer.cpp.s:
-	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/vboindexer.cpp.s
 	$(MAKE) -f CMakeFiles/misc05_picking_slow_easy.dir/build.make CMakeFiles/misc05_picking_slow_easy.dir/common/vboindexer.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial16_shadowmaps.dir/build.make CMakeFiles/tutorial16_shadowmaps.dir/common/vboindexer.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial16_shadowmaps_simple.dir/build.make CMakeFiles/tutorial16_shadowmaps_simple.dir/common/vboindexer.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial10_transparency.dir/build.make CMakeFiles/tutorial10_transparency.dir/common/vboindexer.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial17_rotations.dir/build.make CMakeFiles/tutorial17_rotations.dir/common/vboindexer.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial13_normal_mapping.dir/build.make CMakeFiles/tutorial13_normal_mapping.dir/common/vboindexer.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial15_lightmaps.dir/build.make CMakeFiles/tutorial15_lightmaps.dir/common/vboindexer.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial09_vbo_indexing.dir/build.make CMakeFiles/tutorial09_vbo_indexing.dir/common/vboindexer.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial09_several_objects.dir/build.make CMakeFiles/tutorial09_several_objects.dir/common/vboindexer.cpp.s
 	$(MAKE) -f CMakeFiles/misc05_picking_BulletPhysics.dir/build.make CMakeFiles/misc05_picking_BulletPhysics.dir/common/vboindexer.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial11_2d_fonts.dir/build.make CMakeFiles/tutorial11_2d_fonts.dir/common/vboindexer.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial12_extensions.dir/build.make CMakeFiles/tutorial12_extensions.dir/common/vboindexer.cpp.s
-	$(MAKE) -f CMakeFiles/tutorial14_render_to_texture.dir/build.make CMakeFiles/tutorial14_render_to_texture.dir/common/vboindexer.cpp.s
+	$(MAKE) -f CMakeFiles/misc05_picking_custom.dir/build.make CMakeFiles/misc05_picking_custom.dir/common/vboindexer.cpp.s
 .PHONY : common/vboindexer.cpp.s
 
 misc05_picking/misc05_picking_BulletPhysics.o: misc05_picking/misc05_picking_BulletPhysics.cpp.o
@@ -1529,600 +913,6 @@ playground/playground.cpp.s:
 	$(MAKE) -f CMakeFiles/playground.dir/build.make CMakeFiles/playground.dir/playground/playground.cpp.s
 .PHONY : playground/playground.cpp.s
 
-tutorial01_first_window/tutorial01.o: tutorial01_first_window/tutorial01.cpp.o
-
-.PHONY : tutorial01_first_window/tutorial01.o
-
-# target to build an object file
-tutorial01_first_window/tutorial01.cpp.o:
-	$(MAKE) -f CMakeFiles/tutorial01_first_window.dir/build.make CMakeFiles/tutorial01_first_window.dir/tutorial01_first_window/tutorial01.cpp.o
-.PHONY : tutorial01_first_window/tutorial01.cpp.o
-
-tutorial01_first_window/tutorial01.i: tutorial01_first_window/tutorial01.cpp.i
-
-.PHONY : tutorial01_first_window/tutorial01.i
-
-# target to preprocess a source file
-tutorial01_first_window/tutorial01.cpp.i:
-	$(MAKE) -f CMakeFiles/tutorial01_first_window.dir/build.make CMakeFiles/tutorial01_first_window.dir/tutorial01_first_window/tutorial01.cpp.i
-.PHONY : tutorial01_first_window/tutorial01.cpp.i
-
-tutorial01_first_window/tutorial01.s: tutorial01_first_window/tutorial01.cpp.s
-
-.PHONY : tutorial01_first_window/tutorial01.s
-
-# target to generate assembly for a file
-tutorial01_first_window/tutorial01.cpp.s:
-	$(MAKE) -f CMakeFiles/tutorial01_first_window.dir/build.make CMakeFiles/tutorial01_first_window.dir/tutorial01_first_window/tutorial01.cpp.s
-.PHONY : tutorial01_first_window/tutorial01.cpp.s
-
-tutorial02_red_triangle/tutorial02.o: tutorial02_red_triangle/tutorial02.cpp.o
-
-.PHONY : tutorial02_red_triangle/tutorial02.o
-
-# target to build an object file
-tutorial02_red_triangle/tutorial02.cpp.o:
-	$(MAKE) -f CMakeFiles/tutorial02_red_triangle.dir/build.make CMakeFiles/tutorial02_red_triangle.dir/tutorial02_red_triangle/tutorial02.cpp.o
-.PHONY : tutorial02_red_triangle/tutorial02.cpp.o
-
-tutorial02_red_triangle/tutorial02.i: tutorial02_red_triangle/tutorial02.cpp.i
-
-.PHONY : tutorial02_red_triangle/tutorial02.i
-
-# target to preprocess a source file
-tutorial02_red_triangle/tutorial02.cpp.i:
-	$(MAKE) -f CMakeFiles/tutorial02_red_triangle.dir/build.make CMakeFiles/tutorial02_red_triangle.dir/tutorial02_red_triangle/tutorial02.cpp.i
-.PHONY : tutorial02_red_triangle/tutorial02.cpp.i
-
-tutorial02_red_triangle/tutorial02.s: tutorial02_red_triangle/tutorial02.cpp.s
-
-.PHONY : tutorial02_red_triangle/tutorial02.s
-
-# target to generate assembly for a file
-tutorial02_red_triangle/tutorial02.cpp.s:
-	$(MAKE) -f CMakeFiles/tutorial02_red_triangle.dir/build.make CMakeFiles/tutorial02_red_triangle.dir/tutorial02_red_triangle/tutorial02.cpp.s
-.PHONY : tutorial02_red_triangle/tutorial02.cpp.s
-
-tutorial03_matrices/tutorial03.o: tutorial03_matrices/tutorial03.cpp.o
-
-.PHONY : tutorial03_matrices/tutorial03.o
-
-# target to build an object file
-tutorial03_matrices/tutorial03.cpp.o:
-	$(MAKE) -f CMakeFiles/tutorial03_matrices.dir/build.make CMakeFiles/tutorial03_matrices.dir/tutorial03_matrices/tutorial03.cpp.o
-.PHONY : tutorial03_matrices/tutorial03.cpp.o
-
-tutorial03_matrices/tutorial03.i: tutorial03_matrices/tutorial03.cpp.i
-
-.PHONY : tutorial03_matrices/tutorial03.i
-
-# target to preprocess a source file
-tutorial03_matrices/tutorial03.cpp.i:
-	$(MAKE) -f CMakeFiles/tutorial03_matrices.dir/build.make CMakeFiles/tutorial03_matrices.dir/tutorial03_matrices/tutorial03.cpp.i
-.PHONY : tutorial03_matrices/tutorial03.cpp.i
-
-tutorial03_matrices/tutorial03.s: tutorial03_matrices/tutorial03.cpp.s
-
-.PHONY : tutorial03_matrices/tutorial03.s
-
-# target to generate assembly for a file
-tutorial03_matrices/tutorial03.cpp.s:
-	$(MAKE) -f CMakeFiles/tutorial03_matrices.dir/build.make CMakeFiles/tutorial03_matrices.dir/tutorial03_matrices/tutorial03.cpp.s
-.PHONY : tutorial03_matrices/tutorial03.cpp.s
-
-tutorial04_colored_cube/tutorial04.o: tutorial04_colored_cube/tutorial04.cpp.o
-
-.PHONY : tutorial04_colored_cube/tutorial04.o
-
-# target to build an object file
-tutorial04_colored_cube/tutorial04.cpp.o:
-	$(MAKE) -f CMakeFiles/tutorial04_colored_cube.dir/build.make CMakeFiles/tutorial04_colored_cube.dir/tutorial04_colored_cube/tutorial04.cpp.o
-.PHONY : tutorial04_colored_cube/tutorial04.cpp.o
-
-tutorial04_colored_cube/tutorial04.i: tutorial04_colored_cube/tutorial04.cpp.i
-
-.PHONY : tutorial04_colored_cube/tutorial04.i
-
-# target to preprocess a source file
-tutorial04_colored_cube/tutorial04.cpp.i:
-	$(MAKE) -f CMakeFiles/tutorial04_colored_cube.dir/build.make CMakeFiles/tutorial04_colored_cube.dir/tutorial04_colored_cube/tutorial04.cpp.i
-.PHONY : tutorial04_colored_cube/tutorial04.cpp.i
-
-tutorial04_colored_cube/tutorial04.s: tutorial04_colored_cube/tutorial04.cpp.s
-
-.PHONY : tutorial04_colored_cube/tutorial04.s
-
-# target to generate assembly for a file
-tutorial04_colored_cube/tutorial04.cpp.s:
-	$(MAKE) -f CMakeFiles/tutorial04_colored_cube.dir/build.make CMakeFiles/tutorial04_colored_cube.dir/tutorial04_colored_cube/tutorial04.cpp.s
-.PHONY : tutorial04_colored_cube/tutorial04.cpp.s
-
-tutorial05_textured_cube/tutorial05.o: tutorial05_textured_cube/tutorial05.cpp.o
-
-.PHONY : tutorial05_textured_cube/tutorial05.o
-
-# target to build an object file
-tutorial05_textured_cube/tutorial05.cpp.o:
-	$(MAKE) -f CMakeFiles/tutorial05_textured_cube.dir/build.make CMakeFiles/tutorial05_textured_cube.dir/tutorial05_textured_cube/tutorial05.cpp.o
-.PHONY : tutorial05_textured_cube/tutorial05.cpp.o
-
-tutorial05_textured_cube/tutorial05.i: tutorial05_textured_cube/tutorial05.cpp.i
-
-.PHONY : tutorial05_textured_cube/tutorial05.i
-
-# target to preprocess a source file
-tutorial05_textured_cube/tutorial05.cpp.i:
-	$(MAKE) -f CMakeFiles/tutorial05_textured_cube.dir/build.make CMakeFiles/tutorial05_textured_cube.dir/tutorial05_textured_cube/tutorial05.cpp.i
-.PHONY : tutorial05_textured_cube/tutorial05.cpp.i
-
-tutorial05_textured_cube/tutorial05.s: tutorial05_textured_cube/tutorial05.cpp.s
-
-.PHONY : tutorial05_textured_cube/tutorial05.s
-
-# target to generate assembly for a file
-tutorial05_textured_cube/tutorial05.cpp.s:
-	$(MAKE) -f CMakeFiles/tutorial05_textured_cube.dir/build.make CMakeFiles/tutorial05_textured_cube.dir/tutorial05_textured_cube/tutorial05.cpp.s
-.PHONY : tutorial05_textured_cube/tutorial05.cpp.s
-
-tutorial06_keyboard_and_mouse/tutorial06.o: tutorial06_keyboard_and_mouse/tutorial06.cpp.o
-
-.PHONY : tutorial06_keyboard_and_mouse/tutorial06.o
-
-# target to build an object file
-tutorial06_keyboard_and_mouse/tutorial06.cpp.o:
-	$(MAKE) -f CMakeFiles/tutorial06_keyboard_and_mouse.dir/build.make CMakeFiles/tutorial06_keyboard_and_mouse.dir/tutorial06_keyboard_and_mouse/tutorial06.cpp.o
-.PHONY : tutorial06_keyboard_and_mouse/tutorial06.cpp.o
-
-tutorial06_keyboard_and_mouse/tutorial06.i: tutorial06_keyboard_and_mouse/tutorial06.cpp.i
-
-.PHONY : tutorial06_keyboard_and_mouse/tutorial06.i
-
-# target to preprocess a source file
-tutorial06_keyboard_and_mouse/tutorial06.cpp.i:
-	$(MAKE) -f CMakeFiles/tutorial06_keyboard_and_mouse.dir/build.make CMakeFiles/tutorial06_keyboard_and_mouse.dir/tutorial06_keyboard_and_mouse/tutorial06.cpp.i
-.PHONY : tutorial06_keyboard_and_mouse/tutorial06.cpp.i
-
-tutorial06_keyboard_and_mouse/tutorial06.s: tutorial06_keyboard_and_mouse/tutorial06.cpp.s
-
-.PHONY : tutorial06_keyboard_and_mouse/tutorial06.s
-
-# target to generate assembly for a file
-tutorial06_keyboard_and_mouse/tutorial06.cpp.s:
-	$(MAKE) -f CMakeFiles/tutorial06_keyboard_and_mouse.dir/build.make CMakeFiles/tutorial06_keyboard_and_mouse.dir/tutorial06_keyboard_and_mouse/tutorial06.cpp.s
-.PHONY : tutorial06_keyboard_and_mouse/tutorial06.cpp.s
-
-tutorial07_model_loading/tutorial07.o: tutorial07_model_loading/tutorial07.cpp.o
-
-.PHONY : tutorial07_model_loading/tutorial07.o
-
-# target to build an object file
-tutorial07_model_loading/tutorial07.cpp.o:
-	$(MAKE) -f CMakeFiles/tutorial07_model_loading.dir/build.make CMakeFiles/tutorial07_model_loading.dir/tutorial07_model_loading/tutorial07.cpp.o
-.PHONY : tutorial07_model_loading/tutorial07.cpp.o
-
-tutorial07_model_loading/tutorial07.i: tutorial07_model_loading/tutorial07.cpp.i
-
-.PHONY : tutorial07_model_loading/tutorial07.i
-
-# target to preprocess a source file
-tutorial07_model_loading/tutorial07.cpp.i:
-	$(MAKE) -f CMakeFiles/tutorial07_model_loading.dir/build.make CMakeFiles/tutorial07_model_loading.dir/tutorial07_model_loading/tutorial07.cpp.i
-.PHONY : tutorial07_model_loading/tutorial07.cpp.i
-
-tutorial07_model_loading/tutorial07.s: tutorial07_model_loading/tutorial07.cpp.s
-
-.PHONY : tutorial07_model_loading/tutorial07.s
-
-# target to generate assembly for a file
-tutorial07_model_loading/tutorial07.cpp.s:
-	$(MAKE) -f CMakeFiles/tutorial07_model_loading.dir/build.make CMakeFiles/tutorial07_model_loading.dir/tutorial07_model_loading/tutorial07.cpp.s
-.PHONY : tutorial07_model_loading/tutorial07.cpp.s
-
-tutorial08_basic_shading/tutorial08.o: tutorial08_basic_shading/tutorial08.cpp.o
-
-.PHONY : tutorial08_basic_shading/tutorial08.o
-
-# target to build an object file
-tutorial08_basic_shading/tutorial08.cpp.o:
-	$(MAKE) -f CMakeFiles/tutorial08_basic_shading.dir/build.make CMakeFiles/tutorial08_basic_shading.dir/tutorial08_basic_shading/tutorial08.cpp.o
-.PHONY : tutorial08_basic_shading/tutorial08.cpp.o
-
-tutorial08_basic_shading/tutorial08.i: tutorial08_basic_shading/tutorial08.cpp.i
-
-.PHONY : tutorial08_basic_shading/tutorial08.i
-
-# target to preprocess a source file
-tutorial08_basic_shading/tutorial08.cpp.i:
-	$(MAKE) -f CMakeFiles/tutorial08_basic_shading.dir/build.make CMakeFiles/tutorial08_basic_shading.dir/tutorial08_basic_shading/tutorial08.cpp.i
-.PHONY : tutorial08_basic_shading/tutorial08.cpp.i
-
-tutorial08_basic_shading/tutorial08.s: tutorial08_basic_shading/tutorial08.cpp.s
-
-.PHONY : tutorial08_basic_shading/tutorial08.s
-
-# target to generate assembly for a file
-tutorial08_basic_shading/tutorial08.cpp.s:
-	$(MAKE) -f CMakeFiles/tutorial08_basic_shading.dir/build.make CMakeFiles/tutorial08_basic_shading.dir/tutorial08_basic_shading/tutorial08.cpp.s
-.PHONY : tutorial08_basic_shading/tutorial08.cpp.s
-
-tutorial09_vbo_indexing/tutorial09.o: tutorial09_vbo_indexing/tutorial09.cpp.o
-
-.PHONY : tutorial09_vbo_indexing/tutorial09.o
-
-# target to build an object file
-tutorial09_vbo_indexing/tutorial09.cpp.o:
-	$(MAKE) -f CMakeFiles/tutorial09_vbo_indexing.dir/build.make CMakeFiles/tutorial09_vbo_indexing.dir/tutorial09_vbo_indexing/tutorial09.cpp.o
-.PHONY : tutorial09_vbo_indexing/tutorial09.cpp.o
-
-tutorial09_vbo_indexing/tutorial09.i: tutorial09_vbo_indexing/tutorial09.cpp.i
-
-.PHONY : tutorial09_vbo_indexing/tutorial09.i
-
-# target to preprocess a source file
-tutorial09_vbo_indexing/tutorial09.cpp.i:
-	$(MAKE) -f CMakeFiles/tutorial09_vbo_indexing.dir/build.make CMakeFiles/tutorial09_vbo_indexing.dir/tutorial09_vbo_indexing/tutorial09.cpp.i
-.PHONY : tutorial09_vbo_indexing/tutorial09.cpp.i
-
-tutorial09_vbo_indexing/tutorial09.s: tutorial09_vbo_indexing/tutorial09.cpp.s
-
-.PHONY : tutorial09_vbo_indexing/tutorial09.s
-
-# target to generate assembly for a file
-tutorial09_vbo_indexing/tutorial09.cpp.s:
-	$(MAKE) -f CMakeFiles/tutorial09_vbo_indexing.dir/build.make CMakeFiles/tutorial09_vbo_indexing.dir/tutorial09_vbo_indexing/tutorial09.cpp.s
-.PHONY : tutorial09_vbo_indexing/tutorial09.cpp.s
-
-tutorial09_vbo_indexing/tutorial09_AssImp.o: tutorial09_vbo_indexing/tutorial09_AssImp.cpp.o
-
-.PHONY : tutorial09_vbo_indexing/tutorial09_AssImp.o
-
-# target to build an object file
-tutorial09_vbo_indexing/tutorial09_AssImp.cpp.o:
-	$(MAKE) -f CMakeFiles/tutorial09_AssImp.dir/build.make CMakeFiles/tutorial09_AssImp.dir/tutorial09_vbo_indexing/tutorial09_AssImp.cpp.o
-.PHONY : tutorial09_vbo_indexing/tutorial09_AssImp.cpp.o
-
-tutorial09_vbo_indexing/tutorial09_AssImp.i: tutorial09_vbo_indexing/tutorial09_AssImp.cpp.i
-
-.PHONY : tutorial09_vbo_indexing/tutorial09_AssImp.i
-
-# target to preprocess a source file
-tutorial09_vbo_indexing/tutorial09_AssImp.cpp.i:
-	$(MAKE) -f CMakeFiles/tutorial09_AssImp.dir/build.make CMakeFiles/tutorial09_AssImp.dir/tutorial09_vbo_indexing/tutorial09_AssImp.cpp.i
-.PHONY : tutorial09_vbo_indexing/tutorial09_AssImp.cpp.i
-
-tutorial09_vbo_indexing/tutorial09_AssImp.s: tutorial09_vbo_indexing/tutorial09_AssImp.cpp.s
-
-.PHONY : tutorial09_vbo_indexing/tutorial09_AssImp.s
-
-# target to generate assembly for a file
-tutorial09_vbo_indexing/tutorial09_AssImp.cpp.s:
-	$(MAKE) -f CMakeFiles/tutorial09_AssImp.dir/build.make CMakeFiles/tutorial09_AssImp.dir/tutorial09_vbo_indexing/tutorial09_AssImp.cpp.s
-.PHONY : tutorial09_vbo_indexing/tutorial09_AssImp.cpp.s
-
-tutorial09_vbo_indexing/tutorial09_several_objects.o: tutorial09_vbo_indexing/tutorial09_several_objects.cpp.o
-
-.PHONY : tutorial09_vbo_indexing/tutorial09_several_objects.o
-
-# target to build an object file
-tutorial09_vbo_indexing/tutorial09_several_objects.cpp.o:
-	$(MAKE) -f CMakeFiles/tutorial09_several_objects.dir/build.make CMakeFiles/tutorial09_several_objects.dir/tutorial09_vbo_indexing/tutorial09_several_objects.cpp.o
-.PHONY : tutorial09_vbo_indexing/tutorial09_several_objects.cpp.o
-
-tutorial09_vbo_indexing/tutorial09_several_objects.i: tutorial09_vbo_indexing/tutorial09_several_objects.cpp.i
-
-.PHONY : tutorial09_vbo_indexing/tutorial09_several_objects.i
-
-# target to preprocess a source file
-tutorial09_vbo_indexing/tutorial09_several_objects.cpp.i:
-	$(MAKE) -f CMakeFiles/tutorial09_several_objects.dir/build.make CMakeFiles/tutorial09_several_objects.dir/tutorial09_vbo_indexing/tutorial09_several_objects.cpp.i
-.PHONY : tutorial09_vbo_indexing/tutorial09_several_objects.cpp.i
-
-tutorial09_vbo_indexing/tutorial09_several_objects.s: tutorial09_vbo_indexing/tutorial09_several_objects.cpp.s
-
-.PHONY : tutorial09_vbo_indexing/tutorial09_several_objects.s
-
-# target to generate assembly for a file
-tutorial09_vbo_indexing/tutorial09_several_objects.cpp.s:
-	$(MAKE) -f CMakeFiles/tutorial09_several_objects.dir/build.make CMakeFiles/tutorial09_several_objects.dir/tutorial09_vbo_indexing/tutorial09_several_objects.cpp.s
-.PHONY : tutorial09_vbo_indexing/tutorial09_several_objects.cpp.s
-
-tutorial10_transparency/tutorial10.o: tutorial10_transparency/tutorial10.cpp.o
-
-.PHONY : tutorial10_transparency/tutorial10.o
-
-# target to build an object file
-tutorial10_transparency/tutorial10.cpp.o:
-	$(MAKE) -f CMakeFiles/tutorial10_transparency.dir/build.make CMakeFiles/tutorial10_transparency.dir/tutorial10_transparency/tutorial10.cpp.o
-.PHONY : tutorial10_transparency/tutorial10.cpp.o
-
-tutorial10_transparency/tutorial10.i: tutorial10_transparency/tutorial10.cpp.i
-
-.PHONY : tutorial10_transparency/tutorial10.i
-
-# target to preprocess a source file
-tutorial10_transparency/tutorial10.cpp.i:
-	$(MAKE) -f CMakeFiles/tutorial10_transparency.dir/build.make CMakeFiles/tutorial10_transparency.dir/tutorial10_transparency/tutorial10.cpp.i
-.PHONY : tutorial10_transparency/tutorial10.cpp.i
-
-tutorial10_transparency/tutorial10.s: tutorial10_transparency/tutorial10.cpp.s
-
-.PHONY : tutorial10_transparency/tutorial10.s
-
-# target to generate assembly for a file
-tutorial10_transparency/tutorial10.cpp.s:
-	$(MAKE) -f CMakeFiles/tutorial10_transparency.dir/build.make CMakeFiles/tutorial10_transparency.dir/tutorial10_transparency/tutorial10.cpp.s
-.PHONY : tutorial10_transparency/tutorial10.cpp.s
-
-tutorial11_2d_fonts/tutorial11.o: tutorial11_2d_fonts/tutorial11.cpp.o
-
-.PHONY : tutorial11_2d_fonts/tutorial11.o
-
-# target to build an object file
-tutorial11_2d_fonts/tutorial11.cpp.o:
-	$(MAKE) -f CMakeFiles/tutorial11_2d_fonts.dir/build.make CMakeFiles/tutorial11_2d_fonts.dir/tutorial11_2d_fonts/tutorial11.cpp.o
-.PHONY : tutorial11_2d_fonts/tutorial11.cpp.o
-
-tutorial11_2d_fonts/tutorial11.i: tutorial11_2d_fonts/tutorial11.cpp.i
-
-.PHONY : tutorial11_2d_fonts/tutorial11.i
-
-# target to preprocess a source file
-tutorial11_2d_fonts/tutorial11.cpp.i:
-	$(MAKE) -f CMakeFiles/tutorial11_2d_fonts.dir/build.make CMakeFiles/tutorial11_2d_fonts.dir/tutorial11_2d_fonts/tutorial11.cpp.i
-.PHONY : tutorial11_2d_fonts/tutorial11.cpp.i
-
-tutorial11_2d_fonts/tutorial11.s: tutorial11_2d_fonts/tutorial11.cpp.s
-
-.PHONY : tutorial11_2d_fonts/tutorial11.s
-
-# target to generate assembly for a file
-tutorial11_2d_fonts/tutorial11.cpp.s:
-	$(MAKE) -f CMakeFiles/tutorial11_2d_fonts.dir/build.make CMakeFiles/tutorial11_2d_fonts.dir/tutorial11_2d_fonts/tutorial11.cpp.s
-.PHONY : tutorial11_2d_fonts/tutorial11.cpp.s
-
-tutorial12_extensions/tutorial12.o: tutorial12_extensions/tutorial12.cpp.o
-
-.PHONY : tutorial12_extensions/tutorial12.o
-
-# target to build an object file
-tutorial12_extensions/tutorial12.cpp.o:
-	$(MAKE) -f CMakeFiles/tutorial12_extensions.dir/build.make CMakeFiles/tutorial12_extensions.dir/tutorial12_extensions/tutorial12.cpp.o
-.PHONY : tutorial12_extensions/tutorial12.cpp.o
-
-tutorial12_extensions/tutorial12.i: tutorial12_extensions/tutorial12.cpp.i
-
-.PHONY : tutorial12_extensions/tutorial12.i
-
-# target to preprocess a source file
-tutorial12_extensions/tutorial12.cpp.i:
-	$(MAKE) -f CMakeFiles/tutorial12_extensions.dir/build.make CMakeFiles/tutorial12_extensions.dir/tutorial12_extensions/tutorial12.cpp.i
-.PHONY : tutorial12_extensions/tutorial12.cpp.i
-
-tutorial12_extensions/tutorial12.s: tutorial12_extensions/tutorial12.cpp.s
-
-.PHONY : tutorial12_extensions/tutorial12.s
-
-# target to generate assembly for a file
-tutorial12_extensions/tutorial12.cpp.s:
-	$(MAKE) -f CMakeFiles/tutorial12_extensions.dir/build.make CMakeFiles/tutorial12_extensions.dir/tutorial12_extensions/tutorial12.cpp.s
-.PHONY : tutorial12_extensions/tutorial12.cpp.s
-
-tutorial13_normal_mapping/tutorial13.o: tutorial13_normal_mapping/tutorial13.cpp.o
-
-.PHONY : tutorial13_normal_mapping/tutorial13.o
-
-# target to build an object file
-tutorial13_normal_mapping/tutorial13.cpp.o:
-	$(MAKE) -f CMakeFiles/tutorial13_normal_mapping.dir/build.make CMakeFiles/tutorial13_normal_mapping.dir/tutorial13_normal_mapping/tutorial13.cpp.o
-.PHONY : tutorial13_normal_mapping/tutorial13.cpp.o
-
-tutorial13_normal_mapping/tutorial13.i: tutorial13_normal_mapping/tutorial13.cpp.i
-
-.PHONY : tutorial13_normal_mapping/tutorial13.i
-
-# target to preprocess a source file
-tutorial13_normal_mapping/tutorial13.cpp.i:
-	$(MAKE) -f CMakeFiles/tutorial13_normal_mapping.dir/build.make CMakeFiles/tutorial13_normal_mapping.dir/tutorial13_normal_mapping/tutorial13.cpp.i
-.PHONY : tutorial13_normal_mapping/tutorial13.cpp.i
-
-tutorial13_normal_mapping/tutorial13.s: tutorial13_normal_mapping/tutorial13.cpp.s
-
-.PHONY : tutorial13_normal_mapping/tutorial13.s
-
-# target to generate assembly for a file
-tutorial13_normal_mapping/tutorial13.cpp.s:
-	$(MAKE) -f CMakeFiles/tutorial13_normal_mapping.dir/build.make CMakeFiles/tutorial13_normal_mapping.dir/tutorial13_normal_mapping/tutorial13.cpp.s
-.PHONY : tutorial13_normal_mapping/tutorial13.cpp.s
-
-tutorial14_render_to_texture/tutorial14.o: tutorial14_render_to_texture/tutorial14.cpp.o
-
-.PHONY : tutorial14_render_to_texture/tutorial14.o
-
-# target to build an object file
-tutorial14_render_to_texture/tutorial14.cpp.o:
-	$(MAKE) -f CMakeFiles/tutorial14_render_to_texture.dir/build.make CMakeFiles/tutorial14_render_to_texture.dir/tutorial14_render_to_texture/tutorial14.cpp.o
-.PHONY : tutorial14_render_to_texture/tutorial14.cpp.o
-
-tutorial14_render_to_texture/tutorial14.i: tutorial14_render_to_texture/tutorial14.cpp.i
-
-.PHONY : tutorial14_render_to_texture/tutorial14.i
-
-# target to preprocess a source file
-tutorial14_render_to_texture/tutorial14.cpp.i:
-	$(MAKE) -f CMakeFiles/tutorial14_render_to_texture.dir/build.make CMakeFiles/tutorial14_render_to_texture.dir/tutorial14_render_to_texture/tutorial14.cpp.i
-.PHONY : tutorial14_render_to_texture/tutorial14.cpp.i
-
-tutorial14_render_to_texture/tutorial14.s: tutorial14_render_to_texture/tutorial14.cpp.s
-
-.PHONY : tutorial14_render_to_texture/tutorial14.s
-
-# target to generate assembly for a file
-tutorial14_render_to_texture/tutorial14.cpp.s:
-	$(MAKE) -f CMakeFiles/tutorial14_render_to_texture.dir/build.make CMakeFiles/tutorial14_render_to_texture.dir/tutorial14_render_to_texture/tutorial14.cpp.s
-.PHONY : tutorial14_render_to_texture/tutorial14.cpp.s
-
-tutorial15_lightmaps/tutorial15.o: tutorial15_lightmaps/tutorial15.cpp.o
-
-.PHONY : tutorial15_lightmaps/tutorial15.o
-
-# target to build an object file
-tutorial15_lightmaps/tutorial15.cpp.o:
-	$(MAKE) -f CMakeFiles/tutorial15_lightmaps.dir/build.make CMakeFiles/tutorial15_lightmaps.dir/tutorial15_lightmaps/tutorial15.cpp.o
-.PHONY : tutorial15_lightmaps/tutorial15.cpp.o
-
-tutorial15_lightmaps/tutorial15.i: tutorial15_lightmaps/tutorial15.cpp.i
-
-.PHONY : tutorial15_lightmaps/tutorial15.i
-
-# target to preprocess a source file
-tutorial15_lightmaps/tutorial15.cpp.i:
-	$(MAKE) -f CMakeFiles/tutorial15_lightmaps.dir/build.make CMakeFiles/tutorial15_lightmaps.dir/tutorial15_lightmaps/tutorial15.cpp.i
-.PHONY : tutorial15_lightmaps/tutorial15.cpp.i
-
-tutorial15_lightmaps/tutorial15.s: tutorial15_lightmaps/tutorial15.cpp.s
-
-.PHONY : tutorial15_lightmaps/tutorial15.s
-
-# target to generate assembly for a file
-tutorial15_lightmaps/tutorial15.cpp.s:
-	$(MAKE) -f CMakeFiles/tutorial15_lightmaps.dir/build.make CMakeFiles/tutorial15_lightmaps.dir/tutorial15_lightmaps/tutorial15.cpp.s
-.PHONY : tutorial15_lightmaps/tutorial15.cpp.s
-
-tutorial16_shadowmaps/tutorial16.o: tutorial16_shadowmaps/tutorial16.cpp.o
-
-.PHONY : tutorial16_shadowmaps/tutorial16.o
-
-# target to build an object file
-tutorial16_shadowmaps/tutorial16.cpp.o:
-	$(MAKE) -f CMakeFiles/tutorial16_shadowmaps.dir/build.make CMakeFiles/tutorial16_shadowmaps.dir/tutorial16_shadowmaps/tutorial16.cpp.o
-.PHONY : tutorial16_shadowmaps/tutorial16.cpp.o
-
-tutorial16_shadowmaps/tutorial16.i: tutorial16_shadowmaps/tutorial16.cpp.i
-
-.PHONY : tutorial16_shadowmaps/tutorial16.i
-
-# target to preprocess a source file
-tutorial16_shadowmaps/tutorial16.cpp.i:
-	$(MAKE) -f CMakeFiles/tutorial16_shadowmaps.dir/build.make CMakeFiles/tutorial16_shadowmaps.dir/tutorial16_shadowmaps/tutorial16.cpp.i
-.PHONY : tutorial16_shadowmaps/tutorial16.cpp.i
-
-tutorial16_shadowmaps/tutorial16.s: tutorial16_shadowmaps/tutorial16.cpp.s
-
-.PHONY : tutorial16_shadowmaps/tutorial16.s
-
-# target to generate assembly for a file
-tutorial16_shadowmaps/tutorial16.cpp.s:
-	$(MAKE) -f CMakeFiles/tutorial16_shadowmaps.dir/build.make CMakeFiles/tutorial16_shadowmaps.dir/tutorial16_shadowmaps/tutorial16.cpp.s
-.PHONY : tutorial16_shadowmaps/tutorial16.cpp.s
-
-tutorial16_shadowmaps/tutorial16_SimpleVersion.o: tutorial16_shadowmaps/tutorial16_SimpleVersion.cpp.o
-
-.PHONY : tutorial16_shadowmaps/tutorial16_SimpleVersion.o
-
-# target to build an object file
-tutorial16_shadowmaps/tutorial16_SimpleVersion.cpp.o:
-	$(MAKE) -f CMakeFiles/tutorial16_shadowmaps_simple.dir/build.make CMakeFiles/tutorial16_shadowmaps_simple.dir/tutorial16_shadowmaps/tutorial16_SimpleVersion.cpp.o
-.PHONY : tutorial16_shadowmaps/tutorial16_SimpleVersion.cpp.o
-
-tutorial16_shadowmaps/tutorial16_SimpleVersion.i: tutorial16_shadowmaps/tutorial16_SimpleVersion.cpp.i
-
-.PHONY : tutorial16_shadowmaps/tutorial16_SimpleVersion.i
-
-# target to preprocess a source file
-tutorial16_shadowmaps/tutorial16_SimpleVersion.cpp.i:
-	$(MAKE) -f CMakeFiles/tutorial16_shadowmaps_simple.dir/build.make CMakeFiles/tutorial16_shadowmaps_simple.dir/tutorial16_shadowmaps/tutorial16_SimpleVersion.cpp.i
-.PHONY : tutorial16_shadowmaps/tutorial16_SimpleVersion.cpp.i
-
-tutorial16_shadowmaps/tutorial16_SimpleVersion.s: tutorial16_shadowmaps/tutorial16_SimpleVersion.cpp.s
-
-.PHONY : tutorial16_shadowmaps/tutorial16_SimpleVersion.s
-
-# target to generate assembly for a file
-tutorial16_shadowmaps/tutorial16_SimpleVersion.cpp.s:
-	$(MAKE) -f CMakeFiles/tutorial16_shadowmaps_simple.dir/build.make CMakeFiles/tutorial16_shadowmaps_simple.dir/tutorial16_shadowmaps/tutorial16_SimpleVersion.cpp.s
-.PHONY : tutorial16_shadowmaps/tutorial16_SimpleVersion.cpp.s
-
-tutorial17_rotations/tutorial17.o: tutorial17_rotations/tutorial17.cpp.o
-
-.PHONY : tutorial17_rotations/tutorial17.o
-
-# target to build an object file
-tutorial17_rotations/tutorial17.cpp.o:
-	$(MAKE) -f CMakeFiles/tutorial17_rotations.dir/build.make CMakeFiles/tutorial17_rotations.dir/tutorial17_rotations/tutorial17.cpp.o
-.PHONY : tutorial17_rotations/tutorial17.cpp.o
-
-tutorial17_rotations/tutorial17.i: tutorial17_rotations/tutorial17.cpp.i
-
-.PHONY : tutorial17_rotations/tutorial17.i
-
-# target to preprocess a source file
-tutorial17_rotations/tutorial17.cpp.i:
-	$(MAKE) -f CMakeFiles/tutorial17_rotations.dir/build.make CMakeFiles/tutorial17_rotations.dir/tutorial17_rotations/tutorial17.cpp.i
-.PHONY : tutorial17_rotations/tutorial17.cpp.i
-
-tutorial17_rotations/tutorial17.s: tutorial17_rotations/tutorial17.cpp.s
-
-.PHONY : tutorial17_rotations/tutorial17.s
-
-# target to generate assembly for a file
-tutorial17_rotations/tutorial17.cpp.s:
-	$(MAKE) -f CMakeFiles/tutorial17_rotations.dir/build.make CMakeFiles/tutorial17_rotations.dir/tutorial17_rotations/tutorial17.cpp.s
-.PHONY : tutorial17_rotations/tutorial17.cpp.s
-
-tutorial18_billboards_and_particles/tutorial18_billboards.o: tutorial18_billboards_and_particles/tutorial18_billboards.cpp.o
-
-.PHONY : tutorial18_billboards_and_particles/tutorial18_billboards.o
-
-# target to build an object file
-tutorial18_billboards_and_particles/tutorial18_billboards.cpp.o:
-	$(MAKE) -f CMakeFiles/tutorial18_billboards.dir/build.make CMakeFiles/tutorial18_billboards.dir/tutorial18_billboards_and_particles/tutorial18_billboards.cpp.o
-.PHONY : tutorial18_billboards_and_particles/tutorial18_billboards.cpp.o
-
-tutorial18_billboards_and_particles/tutorial18_billboards.i: tutorial18_billboards_and_particles/tutorial18_billboards.cpp.i
-
-.PHONY : tutorial18_billboards_and_particles/tutorial18_billboards.i
-
-# target to preprocess a source file
-tutorial18_billboards_and_particles/tutorial18_billboards.cpp.i:
-	$(MAKE) -f CMakeFiles/tutorial18_billboards.dir/build.make CMakeFiles/tutorial18_billboards.dir/tutorial18_billboards_and_particles/tutorial18_billboards.cpp.i
-.PHONY : tutorial18_billboards_and_particles/tutorial18_billboards.cpp.i
-
-tutorial18_billboards_and_particles/tutorial18_billboards.s: tutorial18_billboards_and_particles/tutorial18_billboards.cpp.s
-
-.PHONY : tutorial18_billboards_and_particles/tutorial18_billboards.s
-
-# target to generate assembly for a file
-tutorial18_billboards_and_particles/tutorial18_billboards.cpp.s:
-	$(MAKE) -f CMakeFiles/tutorial18_billboards.dir/build.make CMakeFiles/tutorial18_billboards.dir/tutorial18_billboards_and_particles/tutorial18_billboards.cpp.s
-.PHONY : tutorial18_billboards_and_particles/tutorial18_billboards.cpp.s
-
-tutorial18_billboards_and_particles/tutorial18_particles.o: tutorial18_billboards_and_particles/tutorial18_particles.cpp.o
-
-.PHONY : tutorial18_billboards_and_particles/tutorial18_particles.o
-
-# target to build an object file
-tutorial18_billboards_and_particles/tutorial18_particles.cpp.o:
-	$(MAKE) -f CMakeFiles/tutorial18_particles.dir/build.make CMakeFiles/tutorial18_particles.dir/tutorial18_billboards_and_particles/tutorial18_particles.cpp.o
-.PHONY : tutorial18_billboards_and_particles/tutorial18_particles.cpp.o
-
-tutorial18_billboards_and_particles/tutorial18_particles.i: tutorial18_billboards_and_particles/tutorial18_particles.cpp.i
-
-.PHONY : tutorial18_billboards_and_particles/tutorial18_particles.i
-
-# target to preprocess a source file
-tutorial18_billboards_and_particles/tutorial18_particles.cpp.i:
-	$(MAKE) -f CMakeFiles/tutorial18_particles.dir/build.make CMakeFiles/tutorial18_particles.dir/tutorial18_billboards_and_particles/tutorial18_particles.cpp.i
-.PHONY : tutorial18_billboards_and_particles/tutorial18_particles.cpp.i
-
-tutorial18_billboards_and_particles/tutorial18_particles.s: tutorial18_billboards_and_particles/tutorial18_particles.cpp.s
-
-.PHONY : tutorial18_billboards_and_particles/tutorial18_particles.s
-
-# target to generate assembly for a file
-tutorial18_billboards_and_particles/tutorial18_particles.cpp.s:
-	$(MAKE) -f CMakeFiles/tutorial18_particles.dir/build.make CMakeFiles/tutorial18_particles.dir/tutorial18_billboards_and_particles/tutorial18_particles.cpp.s
-.PHONY : tutorial18_billboards_and_particles/tutorial18_particles.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -2131,36 +921,14 @@ help:
 	@echo "... depend"
 	@echo "... install/strip"
 	@echo "... list_install_components"
-	@echo "... rebuild_cache"
-	@echo "... edit_cache"
-	@echo "... tutorial18_particles"
-	@echo "... misc05_picking_custom"
+	@echo "... install/local"
 	@echo "... misc05_picking_slow_easy"
 	@echo "... playground"
-	@echo "... tutorial16_shadowmaps"
-	@echo "... tutorial16_shadowmaps_simple"
-	@echo "... tutorial06_keyboard_and_mouse"
-	@echo "... tutorial05_textured_cube"
-	@echo "... tutorial10_transparency"
-	@echo "... tutorial04_colored_cube"
-	@echo "... tutorial17_rotations"
-	@echo "... tutorial13_normal_mapping"
-	@echo "... tutorial15_lightmaps"
-	@echo "... tutorial03_matrices"
-	@echo "... tutorial01_first_window"
-	@echo "... tutorial02_red_triangle"
-	@echo "... tutorial18_billboards"
-	@echo "... tutorial08_basic_shading"
-	@echo "... tutorial07_model_loading"
-	@echo "... tutorial09_vbo_indexing"
 	@echo "... install"
-	@echo "... tutorial09_AssImp"
-	@echo "... tutorial09_several_objects"
 	@echo "... misc05_picking_BulletPhysics"
-	@echo "... tutorial11_2d_fonts"
-	@echo "... install/local"
-	@echo "... tutorial12_extensions"
-	@echo "... tutorial14_render_to_texture"
+	@echo "... misc05_picking_custom"
+	@echo "... edit_cache"
+	@echo "... rebuild_cache"
 	@echo "... ANTTWEAKBAR_116_OGLCORE_GLFW"
 	@echo "... GLEW_1130"
 	@echo "... uninstall"
@@ -2200,18 +968,9 @@ help:
 	@echo "... common/objloader.o"
 	@echo "... common/objloader.i"
 	@echo "... common/objloader.s"
-	@echo "... common/quaternion_utils.o"
-	@echo "... common/quaternion_utils.i"
-	@echo "... common/quaternion_utils.s"
 	@echo "... common/shader.o"
 	@echo "... common/shader.i"
 	@echo "... common/shader.s"
-	@echo "... common/tangentspace.o"
-	@echo "... common/tangentspace.i"
-	@echo "... common/tangentspace.s"
-	@echo "... common/text2D.o"
-	@echo "... common/text2D.i"
-	@echo "... common/text2D.s"
 	@echo "... common/texture.o"
 	@echo "... common/texture.i"
 	@echo "... common/texture.s"
@@ -2230,72 +989,6 @@ help:
 	@echo "... playground/playground.o"
 	@echo "... playground/playground.i"
 	@echo "... playground/playground.s"
-	@echo "... tutorial01_first_window/tutorial01.o"
-	@echo "... tutorial01_first_window/tutorial01.i"
-	@echo "... tutorial01_first_window/tutorial01.s"
-	@echo "... tutorial02_red_triangle/tutorial02.o"
-	@echo "... tutorial02_red_triangle/tutorial02.i"
-	@echo "... tutorial02_red_triangle/tutorial02.s"
-	@echo "... tutorial03_matrices/tutorial03.o"
-	@echo "... tutorial03_matrices/tutorial03.i"
-	@echo "... tutorial03_matrices/tutorial03.s"
-	@echo "... tutorial04_colored_cube/tutorial04.o"
-	@echo "... tutorial04_colored_cube/tutorial04.i"
-	@echo "... tutorial04_colored_cube/tutorial04.s"
-	@echo "... tutorial05_textured_cube/tutorial05.o"
-	@echo "... tutorial05_textured_cube/tutorial05.i"
-	@echo "... tutorial05_textured_cube/tutorial05.s"
-	@echo "... tutorial06_keyboard_and_mouse/tutorial06.o"
-	@echo "... tutorial06_keyboard_and_mouse/tutorial06.i"
-	@echo "... tutorial06_keyboard_and_mouse/tutorial06.s"
-	@echo "... tutorial07_model_loading/tutorial07.o"
-	@echo "... tutorial07_model_loading/tutorial07.i"
-	@echo "... tutorial07_model_loading/tutorial07.s"
-	@echo "... tutorial08_basic_shading/tutorial08.o"
-	@echo "... tutorial08_basic_shading/tutorial08.i"
-	@echo "... tutorial08_basic_shading/tutorial08.s"
-	@echo "... tutorial09_vbo_indexing/tutorial09.o"
-	@echo "... tutorial09_vbo_indexing/tutorial09.i"
-	@echo "... tutorial09_vbo_indexing/tutorial09.s"
-	@echo "... tutorial09_vbo_indexing/tutorial09_AssImp.o"
-	@echo "... tutorial09_vbo_indexing/tutorial09_AssImp.i"
-	@echo "... tutorial09_vbo_indexing/tutorial09_AssImp.s"
-	@echo "... tutorial09_vbo_indexing/tutorial09_several_objects.o"
-	@echo "... tutorial09_vbo_indexing/tutorial09_several_objects.i"
-	@echo "... tutorial09_vbo_indexing/tutorial09_several_objects.s"
-	@echo "... tutorial10_transparency/tutorial10.o"
-	@echo "... tutorial10_transparency/tutorial10.i"
-	@echo "... tutorial10_transparency/tutorial10.s"
-	@echo "... tutorial11_2d_fonts/tutorial11.o"
-	@echo "... tutorial11_2d_fonts/tutorial11.i"
-	@echo "... tutorial11_2d_fonts/tutorial11.s"
-	@echo "... tutorial12_extensions/tutorial12.o"
-	@echo "... tutorial12_extensions/tutorial12.i"
-	@echo "... tutorial12_extensions/tutorial12.s"
-	@echo "... tutorial13_normal_mapping/tutorial13.o"
-	@echo "... tutorial13_normal_mapping/tutorial13.i"
-	@echo "... tutorial13_normal_mapping/tutorial13.s"
-	@echo "... tutorial14_render_to_texture/tutorial14.o"
-	@echo "... tutorial14_render_to_texture/tutorial14.i"
-	@echo "... tutorial14_render_to_texture/tutorial14.s"
-	@echo "... tutorial15_lightmaps/tutorial15.o"
-	@echo "... tutorial15_lightmaps/tutorial15.i"
-	@echo "... tutorial15_lightmaps/tutorial15.s"
-	@echo "... tutorial16_shadowmaps/tutorial16.o"
-	@echo "... tutorial16_shadowmaps/tutorial16.i"
-	@echo "... tutorial16_shadowmaps/tutorial16.s"
-	@echo "... tutorial16_shadowmaps/tutorial16_SimpleVersion.o"
-	@echo "... tutorial16_shadowmaps/tutorial16_SimpleVersion.i"
-	@echo "... tutorial16_shadowmaps/tutorial16_SimpleVersion.s"
-	@echo "... tutorial17_rotations/tutorial17.o"
-	@echo "... tutorial17_rotations/tutorial17.i"
-	@echo "... tutorial17_rotations/tutorial17.s"
-	@echo "... tutorial18_billboards_and_particles/tutorial18_billboards.o"
-	@echo "... tutorial18_billboards_and_particles/tutorial18_billboards.i"
-	@echo "... tutorial18_billboards_and_particles/tutorial18_billboards.s"
-	@echo "... tutorial18_billboards_and_particles/tutorial18_particles.o"
-	@echo "... tutorial18_billboards_and_particles/tutorial18_particles.i"
-	@echo "... tutorial18_billboards_and_particles/tutorial18_particles.s"
 .PHONY : help
 
 

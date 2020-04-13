@@ -5,7 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/external/AntTweakBar-1.16/src/TwEventGLFW.c" "/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwEventGLFW.c.o"
+  "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/AntTweakBar-1.16/src/TwEventGLFW.c" "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwEventGLFW.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -29,15 +29,15 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "../external/bullet-2.81-rev2613/src"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/external/AntTweakBar-1.16/src/LoadOGL.cpp" "/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/LoadOGL.cpp.o"
-  "/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/external/AntTweakBar-1.16/src/LoadOGLCore.cpp" "/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/LoadOGLCore.cpp.o"
-  "/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/external/AntTweakBar-1.16/src/TwBar.cpp" "/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwBar.cpp.o"
-  "/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/external/AntTweakBar-1.16/src/TwColors.cpp" "/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwColors.cpp.o"
-  "/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/external/AntTweakBar-1.16/src/TwFonts.cpp" "/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwFonts.cpp.o"
-  "/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/external/AntTweakBar-1.16/src/TwMgr.cpp" "/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwMgr.cpp.o"
-  "/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/external/AntTweakBar-1.16/src/TwOpenGL.cpp" "/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwOpenGL.cpp.o"
-  "/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/external/AntTweakBar-1.16/src/TwOpenGLCore.cpp" "/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwOpenGLCore.cpp.o"
-  "/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/external/AntTweakBar-1.16/src/TwPrecomp.cpp" "/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwPrecomp.cpp.o"
+  "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/AntTweakBar-1.16/src/LoadOGL.cpp" "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/LoadOGL.cpp.o"
+  "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/AntTweakBar-1.16/src/LoadOGLCore.cpp" "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/LoadOGLCore.cpp.o"
+  "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/AntTweakBar-1.16/src/TwBar.cpp" "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwBar.cpp.o"
+  "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/AntTweakBar-1.16/src/TwColors.cpp" "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwColors.cpp.o"
+  "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/AntTweakBar-1.16/src/TwFonts.cpp" "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwFonts.cpp.o"
+  "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/AntTweakBar-1.16/src/TwMgr.cpp" "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwMgr.cpp.o"
+  "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/AntTweakBar-1.16/src/TwOpenGL.cpp" "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwOpenGL.cpp.o"
+  "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/AntTweakBar-1.16/src/TwOpenGLCore.cpp" "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwOpenGLCore.cpp.o"
+  "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/AntTweakBar-1.16/src/TwPrecomp.cpp" "/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwPrecomp.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

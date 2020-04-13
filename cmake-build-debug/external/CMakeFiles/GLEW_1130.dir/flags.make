@@ -6,5 +6,5 @@ C_FLAGS = -g
 
 C_DEFINES = -DASSIMP_BUILD_BOOST_WORKAROUND -DGLEW_STATIC -DTW_NO_DIRECT3D -DTW_NO_LIB_PRAGMA -DTW_STATIC -D_CRT_SECURE_NO_WARNINGS -D_UNIX
 
-C_INCLUDES = -I/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/external/glfw-3.1.2/include/GLFW -I/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/external/glew-1.13.0/include -I/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/external/AntTweakBar-1.16/include -I/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/external/assimp-3.0.1270/code/BoostWorkaround -I/home/anastasia/Documents/mipt/3d-graph/repositories/ogl/external/bullet-2.81-rev2613/src 
+C_INCLUDES = -I/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/glfw-3.1.2/include/GLFW -I/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/glew-1.13.0/include -I/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/AntTweakBar-1.16/include -I/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/assimp-3.0.1270/code/BoostWorkaround -I/home/anastasia/Documents/mipt/3d-graph/repositories/shooter/external/bullet-2.81-rev2613/src 
 

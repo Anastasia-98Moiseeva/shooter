@@ -48,10 +48,10 @@ RM = /snap/clion/107/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/ogl
+CMAKE_SOURCE_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/shooter
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug
+CMAKE_BINARY_DIR = /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,14 +126,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/external/CMakeFiles/progress.marks
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 external/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug/CMakeFiles 0
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/external/CMakeFiles/progress.marks
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 external/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 external/clean
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 external/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 external/preinstall
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 external/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 external/preinstall
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 external/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/rule:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/rule
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/rule
 .PHONY : external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/rule
 
 # Convenience name for target.
@@ -168,12 +168,12 @@ ANTTWEAKBAR_116_OGLCORE_GLFW: external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.d
 
 # fast build rule for target.
 ANTTWEAKBAR_116_OGLCORE_GLFW/fast:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build
 .PHONY : ANTTWEAKBAR_116_OGLCORE_GLFW/fast
 
 # Convenience name for target.
 external/CMakeFiles/GLEW_1130.dir/rule:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 external/CMakeFiles/GLEW_1130.dir/rule
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 external/CMakeFiles/GLEW_1130.dir/rule
 .PHONY : external/CMakeFiles/GLEW_1130.dir/rule
 
 # Convenience name for target.
@@ -183,7 +183,7 @@ GLEW_1130: external/CMakeFiles/GLEW_1130.dir/rule
 
 # fast build rule for target.
 GLEW_1130/fast:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(MAKE) -f external/CMakeFiles/GLEW_1130.dir/build.make external/CMakeFiles/GLEW_1130.dir/build
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(MAKE) -f external/CMakeFiles/GLEW_1130.dir/build.make external/CMakeFiles/GLEW_1130.dir/build
 .PHONY : GLEW_1130/fast
 
 AntTweakBar-1.16/src/LoadOGL.o: AntTweakBar-1.16/src/LoadOGL.cpp.o
@@ -192,7 +192,7 @@ AntTweakBar-1.16/src/LoadOGL.o: AntTweakBar-1.16/src/LoadOGL.cpp.o
 
 # target to build an object file
 AntTweakBar-1.16/src/LoadOGL.cpp.o:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/LoadOGL.cpp.o
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/LoadOGL.cpp.o
 .PHONY : AntTweakBar-1.16/src/LoadOGL.cpp.o
 
 AntTweakBar-1.16/src/LoadOGL.i: AntTweakBar-1.16/src/LoadOGL.cpp.i
@@ -201,7 +201,7 @@ AntTweakBar-1.16/src/LoadOGL.i: AntTweakBar-1.16/src/LoadOGL.cpp.i
 
 # target to preprocess a source file
 AntTweakBar-1.16/src/LoadOGL.cpp.i:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/LoadOGL.cpp.i
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/LoadOGL.cpp.i
 .PHONY : AntTweakBar-1.16/src/LoadOGL.cpp.i
 
 AntTweakBar-1.16/src/LoadOGL.s: AntTweakBar-1.16/src/LoadOGL.cpp.s
@@ -210,7 +210,7 @@ AntTweakBar-1.16/src/LoadOGL.s: AntTweakBar-1.16/src/LoadOGL.cpp.s
 
 # target to generate assembly for a file
 AntTweakBar-1.16/src/LoadOGL.cpp.s:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/LoadOGL.cpp.s
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/LoadOGL.cpp.s
 .PHONY : AntTweakBar-1.16/src/LoadOGL.cpp.s
 
 AntTweakBar-1.16/src/LoadOGLCore.o: AntTweakBar-1.16/src/LoadOGLCore.cpp.o
@@ -219,7 +219,7 @@ AntTweakBar-1.16/src/LoadOGLCore.o: AntTweakBar-1.16/src/LoadOGLCore.cpp.o
 
 # target to build an object file
 AntTweakBar-1.16/src/LoadOGLCore.cpp.o:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/LoadOGLCore.cpp.o
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/LoadOGLCore.cpp.o
 .PHONY : AntTweakBar-1.16/src/LoadOGLCore.cpp.o
 
 AntTweakBar-1.16/src/LoadOGLCore.i: AntTweakBar-1.16/src/LoadOGLCore.cpp.i
@@ -228,7 +228,7 @@ AntTweakBar-1.16/src/LoadOGLCore.i: AntTweakBar-1.16/src/LoadOGLCore.cpp.i
 
 # target to preprocess a source file
 AntTweakBar-1.16/src/LoadOGLCore.cpp.i:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/LoadOGLCore.cpp.i
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/LoadOGLCore.cpp.i
 .PHONY : AntTweakBar-1.16/src/LoadOGLCore.cpp.i
 
 AntTweakBar-1.16/src/LoadOGLCore.s: AntTweakBar-1.16/src/LoadOGLCore.cpp.s
@@ -237,7 +237,7 @@ AntTweakBar-1.16/src/LoadOGLCore.s: AntTweakBar-1.16/src/LoadOGLCore.cpp.s
 
 # target to generate assembly for a file
 AntTweakBar-1.16/src/LoadOGLCore.cpp.s:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/LoadOGLCore.cpp.s
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/LoadOGLCore.cpp.s
 .PHONY : AntTweakBar-1.16/src/LoadOGLCore.cpp.s
 
 AntTweakBar-1.16/src/TwBar.o: AntTweakBar-1.16/src/TwBar.cpp.o
@@ -246,7 +246,7 @@ AntTweakBar-1.16/src/TwBar.o: AntTweakBar-1.16/src/TwBar.cpp.o
 
 # target to build an object file
 AntTweakBar-1.16/src/TwBar.cpp.o:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwBar.cpp.o
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwBar.cpp.o
 .PHONY : AntTweakBar-1.16/src/TwBar.cpp.o
 
 AntTweakBar-1.16/src/TwBar.i: AntTweakBar-1.16/src/TwBar.cpp.i
@@ -255,7 +255,7 @@ AntTweakBar-1.16/src/TwBar.i: AntTweakBar-1.16/src/TwBar.cpp.i
 
 # target to preprocess a source file
 AntTweakBar-1.16/src/TwBar.cpp.i:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwBar.cpp.i
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwBar.cpp.i
 .PHONY : AntTweakBar-1.16/src/TwBar.cpp.i
 
 AntTweakBar-1.16/src/TwBar.s: AntTweakBar-1.16/src/TwBar.cpp.s
@@ -264,7 +264,7 @@ AntTweakBar-1.16/src/TwBar.s: AntTweakBar-1.16/src/TwBar.cpp.s
 
 # target to generate assembly for a file
 AntTweakBar-1.16/src/TwBar.cpp.s:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwBar.cpp.s
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwBar.cpp.s
 .PHONY : AntTweakBar-1.16/src/TwBar.cpp.s
 
 AntTweakBar-1.16/src/TwColors.o: AntTweakBar-1.16/src/TwColors.cpp.o
@@ -273,7 +273,7 @@ AntTweakBar-1.16/src/TwColors.o: AntTweakBar-1.16/src/TwColors.cpp.o
 
 # target to build an object file
 AntTweakBar-1.16/src/TwColors.cpp.o:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwColors.cpp.o
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwColors.cpp.o
 .PHONY : AntTweakBar-1.16/src/TwColors.cpp.o
 
 AntTweakBar-1.16/src/TwColors.i: AntTweakBar-1.16/src/TwColors.cpp.i
@@ -282,7 +282,7 @@ AntTweakBar-1.16/src/TwColors.i: AntTweakBar-1.16/src/TwColors.cpp.i
 
 # target to preprocess a source file
 AntTweakBar-1.16/src/TwColors.cpp.i:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwColors.cpp.i
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwColors.cpp.i
 .PHONY : AntTweakBar-1.16/src/TwColors.cpp.i
 
 AntTweakBar-1.16/src/TwColors.s: AntTweakBar-1.16/src/TwColors.cpp.s
@@ -291,7 +291,7 @@ AntTweakBar-1.16/src/TwColors.s: AntTweakBar-1.16/src/TwColors.cpp.s
 
 # target to generate assembly for a file
 AntTweakBar-1.16/src/TwColors.cpp.s:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwColors.cpp.s
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwColors.cpp.s
 .PHONY : AntTweakBar-1.16/src/TwColors.cpp.s
 
 AntTweakBar-1.16/src/TwEventGLFW.o: AntTweakBar-1.16/src/TwEventGLFW.c.o
@@ -300,7 +300,7 @@ AntTweakBar-1.16/src/TwEventGLFW.o: AntTweakBar-1.16/src/TwEventGLFW.c.o
 
 # target to build an object file
 AntTweakBar-1.16/src/TwEventGLFW.c.o:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwEventGLFW.c.o
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwEventGLFW.c.o
 .PHONY : AntTweakBar-1.16/src/TwEventGLFW.c.o
 
 AntTweakBar-1.16/src/TwEventGLFW.i: AntTweakBar-1.16/src/TwEventGLFW.c.i
@@ -309,7 +309,7 @@ AntTweakBar-1.16/src/TwEventGLFW.i: AntTweakBar-1.16/src/TwEventGLFW.c.i
 
 # target to preprocess a source file
 AntTweakBar-1.16/src/TwEventGLFW.c.i:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwEventGLFW.c.i
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwEventGLFW.c.i
 .PHONY : AntTweakBar-1.16/src/TwEventGLFW.c.i
 
 AntTweakBar-1.16/src/TwEventGLFW.s: AntTweakBar-1.16/src/TwEventGLFW.c.s
@@ -318,7 +318,7 @@ AntTweakBar-1.16/src/TwEventGLFW.s: AntTweakBar-1.16/src/TwEventGLFW.c.s
 
 # target to generate assembly for a file
 AntTweakBar-1.16/src/TwEventGLFW.c.s:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwEventGLFW.c.s
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwEventGLFW.c.s
 .PHONY : AntTweakBar-1.16/src/TwEventGLFW.c.s
 
 AntTweakBar-1.16/src/TwFonts.o: AntTweakBar-1.16/src/TwFonts.cpp.o
@@ -327,7 +327,7 @@ AntTweakBar-1.16/src/TwFonts.o: AntTweakBar-1.16/src/TwFonts.cpp.o
 
 # target to build an object file
 AntTweakBar-1.16/src/TwFonts.cpp.o:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwFonts.cpp.o
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwFonts.cpp.o
 .PHONY : AntTweakBar-1.16/src/TwFonts.cpp.o
 
 AntTweakBar-1.16/src/TwFonts.i: AntTweakBar-1.16/src/TwFonts.cpp.i
@@ -336,7 +336,7 @@ AntTweakBar-1.16/src/TwFonts.i: AntTweakBar-1.16/src/TwFonts.cpp.i
 
 # target to preprocess a source file
 AntTweakBar-1.16/src/TwFonts.cpp.i:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwFonts.cpp.i
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwFonts.cpp.i
 .PHONY : AntTweakBar-1.16/src/TwFonts.cpp.i
 
 AntTweakBar-1.16/src/TwFonts.s: AntTweakBar-1.16/src/TwFonts.cpp.s
@@ -345,7 +345,7 @@ AntTweakBar-1.16/src/TwFonts.s: AntTweakBar-1.16/src/TwFonts.cpp.s
 
 # target to generate assembly for a file
 AntTweakBar-1.16/src/TwFonts.cpp.s:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwFonts.cpp.s
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwFonts.cpp.s
 .PHONY : AntTweakBar-1.16/src/TwFonts.cpp.s
 
 AntTweakBar-1.16/src/TwMgr.o: AntTweakBar-1.16/src/TwMgr.cpp.o
@@ -354,7 +354,7 @@ AntTweakBar-1.16/src/TwMgr.o: AntTweakBar-1.16/src/TwMgr.cpp.o
 
 # target to build an object file
 AntTweakBar-1.16/src/TwMgr.cpp.o:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwMgr.cpp.o
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwMgr.cpp.o
 .PHONY : AntTweakBar-1.16/src/TwMgr.cpp.o
 
 AntTweakBar-1.16/src/TwMgr.i: AntTweakBar-1.16/src/TwMgr.cpp.i
@@ -363,7 +363,7 @@ AntTweakBar-1.16/src/TwMgr.i: AntTweakBar-1.16/src/TwMgr.cpp.i
 
 # target to preprocess a source file
 AntTweakBar-1.16/src/TwMgr.cpp.i:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwMgr.cpp.i
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwMgr.cpp.i
 .PHONY : AntTweakBar-1.16/src/TwMgr.cpp.i
 
 AntTweakBar-1.16/src/TwMgr.s: AntTweakBar-1.16/src/TwMgr.cpp.s
@@ -372,7 +372,7 @@ AntTweakBar-1.16/src/TwMgr.s: AntTweakBar-1.16/src/TwMgr.cpp.s
 
 # target to generate assembly for a file
 AntTweakBar-1.16/src/TwMgr.cpp.s:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwMgr.cpp.s
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwMgr.cpp.s
 .PHONY : AntTweakBar-1.16/src/TwMgr.cpp.s
 
 AntTweakBar-1.16/src/TwOpenGL.o: AntTweakBar-1.16/src/TwOpenGL.cpp.o
@@ -381,7 +381,7 @@ AntTweakBar-1.16/src/TwOpenGL.o: AntTweakBar-1.16/src/TwOpenGL.cpp.o
 
 # target to build an object file
 AntTweakBar-1.16/src/TwOpenGL.cpp.o:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwOpenGL.cpp.o
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwOpenGL.cpp.o
 .PHONY : AntTweakBar-1.16/src/TwOpenGL.cpp.o
 
 AntTweakBar-1.16/src/TwOpenGL.i: AntTweakBar-1.16/src/TwOpenGL.cpp.i
@@ -390,7 +390,7 @@ AntTweakBar-1.16/src/TwOpenGL.i: AntTweakBar-1.16/src/TwOpenGL.cpp.i
 
 # target to preprocess a source file
 AntTweakBar-1.16/src/TwOpenGL.cpp.i:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwOpenGL.cpp.i
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwOpenGL.cpp.i
 .PHONY : AntTweakBar-1.16/src/TwOpenGL.cpp.i
 
 AntTweakBar-1.16/src/TwOpenGL.s: AntTweakBar-1.16/src/TwOpenGL.cpp.s
@@ -399,7 +399,7 @@ AntTweakBar-1.16/src/TwOpenGL.s: AntTweakBar-1.16/src/TwOpenGL.cpp.s
 
 # target to generate assembly for a file
 AntTweakBar-1.16/src/TwOpenGL.cpp.s:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwOpenGL.cpp.s
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwOpenGL.cpp.s
 .PHONY : AntTweakBar-1.16/src/TwOpenGL.cpp.s
 
 AntTweakBar-1.16/src/TwOpenGLCore.o: AntTweakBar-1.16/src/TwOpenGLCore.cpp.o
@@ -408,7 +408,7 @@ AntTweakBar-1.16/src/TwOpenGLCore.o: AntTweakBar-1.16/src/TwOpenGLCore.cpp.o
 
 # target to build an object file
 AntTweakBar-1.16/src/TwOpenGLCore.cpp.o:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwOpenGLCore.cpp.o
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwOpenGLCore.cpp.o
 .PHONY : AntTweakBar-1.16/src/TwOpenGLCore.cpp.o
 
 AntTweakBar-1.16/src/TwOpenGLCore.i: AntTweakBar-1.16/src/TwOpenGLCore.cpp.i
@@ -417,7 +417,7 @@ AntTweakBar-1.16/src/TwOpenGLCore.i: AntTweakBar-1.16/src/TwOpenGLCore.cpp.i
 
 # target to preprocess a source file
 AntTweakBar-1.16/src/TwOpenGLCore.cpp.i:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwOpenGLCore.cpp.i
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwOpenGLCore.cpp.i
 .PHONY : AntTweakBar-1.16/src/TwOpenGLCore.cpp.i
 
 AntTweakBar-1.16/src/TwOpenGLCore.s: AntTweakBar-1.16/src/TwOpenGLCore.cpp.s
@@ -426,7 +426,7 @@ AntTweakBar-1.16/src/TwOpenGLCore.s: AntTweakBar-1.16/src/TwOpenGLCore.cpp.s
 
 # target to generate assembly for a file
 AntTweakBar-1.16/src/TwOpenGLCore.cpp.s:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwOpenGLCore.cpp.s
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwOpenGLCore.cpp.s
 .PHONY : AntTweakBar-1.16/src/TwOpenGLCore.cpp.s
 
 AntTweakBar-1.16/src/TwPrecomp.o: AntTweakBar-1.16/src/TwPrecomp.cpp.o
@@ -435,7 +435,7 @@ AntTweakBar-1.16/src/TwPrecomp.o: AntTweakBar-1.16/src/TwPrecomp.cpp.o
 
 # target to build an object file
 AntTweakBar-1.16/src/TwPrecomp.cpp.o:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwPrecomp.cpp.o
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwPrecomp.cpp.o
 .PHONY : AntTweakBar-1.16/src/TwPrecomp.cpp.o
 
 AntTweakBar-1.16/src/TwPrecomp.i: AntTweakBar-1.16/src/TwPrecomp.cpp.i
@@ -444,7 +444,7 @@ AntTweakBar-1.16/src/TwPrecomp.i: AntTweakBar-1.16/src/TwPrecomp.cpp.i
 
 # target to preprocess a source file
 AntTweakBar-1.16/src/TwPrecomp.cpp.i:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwPrecomp.cpp.i
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwPrecomp.cpp.i
 .PHONY : AntTweakBar-1.16/src/TwPrecomp.cpp.i
 
 AntTweakBar-1.16/src/TwPrecomp.s: AntTweakBar-1.16/src/TwPrecomp.cpp.s
@@ -453,7 +453,7 @@ AntTweakBar-1.16/src/TwPrecomp.s: AntTweakBar-1.16/src/TwPrecomp.cpp.s
 
 # target to generate assembly for a file
 AntTweakBar-1.16/src/TwPrecomp.cpp.s:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwPrecomp.cpp.s
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwPrecomp.cpp.s
 .PHONY : AntTweakBar-1.16/src/TwPrecomp.cpp.s
 
 glew-1.13.0/src/glew.o: glew-1.13.0/src/glew.c.o
@@ -462,7 +462,7 @@ glew-1.13.0/src/glew.o: glew-1.13.0/src/glew.c.o
 
 # target to build an object file
 glew-1.13.0/src/glew.c.o:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(MAKE) -f external/CMakeFiles/GLEW_1130.dir/build.make external/CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.o
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(MAKE) -f external/CMakeFiles/GLEW_1130.dir/build.make external/CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.o
 .PHONY : glew-1.13.0/src/glew.c.o
 
 glew-1.13.0/src/glew.i: glew-1.13.0/src/glew.c.i
@@ -471,7 +471,7 @@ glew-1.13.0/src/glew.i: glew-1.13.0/src/glew.c.i
 
 # target to preprocess a source file
 glew-1.13.0/src/glew.c.i:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(MAKE) -f external/CMakeFiles/GLEW_1130.dir/build.make external/CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.i
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(MAKE) -f external/CMakeFiles/GLEW_1130.dir/build.make external/CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.i
 .PHONY : glew-1.13.0/src/glew.c.i
 
 glew-1.13.0/src/glew.s: glew-1.13.0/src/glew.c.s
@@ -480,7 +480,7 @@ glew-1.13.0/src/glew.s: glew-1.13.0/src/glew.c.s
 
 # target to generate assembly for a file
 glew-1.13.0/src/glew.c.s:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(MAKE) -f external/CMakeFiles/GLEW_1130.dir/build.make external/CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.s
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(MAKE) -f external/CMakeFiles/GLEW_1130.dir/build.make external/CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.s
 .PHONY : glew-1.13.0/src/glew.c.s
 
 # Help Target
@@ -541,6 +541,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/anastasia/Documents/mipt/3d-graph/repositories/ogl/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/anastasia/Documents/mipt/3d-graph/repositories/shooter/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
