@@ -1,11 +1,8 @@
 #pragma once
 #include "cube.h"
-#include <iterator>
 #include <GL/glew.h>
 #include "../tools/move_polyhedron.cpp"
 
-
-using namespace glm;
 
 GLuint getCubeVertex(float x, float y, float z) {
     GLfloat g_vertex_buffer_data[] = {
