@@ -1,21 +1,6 @@
-#include <stdio.h>
-#include <stdlib.h>
-
-// Include GLEW
-#include <GL/glew.h>
-
-// Include GLFW
-#include <GLFW/glfw3.h>
-// Include GLM
-#include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
-
-#include "../tools/move_polyhedron.cpp"
-
+#include "bipyramid.h"
+#pragma once
 using namespace glm;
-
-#include <common/shader.hpp>
-#include <vector>
 
 GLuint getBipyramidVertex(float x, float y, float z) {
     GLfloat g_vertex_buffer_data[] = {

@@ -309,7 +309,7 @@ GLfloat getPyramidVertex(float x, float y, float z) {
             size, 5 * size, size,
     };
 
-    move(g_vertex_buffer_data, sizeof(g_vertex_buffer_data)/sizeof(g_vertex_buffer_data[0]), x, y, z);
+    move(*g_vertex_buffer_data, sizeof(g_vertex_buffer_data)/sizeof(g_vertex_buffer_data[0]), x, y, z);
 
     return g_vertex_buffer_data;
 }
