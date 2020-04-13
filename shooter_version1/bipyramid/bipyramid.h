@@ -1,6 +1,6 @@
 #ifndef TUTORIALS_BIPYRAMID_H
 #define TUTORIALS_BIPYRAMID_H
-#include "../tools/move_polyhedron.cpp"
+#include "shooter_version1/tools/tools.cpp"
 
 GLuint getBipyramidVertex(float x, float y, float z);
 GLuint getBipyramidColor();

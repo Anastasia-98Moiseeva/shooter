@@ -6,7 +6,7 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 
-#include "../tools/move_polyhedron.cpp"
+#include "shooter_version1/tools/tools.cpp"
 
 using namespace glm;
 

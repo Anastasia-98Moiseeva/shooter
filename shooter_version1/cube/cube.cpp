@@ -1,7 +1,7 @@
 #pragma once
 #include "cube.h"
 #include <GL/glew.h>
-#include "../tools/move_polyhedron.cpp"
+#include "shooter_version1/tools/tools.cpp"
 
 
 GLuint getCubeVertex(float x, float y, float z) {
