@@ -15,17 +15,17 @@ using namespace glm;
 #include <common/shader.hpp>
 
 void move(GLfloat array[], float x, float y, float z){
-        for (int i = 0; i < sizeof(array); i++) {
-            switch (i % 3) {
-                case 0:
-                    array[i] += x;
-                    break;
-                case 1:
-                    array[i] += y;
-                    break;
-                case 2:
-                    array[i] += z;
-                    break;
+    for (int i = 0; i < sizeof(array)/sizeof(array[0]); i++) {
+        switch (i % 3) {
+            case 0:
+                array[i] += x;
+                break;
+            case 1:
+                array[i] += y;
+                break;
+            case 2:
+                array[i] += z;
+                break;
         }
     }
 }

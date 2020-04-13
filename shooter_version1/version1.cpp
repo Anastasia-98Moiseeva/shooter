@@ -126,7 +126,7 @@ int main( void )
 	// A cube has 6 faces with 2 triangles each, so this makes 6*2=12 triangles, and 12*3 vertices
 
 
-	GLuint cubeVertex = getCubeVertex(0 , 0 , 0);
+	GLuint cubeVertex = getCubeVertex(6 , 0 , 0);
     GLuint cubeColor = getCubeColor();
 
     auto* center = new float[3];
