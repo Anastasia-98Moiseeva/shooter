@@ -14,6 +14,7 @@ GLFWwindow* window;
 #include <glm/gtc/matrix_transform.hpp>
 
 #include "cube/cube.cpp"
+#include "polyhedron/polyhedron.cpp"
 
 using namespace glm;
 
@@ -126,8 +127,13 @@ int main( void )
 
 
 	GLuint cubeVertex = getCubeVertex();
-
     GLuint cubeColor = getCubeColor();
+
+    auto* center = new float[3];
+    center[0] = 1.0;
+    center[0] = 3.0;
+    center[0] = 2.0;
+    Polyhedron polyhedron = Polyhedron(cubeVertex, cubeColor, center);
 
 	do{
         // Clear the screen
