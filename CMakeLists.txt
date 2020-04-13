@@ -65,7 +65,7 @@ add_executable(shooter_version1
 
 		shooter_version1/TransformVertexShader.vertexshader
 		shooter_version1/ColorFragmentShader.fragmentshader
-		)
+		shooter_version1/sphere/sphere.cpp shooter_version1/sphere/sphere.h)
 target_link_libraries(shooter_version1
 		${ALL_LIBS}
 		)
