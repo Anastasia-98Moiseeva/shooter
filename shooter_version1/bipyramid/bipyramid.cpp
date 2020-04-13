@@ -62,7 +62,7 @@ GLuint getBipyramidVertex() {
     return vertexbuffer;
 }
 
-GLuint getBipyramidVertexColor() {
+GLuint getBipyramidColor() {
     // One color for each vertex.
     static const GLfloat g_color_buffer_data[] = {
             0.822f,  0.569f,  0.201f,
