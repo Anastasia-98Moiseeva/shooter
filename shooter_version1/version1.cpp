@@ -140,8 +140,8 @@ int main( void )
 */
     float params1[] = {0.7, -6.0, -1.0, 5.0};
     float params2[] = {0.5, 6.0, -1.0, 10.0};
-    float params3[] = {0.5, 0.0, -1.0, 15.0};
-    float params4[] = {0.3, 0.0, 0.0, -15.0};
+    float params3[] = {0.5, 0.0, -1.0, 12.0};
+    float params4[] = {0.3, 0.0, 0.0, -8.0};
 
     std::vector<Polyhedron> polyhedrons;
     polyhedrons.push_back(Polyhedron(0, params1));
