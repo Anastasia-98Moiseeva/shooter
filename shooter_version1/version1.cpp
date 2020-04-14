@@ -150,7 +150,7 @@ int main( void )
     workspace.push_back(std::make_pair(getRightWallVertex(), getRightWallColor()));
     workspace.push_back(std::make_pair(getDistanceWallVertex(), getDistanceWallColor()));
     workspace.push_back(std::make_pair(getTopWallVertex(), getTopWallColor()));
-    
+
     do{
        if (polyhedrons.size() == 0) {
            break;
@@ -183,9 +183,6 @@ int main( void )
 		   glfwWindowShouldClose(window) == 0 );
 
 
-	// Cleanup VBO and shader
-	//glDeleteBuffers(1, &cubeVertex);
-	//glDeleteBuffers(1, &cubeColor);
 	glDeleteProgram(programID);
 	glDeleteVertexArrays(1, &VertexArrayID);
 

@@ -38,6 +38,11 @@ public:
 
     }
 
+    ~Polyhedron() {
+        glDeleteBuffers(1, &vertex);
+        glDeleteBuffers(1, &color);
+    }
+
     float* getCenter() {
         return center;
     }
