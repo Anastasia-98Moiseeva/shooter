@@ -18,12 +18,12 @@ GLuint getRightWallVertex() {
 
 GLuint getRightWallColor() {
     static const GLfloat g_color_buffer_data[] = {
-            0,  0,  1,
-            0,  0,  1,
-            0,  0,  1,
-            0,  0,  1,
-            0,  0,  1,
-            0,  0,  1,
+            0.3,  0.3,  0.3,
+            0.3,  0.3,  0.3,
+            0.3,  0.3,  0.3,
+            0.3,  0.3,  0.3,
+            0.3,  0.3,  0.3,
+            0.3,  0.3,  0.3,
     };
 
     GLuint colorbuffer;
