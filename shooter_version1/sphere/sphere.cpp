@@ -89,8 +89,10 @@ GLuint getSphereVertex(float k, float x, float y, float z) {
         }
     }
 
+/*
     Tools tools = Tools();
     tools.changeConfiguration(*g_vertex_buffer_data, (sizeof(g_vertex_buffer_data)) / (sizeof(g_vertex_buffer_data[0])), k, x, y, z);
+*/
 
     GLuint vertexbuffer;
     glGenBuffers(1, &vertexbuffer);
