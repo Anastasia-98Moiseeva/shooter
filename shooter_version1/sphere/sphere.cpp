@@ -89,10 +89,8 @@ GLuint getSphereVertex(float k, float x, float y, float z) {
         }
     }
 
-/*
     Tools tools = Tools();
     tools.changeConfiguration(*g_vertex_buffer_data, (sizeof(g_vertex_buffer_data)) / (sizeof(g_vertex_buffer_data[0])), k, x, y, z);
-*/
 
     GLuint vertexbuffer;
     glGenBuffers(1, &vertexbuffer);
@@ -120,7 +118,21 @@ GLuint getSphereColor() {
 
     int cur_idx = 0;
 
-    for (int i = 0; i < N_PHI; ++i) {
+    for (int i = 0; i < sizeof(g_color_buffer_data) / sizeof(g_color_buffer_data[0]); i++){
+        switch (i%3){
+            case 0:
+                g_color_buffer_data[i] = 0.583f;
+                break;
+            case 1:
+                g_color_buffer_data[i] =  0.771f;
+                break;
+            case 2:
+                g_color_buffer_data[i] =  0.014f;
+                break;
+        }
+    }
+
+    /*for (int i = 0; i < N_PHI; ++i) {
         g_color_buffer_data[cur_idx] = north_pole.x;
         g_color_buffer_data[cur_idx] = north_pole.y;
         g_color_buffer_data[cur_idx] = north_pole.z;
@@ -175,7 +187,7 @@ GLuint getSphereColor() {
             g_color_buffer_data[cur_idx] = vertices[j][(i + 1) % N_PHI].z;
 
         }
-    }
+    }*/
 
     //normalize colors
     for (int i = 0; i < cur_idx; ++i) {
