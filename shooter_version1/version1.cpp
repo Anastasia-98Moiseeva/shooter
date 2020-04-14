@@ -19,6 +19,7 @@ GLFWwindow* window;
 #include "workspace/rightWall.cpp"
 #include "shooter_version1/workspace/frontWall.cpp"
 #include "shooter_version1/workspace/ceiling.cpp"
+#include "sphere/controllerSphere.cpp"
 
 
 using namespace glm;
@@ -134,19 +135,14 @@ int main( void )
     float params1[] = {0.7, -6.0, -1.0, 5.0};
     float params2[] = {0.5, 6.0, -1.0, 10.0};
     float params3[] = {0.5, 0.0, -1.0, 15.0};
+    float params4[] = {0.3, 0.0, 0.0, -15.0};
 
     std::vector<Polyhedron> polyhedrons;
     polyhedrons.push_back(Polyhedron(0, params1));
     polyhedrons.push_back(Polyhedron(1, params2));
     polyhedrons.push_back(Polyhedron(2, params3));
 
-    float dx = 0;
-    float dy = 0;
-    float dz = -15;
-
-    GLuint sphereVertex = getSphereVertex(0.1, dx, dy, dz);
-    GLuint sphereColor = getSphereColor();
-
+    ControllerSphere controllerSphere = ControllerSphere(params4);
 
     std::vector<std::pair<GLuint, GLuint> > workspace;
     workspace.push_back(std::make_pair(getFloorVertex(), getFloorColor()));
@@ -154,7 +150,7 @@ int main( void )
     workspace.push_back(std::make_pair(getRightWallVertex(), getRightWallColor()));
     workspace.push_back(std::make_pair(getDistanceWallVertex(), getDistanceWallColor()));
     workspace.push_back(std::make_pair(getTopWallVertex(), getTopWallColor()));
-
+    
     do{
        if (polyhedrons.size() == 0) {
            break;
@@ -170,13 +166,10 @@ int main( void )
             drawFigure(3*4, workspace[i].first, workspace[i].second, MatrixID, programID, MVP);
         }
 
-        drawFigure(14700, sphereVertex, sphereColor, MatrixID, programID, MVP);
+       drawFigure(14700, controllerSphere.getSphereV(), controllerSphere.getSphereC(), MatrixID, programID, MVP);
 
-        sphereVertex = getSphereVertex(0.3, dx, dy, dz);
+       controllerSphere.changeSphere();
 
-        dz += 0.015f;
-
-        // Draw the points !
 
         glDisableVertexAttribArray(0);
         glDisableVertexAttribArray(1);

@@ -7,6 +7,7 @@
 
 // Include GLM
 #include <glm/glm.hpp>
+#pragma once
 using namespace glm;
 
 const int N_PHI = 50;
