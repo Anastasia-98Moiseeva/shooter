@@ -1,12 +1,12 @@
 GLuint getDistanceWallVertex() {
     GLfloat g_vertex_buffer_data[] = {
-            -10,  15,  0,
-            10,  15,  0,
-            -10, 15, 5,
-            10,  15,  0,
-            10, 15, 5,
-            -10,  15,  5,
-    };
+            -10,  -4,  15,
+            10,  -4,  15,
+            -10, 5, 15,
+            10,  -4,  15,
+            10, 5, 15,
+            -10,  5,  15,
+            };
 
     GLuint vertexbuffer;
     glGenBuffers(1, &vertexbuffer);

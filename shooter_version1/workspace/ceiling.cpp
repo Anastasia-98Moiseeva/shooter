@@ -1,11 +1,11 @@
 GLuint getTopWallVertex() {
     GLfloat g_vertex_buffer_data[] = {
-            -10,  15,  5,
-            -20,  -8,  5,
-            20,  -8,  5,
-            -10,  15,  5,
-            20,  -8,  5,
-            10,  15,  5,
+            -10,  5,  15,
+            -20,  5,  -8,
+            20,  5,  -8,
+            -10,  5,  15,
+            20,  5,  -8,
+            10,  5,  15,
     };
 
     GLuint vertexbuffer;

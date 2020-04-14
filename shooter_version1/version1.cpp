@@ -121,7 +121,7 @@ int main( void )
 	glm::mat4 Projection = glm::perspective(glm::radians(45.0f), 4.0f / 3.0f, 0.1f, 100.0f);
 	// Camera matrix
 	glm::mat4 View       = glm::lookAt(
-								glm::vec3(0,1,-8), // Camera is at (4,3,-3), in World Space
+								glm::vec3(0,1,-18), // Camera is at (4,3,-3), in World Space
 								glm::vec3(0,0,0), // and looks at the origin
 								glm::vec3(0,1,0)  // Head is up (set to 0,-1,0 to look upside-down)
 						   );
@@ -131,9 +131,9 @@ int main( void )
 	glm::mat4 MVP        = Projection * View * Model; // Remember, matrix multiplication is the other way around
 
 
-    float params1[] = {0.3, -3.0, 0.0, 1.0};
-    float params2[] = {0.3, 3.0, 0.0, 1.0};
-    float params3[] = {0.3, 0.0, 0.0, 1.0};
+    float params1[] = {0.3, -3.0, 0.0, -1.0};
+    float params2[] = {0.3, 3.0, 0.0, -1.0};
+    float params3[] = {0.3, 0.0, 0.0, -1.0};
 
     std::vector<Polyhedron> polyhedrons;
     polyhedrons.push_back(Polyhedron(0, params1));
@@ -149,11 +149,11 @@ int main( void )
 
 
     std::vector<std::pair<GLuint, GLuint> > workspace;
-    //workspace.push_back(std::make_pair(getFloorVertex(), getFloorColor()));
+    workspace.push_back(std::make_pair(getFloorVertex(), getFloorColor()));
     workspace.push_back(std::make_pair(getLeftWallVertex(), getLeftWallColor()));
     workspace.push_back(std::make_pair(getRightWallVertex(), getRightWallColor()));
     workspace.push_back(std::make_pair(getDistanceWallVertex(), getDistanceWallColor()));
-    //workspace.push_back(std::make_pair(getTopWallVertex(), getTopWallColor()));
+    workspace.push_back(std::make_pair(getTopWallVertex(), getTopWallColor()));
 
     do{
        if (polyhedrons.size() == 0) {
