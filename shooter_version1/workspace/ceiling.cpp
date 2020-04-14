@@ -18,7 +18,12 @@ GLuint getTopWallVertex() {
 
 GLuint getTopWallColor() {
     static const GLfloat g_color_buffer_data[] = {
-
+            0.45,  0.45,  0.45,
+            0.45,  0.45,  0.45,
+            0.45,  0.45,  0.45,
+            0.45,  0.45,  0.45,
+            0.45,  0.45,  0.45,
+            0.45,  0.45,  0.45,
     };
 
     GLuint colorbuffer;

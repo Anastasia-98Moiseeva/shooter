@@ -18,7 +18,12 @@ GLuint getFloorVertex() {
 
 GLuint getFloorColor() {
     static const GLfloat g_color_buffer_data[] = {
-
+            0.2,  0.2,  0.2,
+            0.2,  0.2,  0.2,
+            0.2,  0.2,  0.2,
+            0.2,  0.2,  0.2,
+            0.2,  0.2,  0.2,
+            0.2,  0.2,  0.2,
     };
 
     GLuint colorbuffer;
