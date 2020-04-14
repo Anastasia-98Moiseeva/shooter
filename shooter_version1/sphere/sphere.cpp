@@ -73,7 +73,7 @@ GLuint getSphereVertex(float k, float x, float y, float z) {
             g_vertex_buffer_data[cur_idx++] = vertices[j + 1][(i + 1) % N_PHI].x;
             g_vertex_buffer_data[cur_idx++] = vertices[j + 1][(i + 1) % N_PHI].y;
             g_vertex_buffer_data[cur_idx++] = vertices[j + 1][(i + 1) % N_PHI].z;
-            
+
             g_vertex_buffer_data[cur_idx++] = vertices[j][i].x;
             g_vertex_buffer_data[cur_idx++] = vertices[j][i].y;
             g_vertex_buffer_data[cur_idx++] = vertices[j][i].z;
