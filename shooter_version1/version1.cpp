@@ -14,6 +14,11 @@ GLFWwindow* window;
 #include <glm/gtc/matrix_transform.hpp>
 #include "polyhedron/polyhedron.cpp"
 #include "sphere/sphere.cpp"
+#include "workspace/floor.cpp"
+#include "workspace/leftWall.cpp"
+#include "workspace/rightWall.cpp"
+#include "workspace/distanceWall.cpp"
+
 
 using namespace glm;
 
@@ -115,7 +120,7 @@ int main( void )
 	glm::mat4 Projection = glm::perspective(glm::radians(45.0f), 4.0f / 3.0f, 0.1f, 100.0f);
 	// Camera matrix
 	glm::mat4 View       = glm::lookAt(
-								glm::vec3(4,3,-3), // Camera is at (4,3,-3), in World Space
+								glm::vec3(0,-8,1), // Camera is at (4,3,-3), in World Space
 								glm::vec3(0,0,0), // and looks at the origin
 								glm::vec3(0,1,0)  // Head is up (set to 0,-1,0 to look upside-down)
 						   );
@@ -141,7 +146,19 @@ int main( void )
     GLuint sphereVertex = getSphereVertex(0.1, dx, dy, dz);
     GLuint sphereColor = getSphereColor();
 
-   do{
+
+    GLuint floorVertex = getFloorVertex(1, 0, 0, 0);
+    GLuint floorColor = getFloorColor();
+    GLuint leftWallVertex = getLeftWallVertex(1, 0, 0, 0);
+    GLuint leftWallColor = getLeftWallColor();
+    GLuint rightWallVertex = getRightWallVertex(1, 0, 0, 0);
+    GLuint rightWallColor = getRightWallColor();
+    GLuint distanceWallVertex = getDistanceWallVertex(1, 0, 0, 0);
+    GLuint distanceWallColor = getDistanceWallColor();
+
+
+
+    do{
        if (polyhedrons.size() == 0) {
            break;
        }
@@ -151,6 +168,11 @@ int main( void )
 		/*for (int i = 0; i < polyhedrons.size(); i++) {
             drawFigure(polyhedrons[i].getNumPoints(), polyhedrons[i].getFigureVertex(), polyhedrons[i].getFigureColor(), MatrixID, programID, MVP);
 		}*/
+
+        drawFigure(3*4, floorVertex, floorColor, MatrixID, programID, MVP);
+        drawFigure(3*4, leftWallVertex, leftWallColor, MatrixID, programID, MVP);
+        drawFigure(3*4, rightWallVertex, rightWallColor, MatrixID, programID, MVP);
+        drawFigure(3*4, distanceWallVertex, distanceWallColor, MatrixID, programID, MVP);
 
         drawFigure(14700, sphereVertex, sphereColor, MatrixID, programID, MVP);
 
