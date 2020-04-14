@@ -121,7 +121,7 @@ int main( void )
 	glm::mat4 Projection = glm::perspective(glm::radians(45.0f), 4.0f / 3.0f, 0.1f, 100.0f);
 	// Camera matrix
 	glm::mat4 View       = glm::lookAt(
-								glm::vec3(0,-8,1), // Camera is at (4,3,-3), in World Space
+								glm::vec3(0,1,-18), // Camera is at (4,3,-3), in World Space
 								glm::vec3(0,0,0), // and looks at the origin
 								glm::vec3(0,1,0)  // Head is up (set to 0,-1,0 to look upside-down)
 						   );
@@ -131,9 +131,9 @@ int main( void )
 	glm::mat4 MVP        = Projection * View * Model; // Remember, matrix multiplication is the other way around
 
 
-    float params1[] = {0.3, 2.0, 0.0, 0.0};
-    float params2[] = {0.3, -5.0, 0.0, 0.0};
-    float params3[] = {0.3, 0.0, 0.0, 0.0};
+    float params1[] = {0.5, -3.0, 0.0, -1.0};
+    float params2[] = {0.3, 3.0, 0.0, -1.0};
+    float params3[] = {0.3, 0.0, 0.0, -1.0};
 
     std::vector<Polyhedron> polyhedrons;
     polyhedrons.push_back(Polyhedron(0, params1));
@@ -162,9 +162,9 @@ int main( void )
         // Clear the screen
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-		/*for (int i = 0; i < polyhedrons.size(); i++) {
+		for (int i = 0; i < polyhedrons.size(); i++) {
             drawFigure(polyhedrons[i].getNumPoints(), polyhedrons[i].getFigureVertex(), polyhedrons[i].getFigureColor(), MatrixID, programID, MVP);
-		}*/
+		}
 
         for (int i = 0; i < workspace.size(); i++) {
             drawFigure(3*4, workspace[i].first, workspace[i].second, MatrixID, programID, MVP);
