@@ -140,9 +140,9 @@ int main( void )
     polyhedrons.push_back(Polyhedron(1, params2));
     polyhedrons.push_back(Polyhedron(2, params3));
 
-    float dx = 3;
+    float dx = 0;
     float dy = 0;
-    float dz = 0;
+    float dz = -15;
 
     GLuint sphereVertex = getSphereVertex(0.1, dx, dy, dz);
     GLuint sphereColor = getSphereColor();
@@ -174,7 +174,7 @@ int main( void )
 
         sphereVertex = getSphereVertex(0.3, dx, dy, dz);
 
-        dx -= 0.001f;
+        dz += 0.01f;
 
         // Draw the points !
 
