@@ -131,7 +131,7 @@ int main( void )
 	glm::mat4 MVP        = Projection * View * Model; // Remember, matrix multiplication is the other way around
 
 
-    float params1[] = {0.3, -3.0, 0.0, -1.0};
+    float params1[] = {0.5, -3.0, 0.0, -1.0};
     float params2[] = {0.3, 3.0, 0.0, -1.0};
     float params3[] = {0.3, 0.0, 0.0, -1.0};
 
