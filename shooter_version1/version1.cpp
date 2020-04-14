@@ -18,6 +18,7 @@ GLFWwindow* window;
 #include "workspace/leftWall.cpp"
 #include "workspace/rightWall.cpp"
 #include "workspace/distanceWall.cpp"
+#include "workspace/topWall.cpp"
 
 
 using namespace glm;
@@ -147,16 +148,12 @@ int main( void )
     GLuint sphereColor = getSphereColor();
 
 
-    GLuint floorVertex = getFloorVertex(1, 0, 0, 0);
-    GLuint floorColor = getFloorColor();
-    GLuint leftWallVertex = getLeftWallVertex(1, 0, 0, 0);
-    GLuint leftWallColor = getLeftWallColor();
-    GLuint rightWallVertex = getRightWallVertex(1, 0, 0, 0);
-    GLuint rightWallColor = getRightWallColor();
-    GLuint distanceWallVertex = getDistanceWallVertex(1, 0, 0, 0);
-    GLuint distanceWallColor = getDistanceWallColor();
-
-
+    std::vector<std::pair<GLuint, GLuint> > workspace;
+    workspace.push_back(std::make_pair(getFloorVertex(1, 0, 0, 0), getFloorColor()));
+    workspace.push_back(std::make_pair(getLeftWallVertex(1, 0, 0, 0), getLeftWallColor()));
+    workspace.push_back(std::make_pair(getRightWallVertex(1, 0, 0, 0), getRightWallColor()));
+    workspace.push_back(std::make_pair(getDistanceWallVertex(1, 0, 0, 0), getDistanceWallColor()));
+    workspace.push_back(std::make_pair(getTopWallVertex(1, 0, 0, 0), getTopWallColor()));
 
     do{
        if (polyhedrons.size() == 0) {
@@ -169,10 +166,9 @@ int main( void )
             drawFigure(polyhedrons[i].getNumPoints(), polyhedrons[i].getFigureVertex(), polyhedrons[i].getFigureColor(), MatrixID, programID, MVP);
 		}*/
 
-        drawFigure(3*4, floorVertex, floorColor, MatrixID, programID, MVP);
-        drawFigure(3*4, leftWallVertex, leftWallColor, MatrixID, programID, MVP);
-        drawFigure(3*4, rightWallVertex, rightWallColor, MatrixID, programID, MVP);
-        drawFigure(3*4, distanceWallVertex, distanceWallColor, MatrixID, programID, MVP);
+        for (int i = 0; i < workspace.size(); i++) {
+            drawFigure(3*4, workspace[i].first, workspace[i].second, MatrixID, programID, MVP);
+        }
 
         drawFigure(14700, sphereVertex, sphereColor, MatrixID, programID, MVP);
 

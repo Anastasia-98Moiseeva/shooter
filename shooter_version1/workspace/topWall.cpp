@@ -1,24 +1,35 @@
-//
-// Created by Никита on 14.04.2020.
-//
+GLuint getTopWallVertex(float k, float x, float y, float z) {
+    GLfloat g_vertex_buffer_data[] = {
+            -10,  15,  5,
+            -20,  -8,  5,
+            20,  -8,  5,
+            -10,  15,  5,
+            20,  -8,  5,
+            10,  15,  5,
+    };
 
-GLuint floorVertex = getFloorVertex(1, 0, 0, 0);
-GLuint floorColor = getFloorColor();
-GLuint leftWallVertex = getLeftWallVertex(1, 0, 0, 0);
-GLuint leftWallColor = getLeftWallColor();
-GLuint rightWallVertex = getRightWallVertex(1, 0, 0, 0);
-GLuint rightWallColor = getRightWallColor();
-GLuint distanceWallVertex = getDistanceWallVertex(1, 0, 0, 0);
-GLuint distanceWallColor = getDistanceWallColor();
+    GLuint vertexbuffer;
+    glGenBuffers(1, &vertexbuffer);
+    glBindBuffer(GL_ARRAY_BUFFER, vertexbuffer);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(g_vertex_buffer_data), g_vertex_buffer_data, GL_STATIC_DRAW);
 
+    return vertexbuffer;
+}
 
-drawFigure(3*4, floorVertex, floorColor, MatrixID, programID, MVP);
-drawFigure(3*4, leftWallVertex, leftWallColor, MatrixID, programID, MVP);
-drawFigure(3*4, rightWallVertex, rightWallColor, MatrixID, programID, MVP);
-drawFigure(3*4, distanceWallVertex, distanceWallColor, MatrixID, programID, MVP);
+GLuint getTopWallColor() {
+    static const GLfloat g_color_buffer_data[] = {
+            0,  0,  0.8,
+            0,  0,  0.8,
+            0,  0,  0.8,
+            0,  0,  0.8,
+            0,  0,  0.8,
+            0,  0,  0.8,
+    };
 
-glm::mat4 View       = glm::lookAt(
-        glm::vec3(0,-8,1), // Camera is at (4,3,-3), in World Space
-        glm::vec3(0,0,0), // and looks at the origin
-        glm::vec3(0,1,0)  // Head is up (set to 0,-1,0 to look upside-down)
-);
+    GLuint colorbuffer;
+    glGenBuffers(1, &colorbuffer);
+    glBindBuffer(GL_ARRAY_BUFFER, colorbuffer);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(g_color_buffer_data), g_color_buffer_data, GL_STATIC_DRAW);
+
+    return colorbuffer;
+}
