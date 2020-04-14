@@ -17,8 +17,8 @@ GLFWwindow* window;
 #include "workspace/floor.cpp"
 #include "workspace/leftWall.cpp"
 #include "workspace/rightWall.cpp"
-#include "workspace/distanceWall.cpp"
-#include "workspace/topWall.cpp"
+#include "shooter_version1/workspace/frontWall.cpp"
+#include "shooter_version1/workspace/ceiling.cpp"
 
 
 using namespace glm;
