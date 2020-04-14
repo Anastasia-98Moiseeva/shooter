@@ -142,13 +142,15 @@ int main( void )
     float params2[] = {0.5, 6.0, -1.0, 10.0};
     float params3[] = {0.5, 0.0, -1.0, 12.0};
     float params4[] = {0.3, 0.0, 0.0, -8.0};
+    float direction[] = {0.0, 0.0, 0.035};
 
     std::vector<Polyhedron> polyhedrons;
     polyhedrons.push_back(Polyhedron(0, params1));
     polyhedrons.push_back(Polyhedron(1, params2));
     polyhedrons.push_back(Polyhedron(2, params3));
 
-    ControllerSphere controllerSphere = ControllerSphere(params4);
+    std::vector<ControllerSphere> spheres;
+    spheres.push_back(ControllerSphere(params4, direction));
 
     std::vector<std::pair<GLuint, GLuint> > workspace;
     workspace.push_back(std::make_pair(getFloorVertex(), getFloorColor()));
@@ -179,9 +181,10 @@ int main( void )
             drawFigure(3*4, workspace[i].first, workspace[i].second, MatrixID, programID, MVP);
         }
 
-       drawFigure(14700, controllerSphere.getSphereV(), controllerSphere.getSphereC(), MatrixID, programID, MVP);
-
-       controllerSphere.changeSphere();
+        for (int i = 0; i < spheres.size(); i++) {
+            drawFigure(14700, spheres[i].getSphereV(), spheres[i].getSphereC(), MatrixID, programID, MVP);
+            spheres[i].changeSphere();
+        }
 
 
         glDisableVertexAttribArray(0);
