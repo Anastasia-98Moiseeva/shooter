@@ -323,7 +323,7 @@ GLfloat getPyramidColor() {
     float step = 1.0f / n_points;
     for (int i = 0; i < n_points; i++) {
         for (int k = 0; k < 3; k++) {
-            float angle = 60.0f * (i * step - k / 3.0f);
+            float angle = 50.0f * (i * step - k / 3.0f);
             float color = (1.0f + cos(angle)) * 2 * 0.5f;
             g_color_buffer_data[3 * i + k] = color;
         }
