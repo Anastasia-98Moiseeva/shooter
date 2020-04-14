@@ -174,7 +174,7 @@ int main( void )
 
         sphereVertex = getSphereVertex(0.3, dx, dy, dz);
 
-        dz += 0.01f;
+        dz += 0.015f;
 
         // Draw the points !
 
