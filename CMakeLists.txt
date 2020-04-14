@@ -61,7 +61,8 @@ add_executable(shooter_version1
 		shooter_version1/version1.cpp
 		common/shader.cpp
 		common/shader.hpp
-
+		common/controls.cpp
+		common/controls.hpp
 
 		shooter_version1/TransformVertexShader.vertexshader
 		shooter_version1/ColorFragmentShader.fragmentshader)
