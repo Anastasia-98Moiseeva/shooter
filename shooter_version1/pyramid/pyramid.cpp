@@ -1,10 +1,10 @@
 #include <math.h>
 #include <GL/glew.h>
-
+#include "shooter_version1/tools/tools.cpp"
 using namespace glm;
 
 
-GLfloat getPyramidVertex(float x, float y, float z) {
+GLfloat getPyramidVertex(float k, float x, float y, float z) {
 
     float size = 0.25;
     const int num_points = 6 * 4 * 16;
@@ -301,6 +301,10 @@ GLfloat getPyramidVertex(float x, float y, float z) {
             -size, 3 * size, size,
             size, 5 * size, size,
     };
+
+    Tools tools = Tools();
+    tools.changeConfiguration(*g_vertex_buffer_data, (sizeof(g_vertex_buffer_data)) / (sizeof(g_vertex_buffer_data[0])), k, x, y, z);
+
 
     GLuint vertexbuffer;
     glGenBuffers(1, &vertexbuffer);
