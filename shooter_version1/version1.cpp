@@ -134,8 +134,13 @@ int main( void )
     polyhedrons.push_back(Polyhedron(1, params2));
     polyhedrons.push_back(Polyhedron(2, params3));
 
-    GLuint sphereVertex = getSphereVertex(0.1, 0, 0, 0);
+    float dx = 3;
+    float dy = 0;
+    float dz = 0;
+
+    GLuint sphereVertex = getSphereVertex(0.1, dx, dy, dz);
     GLuint sphereColor = getSphereColor();
+
    do{
        if (polyhedrons.size() == 0) {
            break;
@@ -148,6 +153,10 @@ int main( void )
 		}*/
 
         drawFigure(14700, sphereVertex, sphereColor, MatrixID, programID, MVP);
+
+        sphereVertex = getSphereVertex(0.1, dx, dy, dz);
+
+        dx -= 0.001f;
 
         // Draw the points !
 
