@@ -18,7 +18,7 @@ GLuint getDistanceWallVertex() {
 
 GLuint getDistanceWallColor() {
     static const GLfloat g_color_buffer_data[] = {
-           
+
     };
 
     GLuint colorbuffer;
