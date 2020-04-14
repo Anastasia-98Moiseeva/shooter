@@ -13,7 +13,7 @@ GLFWwindow* window;
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include "polyhedron/polyhedron.cpp"
-
+#include "sphere/sphere.cpp"
 
 using namespace glm;
 
@@ -124,15 +124,6 @@ int main( void )
 	// Our ModelViewProjection : multiplication of our 3 matrices
 	glm::mat4 MVP        = Projection * View * Model; // Remember, matrix multiplication is the other way around
 
-	// Our vertices. Tree consecutive floats give a 3D vertex; Three consecutive vertices give a triangle.
-	// A cube has 6 faces with 2 triangles each, so this makes 6*2=12 triangles, and 12*3 vertices
-
-    //GLuint cubeVertex = getCubeVertex(0 , 0 , 0);
-    //GLuint cubeColor = getCubeColor();
-    //GLuint cubeVertex = getBipyramidVertex(0, 1 ,0);
-    //GLuint cubeColor = getBipyramidColor();
-    //GLuint cubeVertex = getPyramidVertex(params[0], params[1], params[2], params[3]);
-    //GLuint cubeColor = getPyramidColor();
 
     float params1[] = {0.3, 2.0, 0.0, 0.0};
     float params2[] = {0.3, -5.0, 0.0, 0.0};
@@ -143,6 +134,8 @@ int main( void )
     polyhedrons.push_back(Polyhedron(1, params2));
     polyhedrons.push_back(Polyhedron(2, params3));
 
+    GLuint sphereVertex = getSphereVertex(0.1, 0, 0, 0);
+    GLuint sphereColor = getSphereColor();
    do{
        if (polyhedrons.size() == 0) {
            break;
@@ -150,10 +143,11 @@ int main( void )
         // Clear the screen
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-		for (int i = 0; i < polyhedrons.size(); i++) {
-            drawFigure(polyhedrons[i].getNumPoints(), polyhedrons[i].getFigureVertex(), polyhedrons[i].getFigureColor(), MatrixID, programID, MVP);
-		}
+//		for (int i = 0; i < polyhedrons.size(); i++) {
+//            drawFigure(polyhedrons[i].getNumPoints(), polyhedrons[i].getFigureVertex(), polyhedrons[i].getFigureColor(), MatrixID, programID, MVP);
+//		}
 
+        drawFigure(44100, sphereVertex, sphereColor, MatrixID, programID, MVP);
 
         // Draw the points !
 
