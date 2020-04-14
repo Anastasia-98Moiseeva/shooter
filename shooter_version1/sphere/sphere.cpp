@@ -119,75 +119,38 @@ GLuint getSphereColor() {
     int cur_idx = 0;
 
     for (int i = 0; i < sizeof(g_color_buffer_data) / sizeof(g_color_buffer_data[0]); i++){
-        switch (i%3){
+        switch (i%9){
             case 0:
-                g_color_buffer_data[i] = 0.583f;
+                g_color_buffer_data[i] = 0.7f;
                 break;
             case 1:
-                g_color_buffer_data[i] =  0.771f;
+                g_color_buffer_data[i] =  0.1f;
                 break;
             case 2:
-                g_color_buffer_data[i] =  0.014f;
+                g_color_buffer_data[i] =  0.6f;
+                break;
+
+            case 3:
+                g_color_buffer_data[i] = 0.6f;
+                break;
+            case 4:
+                g_color_buffer_data[i] =  0.6f;
+                break;
+            case 5:
+                g_color_buffer_data[i] =  0.0f;
+                break;
+
+            case 6:
+                g_color_buffer_data[i] = 0.6f;
+                break;
+            case 7:
+                g_color_buffer_data[i] =  0.1f;
+                break;
+            case 8:
+                g_color_buffer_data[i] =  0.0f;
                 break;
         }
     }
-
-    /*for (int i = 0; i < N_PHI; ++i) {
-        g_color_buffer_data[cur_idx] = north_pole.x;
-        g_color_buffer_data[cur_idx] = north_pole.y;
-        g_color_buffer_data[cur_idx] = north_pole.z;
-
-        g_color_buffer_data[cur_idx] = vertices[1][i].x;
-        g_color_buffer_data[cur_idx] = vertices[1][i].y;
-        g_color_buffer_data[cur_idx] = vertices[1][i].z;
-
-        g_color_buffer_data[cur_idx] = vertices[1][(i + 1) % N_PHI].x;
-        g_color_buffer_data[cur_idx] = vertices[1][(i + 1) % N_PHI].y;
-        g_color_buffer_data[cur_idx] = vertices[1][(i + 1) % N_PHI].z;
-    }
-
-    for (int i = 0; i < N_PHI; ++i) {
-        g_color_buffer_data[cur_idx] = south_pole.x;
-        g_color_buffer_data[cur_idx] = south_pole.y;
-        g_color_buffer_data[cur_idx] = south_pole.z;
-
-        g_color_buffer_data[cur_idx] = vertices[N_PSI - 1][i].x;
-        g_color_buffer_data[cur_idx] = vertices[N_PSI - 1][i].y;
-        g_color_buffer_data[cur_idx] = vertices[N_PSI - 1][i].z;
-
-        g_color_buffer_data[cur_idx] = vertices[N_PSI - 1][(i + 1) % N_PHI].x;
-        g_color_buffer_data[cur_idx] = vertices[N_PSI - 1][(i + 1) % N_PHI].y;
-        g_color_buffer_data[cur_idx] = vertices[N_PSI - 1][(i + 1) % N_PHI].z;
-    }
-
-    for (int j = 1; j < N_PSI - 1; ++j) {
-        for (int i = 0; i < N_PHI; ++i) {
-            g_color_buffer_data[cur_idx] = vertices[j][i].x;
-            g_color_buffer_data[cur_idx] = vertices[j][i].y;
-            g_color_buffer_data[cur_idx] = vertices[j][i].z;
-
-            g_color_buffer_data[cur_idx] = vertices[j + 1][i].x;
-            g_color_buffer_data[cur_idx] = vertices[j + 1][i].y;
-            g_color_buffer_data[cur_idx] = vertices[j + 1][i].z;
-
-            g_color_buffer_data[cur_idx] = vertices[j + 1][(i + 1) % N_PHI].x;
-            g_color_buffer_data[cur_idx] = vertices[j + 1][(i + 1) % N_PHI].y;
-            g_color_buffer_data[cur_idx] = vertices[j + 1][(i + 1) % N_PHI].z;
-
-            g_color_buffer_data[cur_idx] = vertices[j][i].x;
-            g_color_buffer_data[cur_idx] = vertices[j][i].y;
-            g_color_buffer_data[cur_idx] = vertices[j][i].z;
-
-            g_color_buffer_data[cur_idx] = vertices[j + 1][(i + 1) % N_PHI].x;
-            g_color_buffer_data[cur_idx] = vertices[j + 1][(i + 1) % N_PHI].y;
-            g_color_buffer_data[cur_idx] = vertices[j + 1][(i + 1) % N_PHI].z;
-
-            g_color_buffer_data[cur_idx] = vertices[j][(i + 1) % N_PHI].x;
-            g_color_buffer_data[cur_idx] = vertices[j][(i + 1) % N_PHI].y;
-            g_color_buffer_data[cur_idx] = vertices[j][(i + 1) % N_PHI].z;
-
-        }
-    }*/
 
     //normalize colors
     for (int i = 0; i < cur_idx; ++i) {
