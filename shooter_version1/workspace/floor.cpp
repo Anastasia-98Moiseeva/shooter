@@ -1,4 +1,4 @@
-GLuint getFloorVertex(float k, float x, float y, float z) {
+GLuint getFloorVertex() {
     GLfloat g_vertex_buffer_data[] = {
             -10,  15,  0,
             -20,  -8,  0,

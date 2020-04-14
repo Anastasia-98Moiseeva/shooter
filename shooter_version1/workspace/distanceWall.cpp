@@ -1,4 +1,4 @@
-GLuint getDistanceWallVertex(float k, float x, float y, float z) {
+GLuint getDistanceWallVertex() {
     GLfloat g_vertex_buffer_data[] = {
             -10,  15,  0,
             10,  15,  0,

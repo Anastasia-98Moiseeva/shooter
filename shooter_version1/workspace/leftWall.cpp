@@ -1,4 +1,4 @@
-GLuint getLeftWallVertex(float k, float x, float y, float z) {
+GLuint getLeftWallVertex() {
     GLfloat g_vertex_buffer_data[] = {
             -20,  -8,  0,
             -10,  15,  0,

@@ -149,11 +149,11 @@ int main( void )
 
 
     std::vector<std::pair<GLuint, GLuint> > workspace;
-    workspace.push_back(std::make_pair(getFloorVertex(1, 0, 0, 0), getFloorColor()));
-    workspace.push_back(std::make_pair(getLeftWallVertex(1, 0, 0, 0), getLeftWallColor()));
-    workspace.push_back(std::make_pair(getRightWallVertex(1, 0, 0, 0), getRightWallColor()));
-    workspace.push_back(std::make_pair(getDistanceWallVertex(1, 0, 0, 0), getDistanceWallColor()));
-    workspace.push_back(std::make_pair(getTopWallVertex(1, 0, 0, 0), getTopWallColor()));
+    workspace.push_back(std::make_pair(getFloorVertex(), getFloorColor()));
+    workspace.push_back(std::make_pair(getLeftWallVertex(), getLeftWallColor()));
+    workspace.push_back(std::make_pair(getRightWallVertex(), getRightWallColor()));
+    workspace.push_back(std::make_pair(getDistanceWallVertex(), getDistanceWallColor()));
+    workspace.push_back(std::make_pair(getTopWallVertex(), getTopWallColor()));
 
     do{
        if (polyhedrons.size() == 0) {
