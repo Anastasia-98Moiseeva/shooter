@@ -28,12 +28,29 @@ using namespace glm;
 #include <common/controls.hpp>
 #include <common/shader.hpp>
 
-std::vector<float> getRandomFigure() {
+std::vector<float> getRandomFigure(std::vector<glm::vec3> centers_polyhedrons) {
     //float params1[] = {0.7, -6.0, -1.0, 5.0};
     int num_figure = rand() % 3;
-    float x = static_cast <float> ((rand() % 20)) - 10.0;
-    float y = static_cast <float> ((rand() % 7) ) - 3.0;
-    float z = static_cast <float> ((rand() % 5)) + 10.0;
+    bool collision = true;
+    float x;
+    float y;
+    float z;
+    while (collision) {
+        x = static_cast <float> ((rand() % 20)) - 10.0;
+        y = static_cast <float> ((rand() % 7)) - 3.0;
+        z = static_cast <float> ((rand() % 5)) + 10.0;
+        bool col = false;
+        for (int i = 0; i < centers_polyhedrons.size(); i++) {
+            glm::vec3 diff = glm::vec3(x - centers_polyhedrons[i].x,
+                                       y - centers_polyhedrons[i].y,
+                                       z - centers_polyhedrons[i].z);
+            float distance = sqrt(pow(diff.x, 2) + pow(diff.y, 2) + pow(diff.z, 2));
+            if (distance < 3) {
+                col = true;
+            }
+        }
+        collision = col;
+    }
     std::vector<float> parameters_polyhedron;
     parameters_polyhedron.push_back(num_figure);
     switch (num_figure){
@@ -186,7 +203,11 @@ int main( void )
 
         double currentTime = glfwGetTime();
         if ((std::abs(startTime - currentTime) > 5 && polyhedrons.size() < maxPolyhedron) or (polyhedrons.size() < 2)) {
-            std::vector<float> params = getRandomFigure();
+            std::vector<glm::vec3> centers_polyhedrons;
+            for (int i = 0; i < polyhedrons.size(); i ++) {
+                centers_polyhedrons.push_back(polyhedrons[i].getCenter());
+            }
+            std::vector<float> params = getRandomFigure(centers_polyhedrons);
             polyhedrons.push_back(Polyhedron(params));
             startTime = glfwGetTime();
         }
