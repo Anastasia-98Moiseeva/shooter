@@ -261,6 +261,16 @@ int main( void )
 	while( glfwGetKey(window, GLFW_KEY_ESCAPE ) != GLFW_PRESS &&
 		   glfwWindowShouldClose(window) == 0 );
 
+	for (int i = 0; i < workspace.size(); i++) {
+        glDeleteBuffers(1, &workspace[i].first);
+        glDeleteBuffers(1, &workspace[i].second);
+	}
+    for (int i = 0; i < spheres.size(); i++) {
+        spheres[i].clearMemory();
+    }
+    for (int i = 0; i < polyhedrons.size(); i++) {
+        polyhedrons[i].clearMemory();
+    }
 
 	glDeleteProgram(programID);
 	glDeleteVertexArrays(1, &VertexArrayID);
