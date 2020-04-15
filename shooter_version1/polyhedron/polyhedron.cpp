@@ -58,6 +58,20 @@ public:
         return num_points;
     }
 
+    int getSphereHittedTarget(float sphereRadius, std::vector<glm::vec3> sphereCenters){
+        for (int i = 0; i < sphereCenters.size(); i++) {
+            glm::vec3 diff = glm::vec3(center.x - sphereCenters[i].x,
+                                           center.y - sphereCenters[i].y,
+                                           center.z - sphereCenters[i].z);
+            float distance = sqrt(pow(diff.x, 2) + pow(diff.y, 2) + pow(diff.z, 2));
+            if (radius + sphereRadius >= distance){
+                return i;
+            }
+            return -1;
+        }
+    }
+
+
 //    GLuint get
 
 private:
@@ -66,4 +80,5 @@ private:
     float size;
     glm::vec3 center;
     float num_points;
+    float radius;
 };
