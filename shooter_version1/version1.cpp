@@ -86,6 +86,7 @@ int main( void )
 		glfwTerminate();
 		return -1;
 	}
+
 	glfwMakeContextCurrent(window);
 
 	// Initialize GLEW
@@ -123,7 +124,7 @@ int main( void )
 
 	// Get a handle for our "MVP" uniform
 	GLuint MatrixID = glGetUniformLocation(programID, "MVP");
-	
+
     float params1[] = {0.7, -6.0, -1.0, 5.0};
     float params2[] = {0.5, 6.0, -1.0, 10.0};
     float params3[] = {0.5, 0.0, -1.0, 12.0};
