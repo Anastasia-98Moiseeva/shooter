@@ -172,6 +172,7 @@ int main( void )
     double startTime = glfwGetTime();
     double maxPolyhedron = 5;
     double lastSphere = glfwGetTime() - 10;
+    float distance_sphere = 15.2;
     do{
         // Clear the screen
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -212,6 +213,42 @@ int main( void )
             drawFigure(14700, spheres[i].getSphereV(), spheres[i].getSphereC(), MatrixID, programID, MVP);
             spheres[i].changeSphere();
         }
+
+        std::vector<glm::vec3> centers_spheres;
+        for (int i = 0; i < spheres.size(); i++) {
+            centers_spheres.push_back(spheres[i].getCenter());
+        }
+
+        std::vector<int> num_del_polyhedrons;
+        if (centers_spheres.size() > 0) {
+            for (int i = 0; i < polyhedrons.size(); i++) {
+                int num_sphere = polyhedrons[i].getSphereHittedTarget(spheres[0].getRadius(), centers_spheres);
+                if (num_sphere == -1) {
+                    continue;
+                }
+                spheres[num_sphere].clearMemory();
+                spheres.erase(spheres.begin() + num_sphere);
+                num_del_polyhedrons.push_back(i);
+            }
+            for (int i = 0; i < num_del_polyhedrons.size(); i++) {
+                polyhedrons[num_del_polyhedrons[i]].clearMemory();
+                polyhedrons.erase(polyhedrons.begin() + num_del_polyhedrons[i]);
+            }
+        }
+
+        int del_num = 0;
+        while (spheres.size() > 0 && spheres[del_num].getZ() > distance_sphere) {
+            del_num++;
+        }
+
+        if (del_num > 0) {
+            for (int j = 0; j < del_num; j++) {
+                spheres[j].clearMemory();
+            }
+            spheres.erase(spheres.begin(), spheres.begin() + del_num);
+        }
+
+
 
         glDisableVertexAttribArray(0);
         glDisableVertexAttribArray(1);

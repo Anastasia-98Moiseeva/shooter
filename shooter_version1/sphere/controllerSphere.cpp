@@ -22,11 +22,28 @@ public:
         return color;
     }
 
+    void clearMemory() {
+        glDeleteBuffers(1, &vertex);
+        glDeleteBuffers(1, &color);
+    }
+
+    glm::vec3 getCenter() {
+        return center;
+    }
+
     void changeSphere() {
         glDeleteBuffers(1, &vertex);
         center += offset;
         vertex = getSphereVertex(size, center);
         return;
+    }
+
+    float getZ() {
+        return center.z;
+    }
+
+    float getRadius() {
+        return size;
     }
 
 private:

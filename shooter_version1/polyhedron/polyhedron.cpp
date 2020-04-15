@@ -16,16 +16,19 @@ public:
                 vertex = getPyramidVertex(size, center);
                 color = getPyramidColor();
                 num_points =  6 * 4 * 16;
+                radius = 0.5;
                 break;
             case 1:
                 vertex = getCubeVertex(size, center);
                 color = getCubeColor();
                 num_points = 12 * 3;
+                radius = 0.5;
                 break;
             case 2:
                 vertex = getBipyramidVertex(size, center);
                 color = getBipyramidColor();
                 num_points = 12 * 3;
+                radius = 0.5;
                 break;
             default:
                 vertex = 0;
