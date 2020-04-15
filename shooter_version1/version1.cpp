@@ -137,7 +137,6 @@ int main( void )
     polyhedrons.push_back(Polyhedron(2, params3));
 
     std::vector<ControllerSphere> spheres;
-    spheres.push_back(ControllerSphere(params4, direction));
 
     std::vector<std::pair<GLuint, GLuint> > workspace;
     workspace.push_back(std::make_pair(getFloorVertex(), getFloorColor()));
