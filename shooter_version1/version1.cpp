@@ -21,11 +21,38 @@ GLFWwindow* window;
 #include "shooter_version1/workspace/frontWall.cpp"
 #include "shooter_version1/workspace/ceiling.cpp"
 #include "sphere/controllerSphere.cpp"
+#include <cmath>
 
 using namespace glm;
 
 #include <common/controls.hpp>
 #include <common/shader.hpp>
+
+std::vector<float> getRandomFigure() {
+    //float params1[] = {0.7, -6.0, -1.0, 5.0};
+    int num_figure = rand() % 3;
+    float x = static_cast <float> ((rand() % 20)) - 10.0;
+    float y = static_cast <float> ((rand() % 7) ) - 3.0;
+    float z = static_cast <float> ((rand() % 5)) + 10.0;
+    std::vector<float> parameters_polyhedron;
+    parameters_polyhedron.push_back(num_figure);
+    switch (num_figure){
+        case 0:
+            parameters_polyhedron.push_back(0.7);
+            break;
+        case 1:
+            parameters_polyhedron.push_back(0.5);
+            break;
+        case 2:
+            parameters_polyhedron.push_back(0.5);
+            break;
+    }
+
+    parameters_polyhedron.push_back(x);
+    parameters_polyhedron.push_back(y);
+    parameters_polyhedron.push_back(z);
+    return parameters_polyhedron;
+}
 
 void drawFigure(float num_points, GLuint cubeVertex, GLuint cubeColor, GLuint MatrixID, GLuint programID, glm::mat4 MVP) {
 // Use our shader
@@ -61,6 +88,8 @@ void drawFigure(float num_points, GLuint cubeVertex, GLuint cubeColor, GLuint Ma
     glDrawArrays(GL_TRIANGLES, 0, num_points); // 12*3 indices starting at 0 -> 12 triangles
 
 }
+
+
 
 int main( void )
 {
@@ -125,16 +154,10 @@ int main( void )
 	// Get a handle for our "MVP" uniform
 	GLuint MatrixID = glGetUniformLocation(programID, "MVP");
 
-    float params1[] = {0.7, -6.0, -1.0, 5.0};
-    float params2[] = {0.5, 6.0, -1.0, 10.0};
-    float params3[] = {0.5, 0.0, -1.0, 12.0};
-    float params4[] = {0.3, 0.0, 0.0, -8.0};
+	float params4[] = {0.3, 0.0, 0.0, -8.0};
     glm::vec3 direction = glm::vec3(0.0, 0.0, 0.15);
 
     std::vector<Polyhedron> polyhedrons;
-    polyhedrons.push_back(Polyhedron(0, params1));
-    polyhedrons.push_back(Polyhedron(1, params2));
-    polyhedrons.push_back(Polyhedron(2, params3));
 
     std::vector<ControllerSphere> spheres;
 
@@ -145,10 +168,11 @@ int main( void )
     workspace.push_back(std::make_pair(getDistanceWallVertex(), getDistanceWallColor()));
     workspace.push_back(std::make_pair(getTopWallVertex(), getTopWallColor()));
 
+
+    double startTime = glfwGetTime();
+    double maxPolyhedron = 5;
+    double lastSphere = glfwGetTime() - 10;
     do{
-       if (polyhedrons.size() == 0) {
-           break;
-       }
         // Clear the screen
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
@@ -159,7 +183,15 @@ int main( void )
         glm::mat4 ModelMatrix = glm::mat4(1.0f);
         glm::mat4 MVP = ProjectionMatrix * ViewMatrix * ModelMatrix;
 
-		for (int i = 0; i < polyhedrons.size(); i++) {
+        double currentTime = glfwGetTime();
+        if ((std::abs(startTime - currentTime) > 5 && polyhedrons.size() < maxPolyhedron) or (polyhedrons.size() < 2)) {
+            std::vector<float> params = getRandomFigure();
+            polyhedrons.push_back(Polyhedron(params));
+            startTime = glfwGetTime();
+        }
+
+
+            for (int i = 0; i < polyhedrons.size(); i++) {
             drawFigure(polyhedrons[i].getNumPoints(), polyhedrons[i].getFigureVertex(), polyhedrons[i].getFigureColor(), MatrixID, programID, MVP);
 		}
 
@@ -167,12 +199,13 @@ int main( void )
             drawFigure(3*4, workspace[i].first, workspace[i].second, MatrixID, programID, MVP);
         }
 
-        if (glfwGetKey( window, GLFW_KEY_ENTER ) == GLFW_PRESS) {
+        if (glfwGetKey( window, GLFW_KEY_ENTER ) == GLFW_PRESS && (std::abs(lastSphere - currentTime) > 1)) {
             glm::vec3 cameraPos = getCameraPosition();
             params4[1] = cameraPos.x;
             params4[2] = cameraPos.y - 2;
             params4[3] = cameraPos.z + 3;
             spheres.push_back(ControllerSphere(params4, direction));
+            lastSphere = glfwGetTime();
         }
 
         for (int i = 0; i < spheres.size(); i++) {

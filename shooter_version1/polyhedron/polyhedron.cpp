@@ -2,18 +2,15 @@
 #include "../pyramid/pyramid.cpp"
 #include "../cube/cube.cpp"
 #include "../bipyramid/bipyramid.cpp"
-// 0 - size
-// 1,2,3 - koor
-// 4 - num_points
 
 class Polyhedron {
 public:
-    Polyhedron(int num_figure, float* param_figure) {
-        size = param_figure[0];
-        center.x = param_figure[1];
-        center.y = param_figure[2];
-        center.z = param_figure[3];
-
+    Polyhedron(std::vector<float> param_figure) {
+        size = param_figure[1];
+        center.x = param_figure[2];
+        center.y = param_figure[3];
+        center.z = param_figure[4];
+        int num_figure = param_figure[0];
         switch (num_figure) {
             case 0:
                 vertex = getPyramidVertex(size, center);
