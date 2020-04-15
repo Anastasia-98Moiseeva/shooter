@@ -129,7 +129,7 @@ int main( void )
     float params2[] = {0.5, 6.0, -1.0, 10.0};
     float params3[] = {0.5, 0.0, -1.0, 12.0};
     float params4[] = {0.3, 0.0, 0.0, -8.0};
-    glm::vec3 direction = glm::vec3(0.0, 0.0, 0.015);
+    glm::vec3 direction = glm::vec3(0.0, 0.0, 0.15);
 
     std::vector<Polyhedron> polyhedrons;
     polyhedrons.push_back(Polyhedron(0, params1));
@@ -169,7 +169,9 @@ int main( void )
 
         if (glfwGetKey( window, GLFW_KEY_ENTER ) == GLFW_PRESS) {
             glm::vec3 cameraPos = getCameraPosition();
-            glm::vec3 cameraDir = getCameraDirection();
+            params4[1] = cameraPos.x;
+            params4[2] = cameraPos.y - 2;
+            params4[3] = cameraPos.z + 3;
             spheres.push_back(ControllerSphere(params4, direction));
         }
 

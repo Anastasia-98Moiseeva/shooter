@@ -34,17 +34,6 @@ float verticalAngle = 90.0f;
 // Initial Field of View
 float initialFoV = 45.0f;
 
-
-glm::vec3 direction = glm::vec3(
-        cos(verticalAngle) * sin(horizontalAngle),
-        sin(verticalAngle),
-        cos(verticalAngle) * cos(horizontalAngle)
-);
-
-glm::vec3 getCameraDirection(){
-    return direction;
-}
-
 float speed = 3.0f; // 3 units / second
 float mouseSpeed = 0.005f;
 
