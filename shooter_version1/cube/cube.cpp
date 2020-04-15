@@ -3,7 +3,7 @@
 #include "shooter_version1/tools/tools.cpp"
 
 
-GLuint getCubeVertex(float k, float x, float y, float z) {
+GLuint getCubeVertex(float k, glm::vec3 offset) {
     GLfloat g_vertex_buffer_data[] = {
             -1.0f,-1.0f,-1.0f,
             -1.0f,-1.0f, 1.0f,
@@ -44,7 +44,7 @@ GLuint getCubeVertex(float k, float x, float y, float z) {
     };
 
     Tools tools = Tools();
-    tools.changeConfiguration(*g_vertex_buffer_data, (sizeof(g_vertex_buffer_data)) / (sizeof(g_vertex_buffer_data[0])), k, x, y, z);
+    tools.changeConfiguration(*g_vertex_buffer_data, (sizeof(g_vertex_buffer_data)) / (sizeof(g_vertex_buffer_data[0])), k, offset);
 
     GLuint vertexbuffer;
     glGenBuffers(1, &vertexbuffer);

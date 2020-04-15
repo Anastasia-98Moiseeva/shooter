@@ -10,24 +10,23 @@ class Polyhedron {
 public:
     Polyhedron(int num_figure, float* param_figure) {
         size = param_figure[0];
-        center = new float[3];
-        for (int i = 0; i < 3; i++) {
-            center[i] = param_figure[i + 1];
-        }
+        center.x = param_figure[1];
+        center.y = param_figure[2];
+        center.z = param_figure[3];
 
         switch (num_figure) {
             case 0:
-                vertex = getPyramidVertex(size, center[0], center[1], center[2]);
+                vertex = getPyramidVertex(size, center);
                 color = getPyramidColor();
                 num_points =  6 * 4 * 16;
                 break;
             case 1:
-                vertex = getCubeVertex(size, center[0], center[1], center[2]);
+                vertex = getCubeVertex(size, center);
                 color = getCubeColor();
                 num_points = 12 * 3;
                 break;
             case 2:
-                vertex = getBipyramidVertex(size, center[0], center[1], center[2]);
+                vertex = getBipyramidVertex(size, center);
                 color = getBipyramidColor();
                 num_points = 12 * 3;
                 break;
@@ -43,7 +42,7 @@ public:
         glDeleteBuffers(1, &color);
     }
 
-    float* getCenter() {
+    glm::vec3 getCenter() {
         return center;
     }
 
@@ -65,6 +64,6 @@ private:
     GLuint vertex;
     GLuint color;
     float size;
-    float* center;
+    glm::vec3 center;
     float num_points;
 };

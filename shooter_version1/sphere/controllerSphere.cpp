@@ -2,17 +2,15 @@
 
 class ControllerSphere {
 public:
-    ControllerSphere(float* param_figure, float* offsetStart) {
+    ControllerSphere(float* param_figure, glm::vec3& offsetStart) {
         size = param_figure[0];
-        center = new float[3];
-        offset = new float[3];
-        for (int i = 0; i < 3; i++) {
-            center[i] = param_figure[i + 1];
-        }
-        for (int i = 0; i < 3; i++) {
-            offset[i] = offsetStart[i];
-        }
-        vertex = getSphereVertex(size, center[0], center[1], center[2]);
+        center = glm::vec3(0, 0, 0);
+        offset = glm::vec3(0, 0, 0);
+        center.x = param_figure[1];
+        center.y = param_figure[2];
+        center.z = param_figure[3];
+        offset = offsetStart;
+        vertex = getSphereVertex(size,  center);
         color = getSphereColor();
     }
 
@@ -26,10 +24,8 @@ public:
 
     void changeSphere() {
         glDeleteBuffers(1, &vertex);
-        for (int i = 0; i < 3; i++) {
-            center[i] += offset[i];
-        }
-        vertex = getSphereVertex(size, center[0], center[1], center[2]);
+        center += offset;
+        vertex = getSphereVertex(size, center);
         return;
     }
 
@@ -37,6 +33,6 @@ private:
     GLuint vertex;
     GLuint color;
     float size;
-    float* center;
-    float* offset;
+    glm::vec3 center;
+    glm::vec3 offset;
 };

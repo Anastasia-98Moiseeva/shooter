@@ -4,7 +4,7 @@
 using namespace glm;
 
 
-GLfloat getPyramidVertex(float k, float x, float y, float z) {
+GLfloat getPyramidVertex(float k, glm::vec3 offset) {
 
     float size = 0.25;
     const int num_points = 6 * 4 * 16;
@@ -303,7 +303,7 @@ GLfloat getPyramidVertex(float k, float x, float y, float z) {
     };
 
     Tools tools = Tools();
-    tools.changeConfiguration(*g_vertex_buffer_data, (sizeof(g_vertex_buffer_data)) / (sizeof(g_vertex_buffer_data[0])), k, x, y, z);
+    tools.changeConfiguration(*g_vertex_buffer_data, (sizeof(g_vertex_buffer_data)) / (sizeof(g_vertex_buffer_data[0])), k, offset);
 
 
     GLuint vertexbuffer;

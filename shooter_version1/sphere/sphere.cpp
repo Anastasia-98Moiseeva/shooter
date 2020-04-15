@@ -14,7 +14,7 @@ const int N_PHI = 50;
 const int N_PSI = 50;
 const float PI = atan2(0., -1.);
 
-GLuint getSphereVertex(float k, float x, float y, float z) {
+GLuint getSphereVertex(float k, glm::vec3 offset) {
 
     glm::vec3 vertices[N_PSI][N_PHI];
 
@@ -91,7 +91,7 @@ GLuint getSphereVertex(float k, float x, float y, float z) {
     }
 
     Tools tools = Tools();
-    tools.changeConfiguration(*g_vertex_buffer_data, (sizeof(g_vertex_buffer_data)) / (sizeof(g_vertex_buffer_data[0])), k, x, y, z);
+    tools.changeConfiguration(*g_vertex_buffer_data, (sizeof(g_vertex_buffer_data)) / (sizeof(g_vertex_buffer_data[0])), k, offset);
 
     GLuint vertexbuffer;
     glGenBuffers(1, &vertexbuffer);
