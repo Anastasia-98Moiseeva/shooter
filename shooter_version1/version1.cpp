@@ -181,11 +181,14 @@ int main( void )
             drawFigure(3*4, workspace[i].first, workspace[i].second, MatrixID, programID, MVP);
         }
 
+        if (glfwGetKey( window, GLFW_KEY_ENTER ) == GLFW_PRESS) {
+            spheres.push_back(ControllerSphere(params4, direction));
+        }
+
         for (int i = 0; i < spheres.size(); i++) {
             drawFigure(14700, spheres[i].getSphereV(), spheres[i].getSphereC(), MatrixID, programID, MVP);
             spheres[i].changeSphere();
         }
-
 
         glDisableVertexAttribArray(0);
         glDisableVertexAttribArray(1);
